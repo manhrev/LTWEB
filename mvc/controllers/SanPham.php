@@ -9,7 +9,7 @@ class SanPham extends Controller{
 
     function TatCaSanPham($page = 1) {
         $model= $this->model('SanPhamModel');
-        $a=$model->getAllSP();
+        $a=$model->TatCaSanPham();
         print_r($a);
      //$this->view('product-grid', []);
     }

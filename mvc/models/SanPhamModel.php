@@ -1,7 +1,7 @@
 <?php
 
 class SanPhamModel extends DB {
-    public function getAllSP()
+    public function TatCaSanPham()
     {
         $query = "select url, name, images, price  from product";
         $result = $this -> con -> query($query);
