@@ -8,11 +8,11 @@ class SanPham extends Controller{
     }
 
     function TatCaSanPham($page = 1) {
-        echo "tat ca sp";
+     $this->view('product-grid', []);
     }
 
     function GetSanPham($ten) {
-        echo 'San pham'.$ten;
+        $this->view('product-detail', []);
     }
 }
 
