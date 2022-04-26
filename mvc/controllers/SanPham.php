@@ -4,11 +4,14 @@ class SanPham extends Controller{
 
     
     function BoLoc($filter, $page = 1) {
-        echo 'boloc';
+
     }
 
     function TatCaSanPham($page = 1) {
-     $this->view('product-grid', []);
+        $model= $this->model('SanPhamModel');
+        $a=$model->getAllSP();
+        print_r($a);
+     //$this->view('product-grid', []);
     }
 
     function GetSanPham($ten) {
