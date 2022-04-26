@@ -21,19 +21,26 @@ class SanPhamModel extends DB {
         $resultArray[]= mysqli_fetch_array($result, MYSQLI_ASSOC);
         return $resultArray;
     }
+    // used for both BoLoc and SanPhamNoiBat
+    public function BanChayNhat()
+    {
+        $query = "select  url, name, images, price, description, view_count  from product";
+        $result = $this -> con -> query($query);
+
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        {
+            $resultArray[] = $item;
+        }
+        array_multisort( array_column($resultArray, "view_count"), SORT_DESC, $resultArray);
+        return $resultArray;
+    }
+    // Get products with filter
     public function BoLoc($filter)
     {
         switch ($filter)
         {
             case 'ban-chay-nhat':
-                $query = "select  url, name, images, price, description, view_count  from product";
-                $result = $this -> con -> query($query);
-        
-                while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
-                {
-                    $resultArray[] = $item;
-                }
-                array_multisort( array_column($resultArray, "view_count"), SORT_DESC, $resultArray);
+                $resultArray=$this -> BanChayNhat();
                 break;
             case 'moi-nhat':
                 $query = "select  url, name, images, price, description, date_created  from product";
@@ -47,6 +54,17 @@ class SanPhamModel extends DB {
                 }
                 usort($resultArray, "sortFunction");
                 break;
+        }
+        return $resultArray;
+    }
+    public function GetCategory()
+    {
+        $query = "select * from category";
+        $result = $this -> con -> query($query);
+        
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
+        {
+            $resultArray[] = $item;
         }
         return $resultArray;
     }
