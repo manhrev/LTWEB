@@ -8,12 +8,11 @@ class App{
     function __construct(){
   
         $arr = $this->UrlProcess();
-        if (!isset($arr[0])) {
-            $arr[0] = $this->controller;
-        }
-
         $arr = $this->Check($arr);
-        
+
+        if (!isset($arr[0])) {
+            $arr[] = $this->controller;
+        }
         // Controller
         if( file_exists("./mvc/controllers/".$arr[0].".php") ){
             $this->controller = $arr[0];
@@ -46,6 +45,9 @@ class App{
     function Check($arr) {
         $returnArr = array();
         //kiem tra controller
+        if (!isset($arr[0])) {
+            return array();
+        }
         switch ($arr[0]) {
             //home
             case 'trang-chu':
@@ -123,6 +125,11 @@ class App{
             case 'quan-li':
                 $returnArr = $arr;
                 $returnArr[0] = 'QuanLi';
+                break;
+            default:
+                return array('NotFound');
+                break;
+
         }
         return $returnArr;
     }

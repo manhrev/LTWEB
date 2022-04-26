@@ -1,4 +1,31 @@
 <header>
+        <!-- search -->
+        <div id="tiva-searchBox" class="d-flex align-items-center text-center active">
+            <div class="container">
+                <span class="tiva-seachBoxClose">
+                    <i class="zmdi zmdi-close"></i>
+                </span>
+                <div class="tiva-seachBoxInner">
+                    <div class="title-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <span>Tìm kiếm</span>
+                    </div>
+                    <div class="description">
+                        Tìm kiếm nhanh sản phẩm bạn cần bằng tên sản phẩm hoặc mã sản phẩm.
+                    </div>
+                    <!-- Block search module TOP -->
+                    <div id="search" class="search-widget d-flex justify-content-center">
+                        <form method="get" action="#">
+                            <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
+                            <input type="text" name="s" value="" placeholder="Nhập nội dung tìm kiếm ở đây" class="ui-autocomplete-input" autocomplete="off">
+                            <button type="button">
+                                Tìm
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- header left mobie -->
         <div class="header-mobile d-md-none">
             <div class="mobile hidden-md-up text-xs-center d-flex align-items-center justify-content-around">
@@ -10,7 +37,7 @@
 
                 <!-- logo -->
                 <div class="mobile-logo">
-                    <a href="home5.html">
+                    <a href="<?=BASE_URL?>">
                         <img class="logo-mobile img-fluid" src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="Prestashop_Furnitica">
                     </a>
                 </div>
@@ -26,7 +53,7 @@
                 <div id="mobile_search_content">
                     <form method="get" action="#">
 
-                        <input type="text" name="s" value="" placeholder="Search">
+                        <input type="text" name="s" value="" placeholder="Tìm kiếm">
                         <button type="submit">
                             <i class="fa fa-search"></i>
                         </button>
@@ -69,10 +96,11 @@
                                         </tr>
 
                                         <tr>
+                                            <!-- mobile cart -->
                                             <td colspan="3" class="d-flex justify-content-center">
                                                 <div class="cart-button">
-                                                    <a href="product-cart.html" title="View Cart">View Cart</a>
-                                                    <a href="product-checkout.html" title="Checkout">Checkout</a>
+                                                    <a href="product-cart.html" title="View Cart">Xem giỏ hàng</a>
+                                                    <a href="product-checkout.html" title="Checkout">Thanh toán</a>
                                                 </div>
                                             </td>
                                         </tr>
@@ -100,7 +128,7 @@
                 <!-- logo -->
                 <div class="d-flex align-items-center  flex-2">
                     <div id="logo">
-                        <a href="home5.html">
+                        <a href="<?=BASE_URL?>">
                             <img src="<?=STATIC_URL?>img/home/logo.png" alt="logo" class="img-fluid">
                         </a>
                     </div>
@@ -109,7 +137,7 @@
                     <div class="menu navbar collapse navbar-collapse d-flex align-items-center justify-content-center">
                         <ul class="menu-top navbar-nav">
                             <li class="nav-link">
-                                <a href="#" class="parent">Home</a>
+                                <a href="#" class="parent">Trang chủ</a>
                                 <div class="dropdown-menu">
                                     <ul>
                                         <li class="item">
@@ -211,7 +239,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="contact.html" class="parent">Contact US</a>
+                                <a href="contact.html" class="parent">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
@@ -229,25 +257,25 @@
                         </div>
                         <div id="acount" class="collapse">
                             <div class="account-list-content">
-                                <div>
+                                <!-- <div>
                                     <a class="login" href="user-acount.html" rel="nofollow" title="Log in to your customer account">
                                         <i class="fa fa-cog"></i>
                                         <span>My Account</span>
                                     </a>
-                                </div>
+                                </div> -->
                                 <div>
                                     <a class="login" href="user-login.html" rel="nofollow" title="Log in to your customer account">
                                         <i class="fa fa-sign-in"></i>
-                                        <span>Sign in</span>
+                                        <span>Đăng nhập</span>
                                     </a>
                                 </div>
                                 <div>
                                     <a class="register" href="user-register.html" rel="nofollow" title="Register Account">
                                         <i class="fa fa-user"></i>
-                                        <span>Register Account</span>
+                                        <span>Đăng kí</span>
                                     </a>
                                 </div>
-                                <div>
+                                <!-- <div>
                                     <a class="check-out" href="product-checkout.html" rel="nofollow" title="Checkout">
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                         <span>Checkout</span>
@@ -257,8 +285,8 @@
                                     <a href="user-wishlist.html" title="My Wishlists">
                                         <i class="fa fa-heart"></i>My Wishlists
                                     </a>
-                                </div>
-                                <div id="desktop_currency_selector" class="currency-selector groups-selector hidden-sm-down">
+                                </div> -->
+                                <!-- <div id="desktop_currency_selector" class="currency-selector groups-selector hidden-sm-down">
                                     <ul class="list-inline">
                                         <li>
                                             <a title="Euro" rel="nofollow" href="#">EUR</a>
@@ -291,7 +319,7 @@
                                             </a>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -334,8 +362,8 @@
                                             <tr>
                                                 <td colspan="3" class="d-flex justify-content-center">
                                                     <div class="cart-button">
-                                                        <a href="product-cart.html" title="View Cart">View Cart</a>
-                                                        <a href="product-checkout.html" title="Checkout">Checkout</a>
+                                                        <a href="product-cart.html" title="View Cart">Xem giỏ hàng</a>
+                                                        <a href="product-checkout.html" title="Checkout">Thanh toán</a>
                                                     </div>
                                                 </td>
                                             </tr>
