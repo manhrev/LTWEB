@@ -40,7 +40,7 @@
 <body id="home5">
    
     <!-- header -->
-    <?php require_once "./mvc/views/inc/header.php"?>
+    <?php require_once "./mvc/views/inc/home-header.php"?>
     <!-- !header -->
     
     <!-- main content -->
@@ -1070,7 +1070,7 @@
 
                             <div class="content-showmore text-center has-showmore">
                                 <button type="button" class="btn btn-default novShowMore" name="novShowMore" data-loading="Loading..." data-loadmore="Load More Products">
-                                    <span>Load More Products</span>
+                                    <span>Xem thêm sản phẩm</span>
                                 </button>
                             </div>
                         </div>
@@ -1084,8 +1084,6 @@
     <!-- footer -->
     <?php require_once "./mvc/views/inc/home-footer.php"?>
     
-    
-
     <!-- menu mobie left -->
     <?php require_once "./mvc/views/inc/mobile-menu.php" ?>
     <!-- Page Loader -->

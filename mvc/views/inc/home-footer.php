@@ -11,8 +11,8 @@
                                     <div class="policy-content iconpolicy1 text-center">
                                         <img src="<?=STATIC_URL?>img/home/home1-policy.png" alt="img">
                                         <div class="description">
-                                            <div class="policy-name mb-5">FREE DELIVERY FROM $ 250</div>
-                                            <div class="policy-des">Lorem ipsum dolor Sed ut perspiciatis unde omnis</div>
+                                            <div class="policy-name mb-5">VẬN CHUYỂN NHANH</div>
+                                            <div class="policy-des"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -26,8 +26,8 @@
                                     <div class="policy-content iconpolicy2 text-center">
                                         <img src="<?=STATIC_URL?>img/home/home1-policy2.png" alt="img">
                                         <div class="discription">
-                                            <div class="policy-name mb-5">FREE INSTALLATION</div>
-                                            <div class="policy-des">Lorem ipsum dolor Sed ut perspiciatis unde omnis</div>
+                                            <div class="policy-name mb-5">MIỄN PHÍ LẮP ĐẶT</div>
+                                            <div class="policy-des"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -41,8 +41,8 @@
                                     <div class="policy-content iconpolicy3 text-center">
                                         <img src="<?=STATIC_URL?>img/home/home1-policy3.png" alt="img">
                                         <div class="discription">
-                                            <div class="policy-name mb-5">MONEY BACK GUARANTEED</div>
-                                            <div class="policy-des">Lorem ipsum dolor Sed ut perspiciatis unde omnis</div>
+                                            <div class="policy-name mb-5">CHẾ ĐỘ BẢO HÀNH TỐT</div>
+                                            <div class="policy-des"></div>
                                         </div>
                                     </div>
                                 </div>
