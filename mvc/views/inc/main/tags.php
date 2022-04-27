@@ -7,7 +7,7 @@
 
             <?php foreach ($data['tags'] as $tag) { ?>
                 <li>
-                    <a title="Show products matching tag <?=$tag?>" ><?=$tag?></a>
+                    <a href="<?=BASE_URL?>/tim-kiem/<?=$tag?>" title="Show products matching tag <?=$tag?>" ><?=$tag?></a>
                 </li>
             <?php }?>
 
