@@ -13,10 +13,13 @@ class TrangChu extends Controller{
         // category lay max6 cái
         // san pham noi bat min4 max 8
         $sanphamnoibat = array_slice($sanphamnoibat, 0, 8);
+        $categories = $model->GetCategory();
 
         $this->view('home', [
+            'view' => 0,
             "categories" => $category,
-            "SPnoibat" => $sanphamnoibat
+            "SPnoibat" => $sanphamnoibat,
+            'categories' => $categories,
         ]);
 
     }

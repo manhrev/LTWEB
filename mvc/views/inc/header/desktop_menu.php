@@ -1,9 +1,9 @@
 <div class="menu navbar collapse navbar-collapse d-flex align-items-center justify-content-center">
     <ul class="menu-top navbar-nav">
-        <li class="nav-link">
+        <li <?=$data['view']==0?'class="nav-link"':''?> >
             <a href="<?=BASE_URL?>" class="parent">Trang chủ</a>
         </li>
-        <li>
+        <li <?=$data['view']==1?'class="nav-link"':''?> >
             <a href="#" class="parent">Blog</a>
             <!-- <div class="dropdown-menu">
                 <ul>
@@ -28,8 +28,8 @@
                 </ul>
             </div> -->
         </li>
-        <li>
-            <a href="#" class="parent">Sản phẩm</a>
+        <li <?=$data['view']==2?'class="nav-link"':''?> >
+            <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>" class="parent">Sản phẩm</a>
             <div class="dropdown-menu drop-tab">
                 <ul>
                     <li class="item container group">
@@ -40,26 +40,14 @@
                                     <div class="menu-content">
                                         <ul class="col">
                                             <li>
-                                                <a href="product-grid-sidebar-left.html">Tất cả sản phẩm</a>
+                                                <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>">Tất cả sản phẩm</a>
                                             </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
-                                            <li>
-                                                <a href="product-grid-sidebar-left.html">Loại 1</a>
-                                            </li>
+                                            <?php foreach ($data['categories'] as $cate) {?>
+                                                <li>
+                                                    <a href="<?=BASE_URL.'danh-muc/'.$cate['url']?>"><?=ucfirst($cate['name'])?></a>
+                                                </li>
+                                            <?php }?>
+                                          
                                         </ul>
                                     </div>
                                 </li>
@@ -68,10 +56,10 @@
                                     <div class="menu-content">
                                         <ul>
                                             <li>
-                                                <a href="#">Sản phẩm mới nhất</a>
+                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Sản phẩm mới nhất</a>
                                             </li>
                                             <li>
-                                                <a href="#">Sản phẩm bán chạy</a>
+                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Sản phẩm bán chạy</a>
                                             </li>
                                             <li>
                                                 <a href="#">Sản phẩm giảm giá</a>
@@ -98,7 +86,7 @@
                 </ul>
             </div>
         </li>
-        <li>
+        <li <?=$data['view']==3?'class="nav-link"':''?> >
             <a href="contact.html" class="parent">Liên hệ</a>
         </li>
     </ul>

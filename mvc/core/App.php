@@ -90,7 +90,7 @@ class App{
                             break;
                     }
                 } else {
-                    return array('NotFound');
+                    return $returnArr;
                 }
                 break;
             case "danh-muc":
