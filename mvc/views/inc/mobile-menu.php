@@ -1,5 +1,5 @@
 <!-- menu mobie left -->
-<div class="mobile-top-menu d-md-none">
+<!-- <div class="mobile-top-menu d-md-none">
     <button type="button" class="close" aria-label="Close">
         <i class="zmdi zmdi-close"></i>
     </button>
@@ -505,7 +505,7 @@
         </div>
     </div>
 
-</div>
+</div> -->
 
 <!-- menu mobie right -->
 <div id="mobile-pagemenu" class="mobile-boxpage d-flex hidden-md-up active d-md-none">

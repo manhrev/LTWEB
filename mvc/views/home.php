@@ -52,7 +52,7 @@
             <div class="menu-banner d-xs-none">
                 <div class="tiva-verticalmenu block">
                     <div class="box-content">
-                        <div class="verticalmenu" role="navigation">
+                        <!-- <div class="verticalmenu" role="navigation">
                             <ul class="menu level1">
                                 <li class="item parent">
                                     <a href="#" class="hasicon" title="SIDE TABLE">
@@ -564,7 +564,7 @@
                                     <i class="zmdi zmdi-close"></i>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -577,7 +577,7 @@
                     <section class="page-home">
                         <!-- banner -->
                         <div class="spacing-10 group-image-special">
-                            <div class="row">
+                            <div class="row" >
 
                                 <?php foreach ($data['categoriesBanner'] as $category) { ?>
                                     <div class="col-lg-4 col-md-4">
