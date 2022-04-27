@@ -18,6 +18,7 @@ class SanPhamModel extends DB {
         $query  = " select * from product where '$url'= product.url";
         $result = $this ->con -> query($query);
         
+        
         $resultArray[]= mysqli_fetch_array($result, MYSQLI_ASSOC);
         #Get product categorys via url product
 
