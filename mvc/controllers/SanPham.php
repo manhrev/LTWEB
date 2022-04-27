@@ -39,8 +39,7 @@ class SanPham extends Controller{
     function GetSanPham($url) {
         $model= $this->model('SanPhamModel');
         $arr =$model->GetSanPham($url);
-        print_r($arr);
-        //$this->view('product-detail', []);
+
     }
 }
 ?>
