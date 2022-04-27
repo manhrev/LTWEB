@@ -502,34 +502,42 @@
                                             <div class="js-product-list-top ">
                                                 <div class="d-flex justify-content-around row">
                                                     <div class="showing col col-xs-12">
-                                                        <span>SHOWING 1-3 OF 3 ITEM(S)</span>
+                                                        <span>Đang hiển thị <?php $fromP = ($data['currentPage'])*$data['perPage']; echo ($fromP-5).' - '.$fromP?> trong tổng số <?=$data['numOfSP']?> sản phẩm</span>
                                                     </div>
                                                     <div class="page-list col col-xs-12">
                                                         <ul>
+                                                            <?php $currentPage = $data['currentPage'];
+                                                            $numOfPage = $data['numOfPage'];
+                                                            ?>
                                                             <li>
-                                                                <a rel="prev" href="#" class="previous disabled js-search-link">
-                                                                    Previous
+                                                                <a rel="prev" <?php if($currentPage != 1) { ?> href="<?=$data['url'].($data['currentPage']-1)?>" <?php }?> class="previous disabled js-search-link">
+                                                                    Trang trước
                                                                 </a>
                                                             </li>
-                                                            <li class="current active">
-                                                                <a rel="nofollow" href="#" class="disabled js-search-link">
-                                                                    1
-                                                                </a>
-                                                            </li>
+                                                            
+                                                            <?php if (($currentPage - 1) >0) {?>
                                                             <li>
-                                                                <a rel="nofollow" href="#" class="disabled js-search-link">
-                                                                    2
+                                                                <a rel="nofollow" href="<?=$data['url'].($currentPage - 1)?>" class="disabled js-search-link">
+                                                                    <?=$currentPage-1?>
                                                                 </a>
                                                             </li>
+                                                            <?php }?>
+                                                            <li class='current active'>
+                                                                <a rel="nofollow" class='current active' href="#" class="disabled js-search-link">
+                                                                    <?= $currentPage ?>
+                                                                </a>
+                                                            </li>
+                                                            <?php if (($currentPage + 1) <= $numOfPage) {?>
                                                             <li>
-                                                                <a rel="nofollow" href="#" class="disabled js-search-link">
-                                                                    3
+                                                                <a rel="nofollow" href="<?=$data['url'].($currentPage + 1)?>" class="disabled js-search-link">
+                                                                    <?=$currentPage+1?>
                                                                 </a>
                                                             </li>
+                                                            <?php }?>
 
                                                             <li>
-                                                                <a rel="next" href="#" class="next disabled js-search-link">
-                                                                    Next
+                                                                <a rel="next" <?php if($currentPage != $numOfPage) { ?> href="<?=$data['url'].($data['currentPage']+1)?>" <?php }?> class="next disabled js-search-link">
+                                                                    Trang sau
                                                                 </a>
                                                             </li>
                                                         </ul>

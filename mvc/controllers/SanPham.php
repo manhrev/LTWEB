@@ -13,6 +13,9 @@ class SanPham extends Controller{
         
         $model= $this->model('SanPhamModel');
         $allSP=$model->TatCaSanPham();
+
+        //test
+        // $allSP = array_merge($allSP, $allSP);
         
         $sliced_data = array_slice($allSP, ($page-1)*self::PER_PAGE, self::PER_PAGE);
 
@@ -28,6 +31,8 @@ class SanPham extends Controller{
             'allSP' => $sliced_data,
             'currentPage' => $page,
             'numOfPage' => $number_of_pages,
+            'perPage' => self::PER_PAGE,
+            'url' => BASE_URL.'san-pham/tat-ca-san-pham/'
         ]);
     }
 
