@@ -7,6 +7,7 @@
 
 
 <!-- product-grid-sidebar-left10:54-->
+
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
@@ -25,24 +26,24 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
 
     <!-- Vendor CSS -->
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/nivo-slider/css/nivo-slider.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/nivo-slider/css/animate.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/nivo-slider/css/style.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/font-material/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/slider-range/css/jslider.css">
-    <link rel="stylesheet" href="<?=STATIC_URL?>libs/owl-carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/nivo-slider/css/nivo-slider.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/nivo-slider/css/animate.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/nivo-slider/css/style.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/font-material/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/slider-range/css/jslider.css">
+    <link rel="stylesheet" href="<?= STATIC_URL ?>libs/owl-carousel/assets/owl.carousel.min.css">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" type="text/css" href="<?=STATIC_URL?>css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?=STATIC_URL?>css/reponsive.css">
+    <link rel="stylesheet" type="text/css" href="<?= STATIC_URL ?>css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?= STATIC_URL ?>css/reponsive.css">
 </head>
 
 <body id="product-sidebar-left" class="product-grid-sidebar-left">
-    
+
     <!-- header -->
-    <?php require_once "./mvc/views/inc/header.php"?>
+    <?php require_once "./mvc/views/inc/header.php" ?>
     <!-- !header -->
 
     <!-- main content -->
@@ -82,7 +83,7 @@
                                     <div class="sidebar-3 sidebar-collection col-lg-3 col-md-4 col-sm-4">
 
                                         <!-- category menu -->
-                                        <?php require_once "./mvc/views/inc/main/categories.php"?>
+                                        <?php require_once "./mvc/views/inc/main/categories.php" ?>
 
                                         <!-- best seller -->
                                         <div class="sidebar-block">
@@ -325,11 +326,11 @@
                                         </div>
 
                                         <!-- product tag -->
-                                        <?php require_once "./mvc/views/inc/main/tags.php"?>
+                                        <?php require_once "./mvc/views/inc/main/tags.php" ?>
 
                                     </div>
                                     <div class="col-sm-8 col-lg-9 col-md-8 product-container">
-                                        <h1><?=$data['pageTitle']?></h1>
+                                        <h1><?= $data['pageTitle'] ?></h1>
                                         <div class="js-product-list-top firt nav-top">
                                             <div class="d-flex justify-content-around row">
                                                 <div class="col col-xs-12">
@@ -342,7 +343,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="hidden-sm-down total-products">
-                                                        <p>Có <?=$data['numOfSP']?> sản phẩm</p>
+                                                        <p>Có <?= $data['numOfSP'] ?> sản phẩm</p>
                                                     </div>
                                                 </div>
                                                 <div class="col col-xs-12">
@@ -365,134 +366,140 @@
                                             <div id="grid" class="related tab-pane fade in active show">
                                                 <div class="row">
 
-                                                <?php foreach ($data['allSP'] as $sp) {?>
-                                                    <div class="item text-center col-md-4">
-                                                        <div class="product-miniature js-product-miniature item-one first-item">
-                                                            <div class="thumbnail-container border">
-                                                                <a href="<?=BASE_URL?>san-pham/<?=$sp['url']?>">
-                                                                    <?php $images = explode(',', $sp['images']) ?>
-                                                                    
-                                                                    <img class="img-fluid image-cover" src="<?= $images[0]?>" alt="img">
-                                                                    <img class="img-fluid image-secondary" src="<?= $images[1]?>" alt="img">
-        
-                                                                </a>
-                                                                <!-- <div class="highlighted-informations">
+                                                    <?php foreach ($data['allSP'] as $sp) { ?>
+                                                        <div class="item text-center col-md-4">
+                                                            <div class="product-miniature js-product-miniature item-one first-item">
+                                                                <div class="thumbnail-container border">
+                                                                    <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
+                                                                        <?php $images = explode(',', $sp['images']) ?>
+
+                                                                        <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img">
+                                                                        <?php if (isset($images[1])) { ?>
+                                                                            <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img">
+                                                                        <?php } ?>
+
+                                                                    </a>
+                                                                    <!-- <div class="highlighted-informations">
                                                                     <div class="variant-links">
                                                                         <a href="#" class="color beige" title="Beige"></a>
                                                                         <a href="#" class="color orange" title="Orange"></a>
                                                                         <a href="#" class="color green" title="Green"></a>
                                                                     </div>
                                                                 </div> -->
-                                                            </div>
-                                                            <div class="product-description">
-                                                                <div class="product-groups">
-                                                                    <div class="product-title">
-                                                                        <a href="product-detail.html" style="text-transform: uppercase"><?=$sp['name']?></a>
-                                                                    </div>
-                                                                    <div class="rating">
-                                                                        <div class="star-content">
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                            <div class="star"></div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="product-group-price">
-                                                                        <div class="product-price-and-shipping">
-                                                                            <span class="price">
-                                                                                <?php if ($sp['price']>0) echo number_format($sp['price']).'đ'; else echo 'Liên hệ'?>
-                                                                            </span>
-                                                                        </div>
-                                                                    </div>
                                                                 </div>
-                                                                <div class="product-buttons d-flex justify-content-center">
-                                                                    <form action="" method="post" class="formAddToCart">
-                                                                        <input type="hidden" name="id_product" value="1">
-                                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                <div class="product-description">
+                                                                    <div class="product-groups">
+                                                                        <div class="product-title">
+                                                                            <a href="product-detail.html" style="text-transform: uppercase"><?= $sp['name'] ?></a>
+                                                                        </div>
+                                                                        <div class="rating">
+                                                                            <div class="star-content">
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                                <div class="star"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="product-group-price">
+                                                                            <div class="product-price-and-shipping">
+                                                                                <span class="price">
+                                                                                    <?php if ($sp['price'] > 0) echo number_format($sp['price']) . 'đ';
+                                                                                    else echo 'Liên hệ' ?>
+                                                                                </span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product-buttons d-flex justify-content-center">
+                                                                        <form action="" method="post" class="formAddToCart">
+                                                                            <input type="hidden" name="id_product" value="1">
+                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                            </a>
+                                                                        </form>
+                                                                        <a class="addToWishlist" href="" data-rel="1" onclick="">
+                                                                            <i class="fa fa-heart" aria-hidden="true"></i>
                                                                         </a>
-                                                                    </form>
-                                                                    <a class="addToWishlist" href="" data-rel="1" onclick="">
-                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                    </a>
-                                                                    <a href="<?=BASE_URL?>san-pham/<?=$sp['url']?>" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                    </a>
+                                                                        <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                        </a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                <?php }?>
-                                              
+                                                    <?php } ?>
+
                                                 </div>
                                             </div>
                                             <div id="list" class="related tab-pane fade">
                                                 <div class="row">
-                                                    <?php foreach ($data['allSP'] as $sp) {?>
-                                                    <div class="item col-md-12">
-                                                        <div class="product-miniature item-one first-item">
-                                                            <div class="row">
-                                                                <div class="col-md-4">
-                                                                    <div class="thumbnail-container border">
-                                                                        <a href="<?=BASE_URL?>san-pham/<?=$sp['url']?>">
-                                                                            <?php $images = explode(',', $sp['images']) ?>
-                                                                        
-                                                                            <img class="img-fluid image-cover" src="<?= $images[0]?>" alt="img">
-                                                                            <img class="img-fluid image-secondary" src="<?= $images[1]?>" alt="img">
-                                                                        </a>
+                                                    <?php foreach ($data['allSP'] as $sp) { ?>
+                                                        <div class="item col-md-12">
+                                                            <div class="product-miniature item-one first-item">
+                                                                <div class="row">
+                                                                    <div class="col-md-4">
+                                                                        <div class="thumbnail-container border">
+                                                                            <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
+                                                                                <?php $images = explode(',', $sp['images']) ?>
+
+                                                                                <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img">
+                                                                                <?php if (isset($images[1])) { ?>
+                                                                                    <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img">
+                                                                                <?php } ?>
+                                                                            </a>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                <div class="col-md-8">
-                                                                    <div class="product-description">
-                                                                        <div class="product-groups">
-                                                                            <div class="product-title">
-                                                                                <a style="text-transform: uppercase"href="<?=BASE_URL?>san-pham/<?=$sp['url']?>"><?=$sp['name']?></a>
-                                                                                <span class="info-stock">
-                                                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                                                                                    Còn hàng
-                                                                                </span>
-                                                                            </div>
-                                                                            <div class="rating">
-                                                                                <div class="star-content">
-                                                                                    <div class="star"></div>
-                                                                                    <div class="star"></div>
-                                                                                    <div class="star"></div>
-                                                                                    <div class="star"></div>
-                                                                                    <div class="star"></div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="product-group-price">
-                                                                                <div class="product-price-and-shipping">
-                                                                                    <span class="price">
-                                                                                    <?php if ($sp['price']>0) echo number_format($sp['price']).'đ'; else echo 'Liên hệ'?>
+                                                                    <div class="col-md-8">
+                                                                        <div class="product-description">
+                                                                            <div class="product-groups">
+                                                                                <div class="product-title">
+                                                                                    <a style="text-transform: uppercase" href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>"><?= $sp['name'] ?></a>
+                                                                                    <span class="info-stock">
+                                                                                        <i class="fa fa-check-square-o" aria-hidden="true"></i>
+                                                                                        Còn hàng
                                                                                     </span>
                                                                                 </div>
+                                                                                <div class="rating">
+                                                                                    <div class="star-content">
+                                                                                        <div class="star"></div>
+                                                                                        <div class="star"></div>
+                                                                                        <div class="star"></div>
+                                                                                        <div class="star"></div>
+                                                                                        <div class="star"></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="product-group-price">
+                                                                                    <div class="product-price-and-shipping">
+                                                                                        <span class="price">
+                                                                                            <?php if ($sp['price'] > 0) echo number_format($sp['price']) . 'đ';
+                                                                                            else echo 'Liên hệ' ?>
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="discription">
+                                                                                    <?= substr($sp['description'], 0, 100) . '...' ?>
+                                                                                </div>
                                                                             </div>
-                                                                            <div class="discription">
-                                                                                <?=substr($sp['description'], 0, 100).'...'?>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="product-buttons d-flex">
-                                                                            <form action="#" method="post" class="formAddToCart">
-                                                                                <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>Thêm vào giỏ hàng
+                                                                            <div class="product-buttons d-flex">
+                                                                                <form action="#" method="post" class="formAddToCart">
+                                                                                    <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>Thêm vào giỏ hàng
+                                                                                    </a>
+                                                                                </form>
+                                                                                <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                                                    <i class="fa fa-heart" aria-hidden="true"></i>
                                                                                 </a>
-                                                                            </form>
-                                                                            <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
-                                                                            <a href="<?=BASE_URL?>san-pham/<?=$sp['url']?>" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                                                <i class="fa fa-eye" aria-hidden="true"></i>
-                                                                            </a>
+                                                                                <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                                                                </a>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <?php }?>
-                                              
+                                                    <?php } ?>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -502,7 +509,8 @@
                                             <div class="js-product-list-top ">
                                                 <div class="d-flex justify-content-around row">
                                                     <div class="showing col col-xs-12">
-                                                        <span>Đang hiển thị <?php $fromP = ($data['currentPage'])*$data['perPage']; echo ($fromP-5).' - '.$fromP?> trong tổng số <?=$data['numOfSP']?> sản phẩm</span>
+                                                        <span>Đang hiển thị <?php $fromP = ($data['currentPage']) * $data['perPage'];
+                                                                            echo ($fromP - 5) . ' - ' . $fromP ?> trong tổng số <?= $data['numOfSP'] ?> sản phẩm</span>
                                                     </div>
                                                     <div class="page-list col col-xs-12">
                                                         <ul>
@@ -510,33 +518,33 @@
                                                             $numOfPage = $data['numOfPage'];
                                                             ?>
                                                             <li>
-                                                                <a rel="prev" <?php if($currentPage != 1) { ?> href="<?=$data['url'].($data['currentPage']-1)?>" <?php }?> class="previous disabled js-search-link">
+                                                                <a rel="prev" <?php if ($currentPage != 1) { ?> href="<?= $data['url'] . ($data['currentPage'] - 1) ?>" <?php } ?> class="previous disabled js-search-link">
                                                                     Trang trước
                                                                 </a>
                                                             </li>
-                                                            
-                                                            <?php if (($currentPage - 1) >0) {?>
-                                                            <li>
-                                                                <a rel="nofollow" href="<?=$data['url'].($currentPage - 1)?>" class="disabled js-search-link">
-                                                                    <?=$currentPage-1?>
-                                                                </a>
-                                                            </li>
-                                                            <?php }?>
+
+                                                            <?php if (($currentPage - 1) > 0) { ?>
+                                                                <li>
+                                                                    <a rel="nofollow" href="<?= $data['url'] . ($currentPage - 1) ?>" class="disabled js-search-link">
+                                                                        <?= $currentPage - 1 ?>
+                                                                    </a>
+                                                                </li>
+                                                            <?php } ?>
                                                             <li class='current active'>
                                                                 <a rel="nofollow" class='current active' href="#" class="disabled js-search-link">
                                                                     <?= $currentPage ?>
                                                                 </a>
                                                             </li>
-                                                            <?php if (($currentPage + 1) <= $numOfPage) {?>
-                                                            <li>
-                                                                <a rel="nofollow" href="<?=$data['url'].($currentPage + 1)?>" class="disabled js-search-link">
-                                                                    <?=$currentPage+1?>
-                                                                </a>
-                                                            </li>
-                                                            <?php }?>
+                                                            <?php if (($currentPage + 1) <= $numOfPage) { ?>
+                                                                <li>
+                                                                    <a rel="nofollow" href="<?= $data['url'] . ($currentPage + 1) ?>" class="disabled js-search-link">
+                                                                        <?= $currentPage + 1 ?>
+                                                                    </a>
+                                                                </li>
+                                                            <?php } ?>
 
                                                             <li>
-                                                                <a rel="next" <?php if($currentPage != $numOfPage) { ?> href="<?=$data['url'].($data['currentPage']+1)?>" <?php }?> class="next disabled js-search-link">
+                                                                <a rel="next" <?php if ($currentPage != $numOfPage) { ?> href="<?= $data['url'] . ($data['currentPage'] + 1) ?>" <?php } ?> class="next disabled js-search-link">
                                                                     Trang sau
                                                                 </a>
                                                             </li>
@@ -558,13 +566,13 @@
     </div>
 
     <!-- footer -->
-    <?php require_once "./mvc/views/inc/footer.php"?>
+    <?php require_once "./mvc/views/inc/footer.php" ?>
 
     <?php require_once "./mvc/views/inc/mobile-menu.php" ?>
-   
+
 
     <!-- Page Loader -->
-        <!-- <div id="page-preloader">
+    <!-- <div id="page-preloader">
         <div class="page-loading">
             <div class="dot"></div>
             <div class="dot"></div>
@@ -575,20 +583,21 @@
     </div> -->
 
     <!-- Vendor JS -->
-    <script src="<?=STATIC_URL?>libs/jquery/jquery.min.js"></script>
-    <script src="<?=STATIC_URL?>libs/popper/popper.min.js"></script>
-    <script src="<?=STATIC_URL?>libs/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?=STATIC_URL?>libs/nivo-slider/js/jquery.nivo.slider.js"></script>
-    <script src="<?=STATIC_URL?>libs/owl-carousel/owl.carousel.min.js"></script>
-    <script src="<?=STATIC_URL?>libs/slider-range/js/tmpl.js"></script>
-    <script src="<?=STATIC_URL?>libs/slider-range/js/jquery.dependClass-0.1.js"></script>
-    <script src="<?=STATIC_URL?>libs/slider-range/js/draggable-0.1.js"></script>
-    <script src="<?=STATIC_URL?>libs/slider-range/js/jquery.slider.js"></script>
+    <script src="<?= STATIC_URL ?>libs/jquery/jquery.min.js"></script>
+    <script src="<?= STATIC_URL ?>libs/popper/popper.min.js"></script>
+    <script src="<?= STATIC_URL ?>libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?= STATIC_URL ?>libs/nivo-slider/js/jquery.nivo.slider.js"></script>
+    <script src="<?= STATIC_URL ?>libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="<?= STATIC_URL ?>libs/slider-range/js/tmpl.js"></script>
+    <script src="<?= STATIC_URL ?>libs/slider-range/js/jquery.dependClass-0.1.js"></script>
+    <script src="<?= STATIC_URL ?>libs/slider-range/js/draggable-0.1.js"></script>
+    <script src="<?= STATIC_URL ?>libs/slider-range/js/jquery.slider.js"></script>
 
     <!-- Template JS -->
-    <script src="<?=STATIC_URL?>js/theme.js"></script>
+    <script src="<?= STATIC_URL ?>js/theme.js"></script>
 </body>
 
 
 <!-- product-grid-sidebar-left10:55-->
+
 </html>
