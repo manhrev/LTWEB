@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 26, 2022 lúc 06:20 PM
+-- Thời gian đã tạo: Th4 27, 2022 lúc 05:50 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -63,8 +63,10 @@ CREATE TABLE `category_details` (
 INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
 ('giuong', 'giuong-go-soi'),
 ('giuong', 'giuong-pallet'),
+('tu-bep', 'giuong-go-soi'),
 ('tu-bep', 'tu-bep-go'),
 ('tu-bep', 'tu-bep-melamine'),
+('tu-cau-thang', 'giuong-go-soi'),
 ('tu-cau-thang', 'tu-cau-thang-go'),
 ('tu-cau-thang', 'tu-cau-thang-nhom'),
 ('tu-quan-ao', 'tu-quan-ao-ba-canh'),
@@ -96,9 +98,9 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `date_created`, `view_count`) VALUES
-('giuong-go-soi', 'giường gỗ sồi', '300000', 'https://i.imgur.com/hndkEEX.jpg, https://i.imgur.com/ZwnwiUb.jpg', 'agsdhfgdsahgfdshifs', 'giường, giường gỗ sồi, gỗ, sồi, gỗ sồi', '2022-04-26', 100),
+('giuong-go-soi', 'giường gỗ sồi', '300000', 'https://i.imgur.com/hndkEEX.jpg, https://i.imgur.com/ZwnwiUb.jpg', 'agsdhfgdsahgfdshifs', 'giường, giường gỗ sồi, gỗ, sồi, gỗ sồi', '2022-04-27', 100),
 ('giuong-pallet', 'giường pallet', '10000', 'https://i.imgur.com/j3b9h8y.jpg, https://i.imgur.com/k3VhXAr.jpg', 'sahdjsahdjhasjdhsajhdjash', 'giường, pallet, giường pallet', '2022-04-26', 0),
-('tu-bep-go', 'tủ bếp gỗ', '0', 'https://i.imgur.com/aV6rx6D.jpg, https://i.imgur.com/P8cTJuP.jpg', 'Tủ bếp gỗ sieeu caaps vip pro', 'tủ gỗ, tủ, gỗ', '2022-04-26', 0),
+('tu-bep-go', 'tủ bếp gỗ', '0', 'https://i.imgur.com/aV6rx6D.jpg, https://i.imgur.com/P8cTJuP.jpg', 'Tủ bếp gỗ sieeu caaps vip pro', 'tủ gỗ, tủ, gỗ', '2021-08-27', 0),
 ('tu-bep-melamine', 'tủ bếp melamine', '5000000', 'https://i.imgur.com/70K4lfO.jpg, https://i.imgur.com/6mWhNSa.jpg', 'Tủ bếp melamine loại xịn ', 'melamine, tủ bếp, bếp, tủ', '2022-04-26', 0),
 ('tu-cau-thang-go', 'tủ càu thang gỗ', '0', 'https://i.imgur.com/1kwebb8.jpg, https://i.imgur.com/PiOOTew.jpg', 'sjfdhjdhfdhskfhsd', 'tủ,tủ cầu thang, gỗ, tủ cầu thang gỗ', '2022-04-26', 90),
 ('tu-cau-thang-nhom', 'tủ cầu thang nhôm', '0', 'https://i.imgur.com/kGrBtB4.jpg, https://i.imgur.com/23qSmwk.jpg', 'hdsjghsdhhfdshgkdh', 'tủ cầu thang, tủ, tủ cầu thang nhôm', '2022-04-26', 70),
