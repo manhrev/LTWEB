@@ -15,10 +15,21 @@ class SanPhamModel extends DB {
     //Get product via url
     public function GetSanPham($url)
     {
-        $query  = "select pd.url, pd.name, pd.price, pd.images, pd.description, pd.tag, pd.date_created, pd.view_count, ct.name as category_name from product as pd inner join category_details as ct_dt on pd.url=ct_dt.product_url inner join category as ct on ct_dt.category_url= ct.url where 'giuong-go-soi'= pd.url;";
+        $query  = " select * from product where '$url'= product.url";
         $result = $this ->con -> query($query);
         
         $resultArray[]= mysqli_fetch_array($result, MYSQLI_ASSOC);
+        #Get product categorys via url product
+
+        $query1  = " SELECT ct.name FROM category as ct INNER JOIN category_details as ct_dt ON ct.url=ct_dt.category_url INNER JOIN product as pd ON pd.url=ct_dt.product_url WHERE pd.url= 'giuong-go-soi' ";
+
+        $result1 = $this ->con -> query($query1);
+        while ($item = mysqli_fetch_array($result1, MYSQLI_ASSOC))
+        {
+            $CateNameArray[] = $item;
+        }
+        array_push($resultArray, $CateNameArray);
+
         return $resultArray;
     }
     // used for both BoLoc and SanPhamNoiBat
