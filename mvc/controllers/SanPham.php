@@ -128,6 +128,10 @@ class SanPham extends Controller{
         $dmmodel = $this->model('DanhMucModel');
         $SPlienquan = $dmmodel->GetSPDanhMuc($arr[1][0]['url']);
         $SPlienquan = array_slice($SPlienquan, 0, 3);
+        foreach ($SPlienquan as $key=>$arra) {
+            if ($arra['name'] == $arr[0]['name'])
+                unset($SPlienquan[$key]);
+        }
         
         //all tags (max 12) //get random 11 tags
         $tagss = $model->GetAllTag();
