@@ -22,7 +22,7 @@ class SanPhamModel extends DB {
         $resultArray[]= mysqli_fetch_array($result, MYSQLI_ASSOC);
         #Get product categorys via url product
 
-        $query1  = " SELECT ct.name FROM category as ct INNER JOIN category_details as ct_dt ON ct.url=ct_dt.category_url INNER JOIN product as pd ON pd.url=ct_dt.product_url WHERE pd.url= '$url' ";
+        $query1  = " SELECT ct.name, ct.url FROM category as ct INNER JOIN category_details as ct_dt ON ct.url=ct_dt.category_url INNER JOIN product as pd ON pd.url=ct_dt.product_url WHERE pd.url= '$url' ";
 
         $result1 = $this ->con -> query($query1);
         while ($item = mysqli_fetch_array($result1, MYSQLI_ASSOC))
