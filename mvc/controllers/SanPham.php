@@ -93,9 +93,11 @@ class SanPham extends Controller{
         $SPlienquan = array_slice($SPlienquan, 0, 3);
         
         //all tags (max 12) //get random 11 tags
-        $tags = $model->GetAllTag();
-        // $tags = array_rand($tags, min(11, count($tags)));
-        
+        $tagss = $model->GetAllTag();
+        $rand = array_rand($tagss, min(11, count($tagss)));
+        foreach ($rand as $index) {
+            $tags[] = $tagss[$index];
+        }
 
 
         $this->view('product-detail', [
