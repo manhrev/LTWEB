@@ -6,7 +6,6 @@ class TrangChu extends Controller{
         $model= $this->model('SanPhamModel');
 
         //category : url, name, image
-        $category =$model->GetCategory();
         //sanphamnoibat: url, name, images, price, description, view_count
         $sanphamnoibat = $model->BanChayNhat();
         
@@ -17,7 +16,6 @@ class TrangChu extends Controller{
 
         $this->view('home', [
             'view' => 0,
-            "categories" => $category,
             "SPnoibat" => $sanphamnoibat,
             'categories' => $categories,
         ]);
