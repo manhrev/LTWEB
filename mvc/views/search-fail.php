@@ -57,21 +57,13 @@
                             <div class="container no-index">
                                 <div class="breadcrumb">
                                     <ol>
-                                        <li>
-                                            <a href="#">
-                                                <span>Home</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Living Room</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Sofa</span>
-                                            </a>
-                                        </li>
+                                        <?php foreach ($data['path'] as $path) { ?>
+                                            <li>
+                                                <a href="<?= $path['url'] ?>">
+                                                    <span><?= $path['name'] ?></span>
+                                                </a>
+                                            </li>
+                                        <?php } ?>
                                     </ol>
                                 </div>
                             </div>
@@ -96,7 +88,7 @@
                                         <h1><?= $data['pageTitle'] ?></h1>
                                         <p>Bạn hãy thử chọn từ khóa khác thích hợp, hoặc chọn theo danh mục bên trái.</p>
 
-                                        
+
                                     </div>
 
                                     <!-- end col-md-9-1 -->

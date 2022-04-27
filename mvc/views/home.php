@@ -671,7 +671,7 @@
                             </div>
 
                             <div class="content-showmore text-center has-showmore" >
-                                <a href="#" type="button" class="btn btn-default novShowMore">
+                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat" type="button" class="btn btn-default novShowMore">
                                     <span>Xem thêm sản phẩm</span>
                                 </a>
                             </div>

@@ -24,7 +24,17 @@ class TimKiem extends Controller{
                 'view' => 2,
                 'pageTitle' => 'Không có kết quả tìm kiếm cho'.' "'.$tag.'"!',
                 'categories' => $categories,
-                'tags' => $tags
+                'tags' => $tags,
+                'path' => [
+                    0 => [
+                        'name'=>'Tìm kiếm',
+                        'url' => "#"
+                    ],
+                    1 => [
+                        'name'=> '"'.$tag.'"',
+                        'url' => "#"
+                    ]
+                ]
             ]);
         }
         // print_r($allSP);
@@ -57,7 +67,17 @@ class TimKiem extends Controller{
             'perPage' => self::PER_PAGE,
             'url' => BASE_URL.'tim-kiem/'.$tag.'/',
             'categories' => $categories,
-            'tags' => $tags
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Tìm kiếm',
+                    'url' => "#"
+                ],
+                1 => [
+                    'name'=> '"'.$tag.'"',
+                    'url' => "#"
+                ]
+            ]
         ]);
     }
     

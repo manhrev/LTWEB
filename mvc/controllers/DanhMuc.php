@@ -43,7 +43,21 @@ class DanhMuc extends Controller{
             'perPage' => self::PER_PAGE,
             'url' => BASE_URL.'danh-muc/'.$tenDanhMucUrl.'/',
             'categories' => $categories,
-            'tags' => $tags
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> 'Danh mục sản phẩm',
+                    'url' => '#',
+                ],
+                2 => [
+                    'name' => ucfirst($tenDanhMuc),
+                    'url' => BASE_URL.'danh-muc/'.$tenDanhMucUrl
+                ]
+            ]
         ]);
     }
     

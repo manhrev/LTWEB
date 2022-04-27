@@ -57,21 +57,13 @@
                             <div class="container no-index">
                                 <div class="breadcrumb">
                                     <ol>
-                                        <li>
-                                            <a href="#">
-                                                <span>Home</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Living Room</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Sofa</span>
-                                            </a>
-                                        </li>
+                                        <?php foreach ($data['path'] as $path) { ?>
+                                            <li>
+                                                <a href="<?= $path['url'] ?>">
+                                                    <span><?= $path['name'] ?></span>
+                                                </a>
+                                            </li>
+                                        <?php } ?>
                                     </ol>
                                 </div>
                             </div>
@@ -171,7 +163,7 @@
                                                     <div class="detail-description">
                                                         <div class="price-del">
                                                             <span style="font-size: 20px">Giá: </span>
-                                                            <span class="price"><?=$sp['price']!=0?number_format($sp['price']).'đ':'Liên hệ'?></span>
+                                                            <span class="price"><?= $sp['price'] != 0 ? number_format($sp['price']) . 'đ' : 'Liên hệ' ?></span>
                                                             <span class="float-right">
                                                                 <span class="availb">Tình trạng: </span>
                                                                 <span class="check">
@@ -240,7 +232,7 @@
                                                         </div>
                                                         <div class="d-flex2 has-border">
                                                             <div class="btn-group">
-                                                                <a >
+                                                                <a>
                                                                     <i class="zmdi zmdi-share"></i>
                                                                     <span>Chia sẻ</span>
                                                                 </a>
@@ -248,7 +240,7 @@
                                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
                                                                     <span>Gửi tặng bạn bè</span>
                                                                 </a>
-                                                     
+
                                                             </div>
                                                         </div>
                                                         <div class="rating-comment has-border d-flex">
@@ -256,11 +248,11 @@
                                                                 <span>ĐÁNH GIÁ:</span>
                                                                 <div class="rating">
                                                                     <div class="star-content">
-                                                                        <div class="star" ></div>
-                                                                        <div class="star" ></div>
-                                                                        <div class="star" ></div>
-                                                                        <div class="star" ></div>
-                                                                        <div class="star" ></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
+                                                                        <div class="star"></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -278,25 +270,25 @@
                                                             </div> -->
                                                         </div>
                                                         <div class="content">
-                                                            
+
                                                             <p>Danh mục :
                                                                 <span class="content2">
-                                                                    <?php 
-                                                                        $cates = $data['SP'][1];
-                                                                        foreach ($cates as $key=>$cate) {?>
-                                                                            <a ><?=$cate['name']?></a><?=$key!=(count($cates)-1)?',':''?>
-                                                                        <?php }?>
-                                                        
+                                                                    <?php
+                                                                    $cates = $data['SP'][1];
+                                                                    foreach ($cates as $key => $cate) { ?>
+                                                                        <a><?= $cate['name'] ?></a><?= $key != (count($cates) - 1) ? ',' : '' ?>
+                                                                    <?php } ?>
+
                                                                 </span>
                                                             </p>
                                                             <p>Tags :
                                                                 <span class="content2">
-                                                                    <?php 
-                                                                        $tags = explode(',',$sp['tag']);
-                                                                        foreach ($tags as $index=>$tag) {
+                                                                    <?php
+                                                                    $tags = explode(',', $sp['tag']);
+                                                                    foreach ($tags as $index => $tag) {
                                                                     ?>
-                                                                        <a ><?=$tag?></a><?=$index!=count($tags)-1?',':''?>
-                                                                    <?php }?>
+                                                                        <a><?= $tag ?></a><?= $index != count($tags) - 1 ? ',' : '' ?>
+                                                                    <?php } ?>
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -320,9 +312,9 @@
                                                 <div class="tab-content">
                                                     <div id="description" class="tab-pane fade in active show">
                                                         <p>
-                                                            <?=$sp['description']?>     
-                                                       </p>
-                                                        
+                                                            <?= $sp['description'] ?>
+                                                        </p>
+
                                                     </div>
 
                                                     <!-- <div id="review" class="tab-pane fade">

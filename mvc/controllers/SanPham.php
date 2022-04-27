@@ -45,7 +45,17 @@ class SanPham extends Controller{
             'perPage' => self::PER_PAGE,
             'url' => BASE_URL.'san-pham/bo-loc/'.$filter.'/',
             'categories' => $categories,
-            'tags' => $tags
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> $filter=='moi-nhat'?'Sản phẩm mới nhất':'Sản phẩm bán chạy',
+                    'url' => BASE_URL.'san-pham/bo-loc/'.$filter
+                ]
+            ]
         ]);
     }
 
@@ -87,7 +97,17 @@ class SanPham extends Controller{
             'perPage' => self::PER_PAGE,
             'url' => BASE_URL.'san-pham/tat-ca-san-pham/',
             'categories' => $categories,
-            'tags' => $tags
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> 'Tất cả sản phẩm',
+                    'url' => BASE_URL.'san-pham/tat-ca-san-pham'
+                ]
+            ]
         ]);
     }
 
@@ -123,7 +143,17 @@ class SanPham extends Controller{
             'categories' => $categories,
             'tags' => $tags,
             'banchay' => $SPbanchay,
-            'lienquan' => $SPlienquan
+            'lienquan' => $SPlienquan,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> ucfirst($arr[0]['name']),
+                    'url' => BASE_URL.'san-pham'.$url
+                ]
+            ]
         ]);
     }
 }

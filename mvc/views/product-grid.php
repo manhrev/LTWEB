@@ -57,21 +57,13 @@
                             <div class="container no-index">
                                 <div class="breadcrumb">
                                     <ol>
-                                        <li>
-                                            <a href="#">
-                                                <span>Home</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Living Room</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <span>Sofa</span>
-                                            </a>
-                                        </li>
+                                        <?php foreach ($data['path'] as $path) {?>
+                                            <li>
+                                                <a href="<?=$path['url']?>">
+                                                    <span><?=$path['name']?></span>
+                                                </a>
+                                            </li>
+                                        <?php }?>
                                     </ol>
                                 </div>
                             </div>
