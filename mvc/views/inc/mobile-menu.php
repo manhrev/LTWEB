@@ -583,7 +583,7 @@
                             </div>
                         </li>
                         <li class="item has-sub">
-                            <a href="contact.html" title="Contact us">
+                            <a href="<?=BASE_URL?>lien-he" title="Contact us">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>Liên hệ</a>
                         </li>
                     </ul>

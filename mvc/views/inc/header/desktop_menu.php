@@ -87,7 +87,7 @@
             </div>
         </li>
         <li <?=$data['view']==3?'class="nav-link"':''?> >
-            <a href="contact.html" class="parent">Liên hệ</a>
+            <a href="<?=BASE_URL.'lien-he'?>" class="parent">Liên hệ</a>
         </li>
     </ul>
 </div>

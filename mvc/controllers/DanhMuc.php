@@ -1,11 +1,50 @@
 <?php
 
 class DanhMuc extends Controller{
-    function GetSPDanhMuc($tenDanhMuc, $page = 1) {
-        $model= $this->model('DanhMucModel');
-        $arr =$model->GetSPDanhMuc($tenDanhMuc);
-        //$arr:url,name, images, price, description (Các sản phẩm trong danh mục)
-        print_r($arr); 
+    const PER_PAGE = 6;
+
+    function GetSPDanhMuc($tenDanhMucUrl, $page = 1) {
+        $model= $this->model('SanPhamModel');
+        $dmmodel = $this->model('DanhMucModel');
+
+        $allSP=$dmmodel->GetSPDanhMuc($tenDanhMucUrl);
+
+        $tenDanhMuc =  $dmmodel->GetTenDanhMuc($tenDanhMucUrl)['name'];
+        if (count($allSP) == 0) {
+            header("Location: ".BASE_URL.'Error');
+        }
+        // print_r($allSP);
+        //test
+        // $allSP = array_merge($allSP, $allSP);
+        
+        $sliced_data = array_slice($allSP, ($page-1)*self::PER_PAGE, self::PER_PAGE);
+
+        $number_of_pages = ceil(count($allSP)/self::PER_PAGE);
+        
+        if ($page<=0 || $page>$number_of_pages) {
+            header("Location: ".BASE_URL."Error");
+        }
+        $categories = $model->GetCategory();
+
+        //all tags (max 12) //get random 11 tags
+        $tagss = $model->GetAllTag();
+        $rand = array_rand($tagss, min(11, count($tagss)));
+        foreach ($rand as $index) {
+            $tags[] = $tagss[$index];
+        }
+
+        $this->view('product-grid', [
+            'view' => 2,
+            'pageTitle' => 'Danh mục: '.ucfirst($tenDanhMuc),
+            'numOfSP' => count($allSP),
+            'allSP' => $sliced_data,
+            'currentPage' => $page,
+            'numOfPage' => $number_of_pages,
+            'perPage' => self::PER_PAGE,
+            'url' => BASE_URL.'danh-muc/'.$tenDanhMucUrl.'/',
+            'categories' => $categories,
+            'tags' => $tags
+        ]);
     }
     
 }
