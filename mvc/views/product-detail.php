@@ -82,59 +82,48 @@
                                     <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
 
                                         <!-- category -->
-                                        <?php require_once "./mvc/views/inc/main/categories.php"?>
+                                        <?php require_once "./mvc/views/inc/main/categories.php" ?>
 
                                         <!-- best seller -->
-                                        <?php require_once "./mvc/views/inc/main/bestseller.php"?>
+                                        <?php require_once "./mvc/views/inc/main/bestseller.php" ?>
 
                                         <!-- product tag -->
-                                        <?php require_once "./mvc/views/inc/main/tags.php"?>
+                                        <?php require_once "./mvc/views/inc/main/tags.php" ?>
                                     </div>
+
+                                    <?php $sp = $data['SP'][0] ?>
                                     <div class="col-sm-8 col-lg-9 col-md-9">
                                         <div class="main-product-detail">
-                                            <h2>Lorem ipsum dolor</h2>
+                                            <h2 style="text-transform: uppercase"><?= $sp['name'] ?></h2>
                                             <div class="product-single row">
                                                 <div class="product-detail col-xs-12 col-md-5 col-sm-5">
                                                     <div class="page-content" id="content">
                                                         <div class="images-container">
                                                             <div class="js-qv-mask mask tab-content border">
-                                                                <div id="item1" class="tab-pane fade active in show">
-                                                                    <img src="<?= STATIC_URL ?>img/product/1.jpg" alt="img">
-                                                                </div>
-                                                                <div id="item2" class="tab-pane fade">
-                                                                    <img src="<?= STATIC_URL ?>img/product/2.jpg" alt="img">
-                                                                </div>
-                                                                <div id="item3" class="tab-pane fade">
-                                                                    <img src="<?= STATIC_URL ?>img/product/3.jpg" alt="img">
-                                                                </div>
-                                                                <div id="item4" class="tab-pane fade">
-                                                                    <img src="<?= STATIC_URL ?>img/product/5.jpg" alt="img">
-                                                                </div>
+                                                                <?php
+                                                                $images = $images = explode(',', $sp['images']);
+                                                                foreach ($images as $key => $image) {
+                                                                ?>
+                                                                    <div id="item<?= $key + 1 ?>" class="tab-pane fade <?= $key == 0 ? "active in show" : '' ?>">
+                                                                        <img src="<?= $image ?>" alt="img">
+                                                                    </div>
+                                                                <?php } ?>
+
                                                                 <div class="layer hidden-sm-down" data-toggle="modal" data-target="#product-modal">
                                                                     <i class="fa fa-expand"></i>
                                                                 </div>
                                                             </div>
                                                             <ul class="product-tab nav nav-tabs d-flex">
-                                                                <li class="active col">
-                                                                    <a href="#item1" data-toggle="tab" aria-expanded="true" class="active show">
-                                                                        <img src="<?= STATIC_URL ?>img/product/1.jpg" alt="img">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="col">
-                                                                    <a href="#item2" data-toggle="tab">
-                                                                        <img src="<?= STATIC_URL ?>img/product/2.jpg" alt="img">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="col">
-                                                                    <a href="#item3" data-toggle="tab">
-                                                                        <img src="<?= STATIC_URL ?>img/product/3.jpg" alt="img">
-                                                                    </a>
-                                                                </li>
-                                                                <li class="col">
-                                                                    <a href="#item4" data-toggle="tab">
-                                                                        <img src="<?= STATIC_URL ?>img/product/5.jpg" alt="img">
-                                                                    </a>
-                                                                </li>
+
+                                                                <?php foreach ($images as $key => $image) { ?>
+                                                                    <li class="<?= $key == 0 ? 'active' : '' ?> col">
+                                                                        <a href="#item<?= $key + 1 ?>" data-toggle="tab" <?php if ($key == 0) { ?>aria-expanded="true" class="active show" <?php } ?>>
+                                                                            <img src="<?= $image ?>" alt="img">
+                                                                        </a>
+                                                                    </li>
+                                                                <?php } ?>
+
+
                                                             </ul>
                                                             <div class="modal fade" id="product-modal" role="dialog">
                                                                 <div class="modal-dialog">
@@ -147,40 +136,25 @@
                                                                                     <div>
                                                                                         <div class="images-container">
                                                                                             <div class="js-qv-mask mask tab-content">
-                                                                                                <div id="modal-item1" class="tab-pane fade active in show">
-                                                                                                    <img src="<?= STATIC_URL ?>img/product/1.jpg" alt="img">
-                                                                                                </div>
-                                                                                                <div id="modal-item2" class="tab-pane fade">
-                                                                                                    <img src="<?= STATIC_URL ?>img/product/2.jpg" alt="img">
-                                                                                                </div>
-                                                                                                <div id="modal-item3" class="tab-pane fade">
-                                                                                                    <img src="<?= STATIC_URL ?>img/product/3.jpg" alt="img">
-                                                                                                </div>
-                                                                                                <div id="modal-item4" class="tab-pane fade">
-                                                                                                    <img src="<?= STATIC_URL ?>img/product/5.jpg" alt="img">
-                                                                                                </div>
+
+                                                                                                <?php foreach ($images as $key => $image) { ?>
+                                                                                                    <div id="modal-item<?= $key + 1 ?>" class="tab-pane fade <?= $key == 0 ? 'active in show' : '' ?>">
+                                                                                                        <img src="<?= $image ?>" alt="img">
+                                                                                                    </div>
+                                                                                                <?php } ?>
+
                                                                                             </div>
                                                                                             <ul class="product-tab nav nav-tabs">
-                                                                                                <li class="active">
-                                                                                                    <a href="#modal-item1" data-toggle="tab" class=" active show">
-                                                                                                        <img src="<?= STATIC_URL ?>img/product/1.jpg" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item2" data-toggle="tab">
-                                                                                                        <img src="<?= STATIC_URL ?>img/product/2.jpg" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item3" data-toggle="tab">
-                                                                                                        <img src="<?= STATIC_URL ?>img/product/3.jpg" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
-                                                                                                <li>
-                                                                                                    <a href="#modal-item4" data-toggle="tab">
-                                                                                                        <img src="<?= STATIC_URL ?>img/product/5.jpg" alt="img">
-                                                                                                    </a>
-                                                                                                </li>
+
+                                                                                                <?php foreach ($images as $key => $image) { ?>
+                                                                                                    <li class="<?= $key == 0 ? 'active' : '' ?>">
+                                                                                                        <a href="#modal-item<?= $key + 1 ?>" data-toggle="tab" class="<?= $key == 0 ? 'active show' : '' ?>">
+                                                                                                            <img src="<?= $image ?>" alt="img">
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                <?php } ?>
+
+
                                                                                             </ul>
                                                                                         </div>
                                                                                     </div>
@@ -196,16 +170,16 @@
                                                 <div class="product-info col-xs-12 col-md-7 col-sm-7">
                                                     <div class="detail-description">
                                                         <div class="price-del">
-                                                            <span class="price">£150.00</span>
+                                                            <span style="font-size: 20px">Giá: </span>
+                                                            <span class="price"><?=$sp['price']!=0?number_format($sp['price']).'đ':'Liên hệ'?></span>
                                                             <span class="float-right">
-                                                                <span class="availb">Availability: </span>
+                                                                <span class="availb">Tình trạng: </span>
                                                                 <span class="check">
-                                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>IN STOCK</span>
+                                                                    <i class="fa fa-check-square-o" aria-hidden="true"></i>CÒN HÀNG</span>
                                                             </span>
                                                         </div>
-                                                        <p class="description">Proin gravida nibh vel velit auctor aliquet. Aenean lorem quis bibendum
-                                                            auctor, nisi elit consequat etiam non auctor.</p>
-                                                        <div class="option has-border d-lg-flex size-color">
+                                                        <p class="description">Sản phẩm được miễn phí vận chuyển</p>
+                                                        <!-- <div class="option has-border d-lg-flex size-color">
                                                             <div class="size">
                                                                 <span class="size">size :</span>
                                                                 <select>
@@ -224,7 +198,7 @@
                                                                 <span class="brown"></span>
                                                                 <span class="red"></span>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="has-border cart-area">
                                                             <div class="product-quantity">
                                                                 <div class="qty">
@@ -243,13 +217,19 @@
                                                                             </span>
                                                                         </div>
                                                                         <span class="add">
-                                                                            <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
-                                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                <span>Add to cart</span>
-                                                                            </button>
-                                                                            <a class="addToWishlist" href="#">
-                                                                                <i class="fa fa-heart" aria-hidden="true"></i>
-                                                                            </a>
+                                                                            <div style="display: flex; align-items: stretch">
+                                                                                <div style="display: flex; align-items: center">
+                                                                                    <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
+                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                        <span>Thêm vào giỏ hàng</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div style="display: flex; align-items: center">
+                                                                                    <a class="addToWishlist" href="#">
+                                                                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
                                                                         </span>
                                                                     </div>
                                                                 </div>
@@ -260,37 +240,34 @@
                                                         </div>
                                                         <div class="d-flex2 has-border">
                                                             <div class="btn-group">
-                                                                <a href="#">
+                                                                <a >
                                                                     <i class="zmdi zmdi-share"></i>
-                                                                    <span>Share</span>
+                                                                    <span>Chia sẻ</span>
                                                                 </a>
-                                                                <a href="#" class="email">
+                                                                <a class="email">
                                                                     <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                                    <span>SEN TO A FRIEND</span>
+                                                                    <span>Gửi tặng bạn bè</span>
                                                                 </a>
-                                                                <a href="#" class="print">
-                                                                    <i class="zmdi zmdi-print"></i>
-                                                                    <span>Print</span>
-                                                                </a>
+                                                     
                                                             </div>
                                                         </div>
                                                         <div class="rating-comment has-border d-flex">
                                                             <div class="review-description d-flex">
-                                                                <span>REVIEW :</span>
+                                                                <span>ĐÁNH GIÁ:</span>
                                                                 <div class="rating">
                                                                     <div class="star-content">
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
-                                                                        <div class="star"></div>
+                                                                        <div class="star" ></div>
+                                                                        <div class="star" ></div>
+                                                                        <div class="star" ></div>
+                                                                        <div class="star" ></div>
+                                                                        <div class="star" ></div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="read after-has-border">
+                                                            <!-- <div class="read after-has-border">
                                                                 <a href="#review">
                                                                     <i class="fa fa-commenting-o color" aria-hidden="true"></i>
-                                                                    <span>READ REVIEWS (3)</span>
+                                                                    <span>Xem bình </span>
                                                                 </a>
                                                             </div>
                                                             <div class="apen after-has-border">
@@ -298,28 +275,28 @@
                                                                     <i class="fa fa-pencil color" aria-hidden="true"></i>
                                                                     <span>WRITE A REVIEW</span>
                                                                 </a>
-                                                            </div>
+                                                            </div> -->
                                                         </div>
                                                         <div class="content">
-                                                            <p>SKU :
+                                                            
+                                                            <p>Danh mục :
                                                                 <span class="content2">
-                                                                    <a href="#">e-02154</a>
+                                                                    <?php 
+                                                                        $cates = $data['SP'][1];
+                                                                        foreach ($cates as $key=>$cate) {?>
+                                                                            <a ><?=$cate['name']?></a><?=$key!=(count($cates)-1)?',':''?>
+                                                                        <?php }?>
+                                                        
                                                                 </span>
                                                             </p>
-                                                            <p>Categories :
+                                                            <p>Tags :
                                                                 <span class="content2">
-                                                                    <a href="#">Clothing</a>,
-                                                                    <a href="#">Men's Jackets</a>
-                                                                </span>
-                                                            </p>
-                                                            <p>tags :
-                                                                <span class="content2">
-                                                                    <a href="#">Jacket</a>,
-                                                                    <a href="#">Overcoat</a>,
-                                                                    <a href="#">Luxury</a>,
-                                                                    <a href="#">men</a>,
-                                                                    <a href="#">summer</a>,
-                                                                    <a href="#">autumn</a>
+                                                                    <?php 
+                                                                        $tags = explode(',',$sp['tag']);
+                                                                        foreach ($tags as $index=>$tag) {
+                                                                    ?>
+                                                                        <a ><?=$tag?></a><?=$index!=count($tags)-1?',':''?>
+                                                                    <?php }?>
                                                                 </span>
                                                             </p>
                                                         </div>
@@ -330,31 +307,25 @@
                                             <div class="review">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active">
-                                                        <a data-toggle="tab" href="#description" class="active show">Description</a>
+                                                        <a data-toggle="tab" href="#description" class="active show">Mô tả sản phẩm</a>
                                                     </li>
-                                                    <li>
+                                                    <!-- <li>
                                                         <a data-toggle="tab" href="#tag">Product Tags</a>
                                                     </li>
                                                     <li>
                                                         <a data-toggle="tab" href="#review">Reviews (2)</a>
-                                                    </li>
+                                                    </li> -->
                                                 </ul>
 
                                                 <div class="tab-content">
                                                     <div id="description" class="tab-pane fade in active show">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                                                            ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.
-                                                        </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                                            eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem
-                                                            ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                            tempor incididunt ut labore et dolore magna aliqua.
-                                                        </p>
+                                                        <p>
+                                                            <?=$sp['description']?>     
+                                                       </p>
+                                                        
                                                     </div>
 
-                                                    <div id="review" class="tab-pane fade">
+                                                    <!-- <div id="review" class="tab-pane fade">
                                                         <div class="spr-form">
                                                             <div class="user-comment">
                                                                 <div class="spr-review">
@@ -466,10 +437,10 @@
                                                             ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                                             tempor incididunt ut labore et dolore magna aliqua.
                                                         </p>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
-                                            <?php require_once "./mvc/views/inc/main/related.php"?>
+                                            <?php require_once "./mvc/views/inc/main/related.php" ?>
                                         </div>
                                     </div>
                                 </div>
