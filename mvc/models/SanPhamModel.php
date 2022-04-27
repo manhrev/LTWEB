@@ -82,12 +82,17 @@ class SanPhamModel extends DB {
     }
     public function GetAllTag()
     {
+        $resultArray=[];
+        $resultString='';
         $query = "select tag from product";
         $result = $this -> con -> query($query);
+        $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
         {
-            $resultArray[] = $item;
+                $resultString .= ', ';
+                $resultString .= array_values($item)[0];
         }
+        $resultArray=explode(",",$resultString);
         return $resultArray;
     }
 }
