@@ -89,10 +89,11 @@ class SanPhamModel extends DB {
         $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
         {
-                $resultString .= ', ';
+                $resultString .= ',';
                 $resultString .= array_values($item)[0];
         }
-        $resultArray=explode(",",$resultString);
-        return $resultArray;
+        $resultArray=array_filter(explode(",",$resultString));
+
+        return array_unique($resultArray);
     }
 }
