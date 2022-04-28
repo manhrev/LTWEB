@@ -50,7 +50,7 @@ class QuanLi extends Controller{
                 }
                 $i ++;
             }
-            print_r($categories);
+            
             //khac
             $name = $_POST['name'];
             $price = $_POST['price'];
@@ -101,6 +101,12 @@ class QuanLi extends Controller{
         }
         else {
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                // foreach ($_POST as $key=>$post) {
+                //     echo $key.' '.$post.'<br>';
+                // }
+                // exit();
+
+
                 $i = 0;
                 $count = count($_POST);
                 //categories
@@ -111,7 +117,8 @@ class QuanLi extends Controller{
                     }
                     $i ++;
                 }
-                print_r($categories);
+                // print_r($categories);
+                // exit();
                 //khac
                 $name = $_POST['name'];
                 $price = $_POST['price'];
@@ -120,6 +127,10 @@ class QuanLi extends Controller{
                 $description = $_POST['description'];
                 $tags = $_POST['tags'];
                 $current_url = $_POST['url'];
+
+                // echo $name.'<br>'.$price.'<br>'.$view_count.'<br>'.$images.'<br>'.$description.'<br>'.$tags.'<br>'.$current_url.'<br>';
+                // print_r($categories);
+                // exit();
 
                 $model = $this->model('QuanLiModel');
                 $message = $model->SuaSP($current_url, $name, $price, $images, $description, $tags, $view_count, $categories);
