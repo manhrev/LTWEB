@@ -170,12 +170,7 @@ class QuanLiModel extends DB {
                 $this -> con -> query($deletequery);
 
             }
-            for ($i=0;$i<count($Categorys);$i++)
-            {
-                $query = "INSERT INTO `category_details` (`category_url`, `product_url`) VALUES ('$url', '".$Categorys[$i]."')";
 
-                $this -> con -> query($query);
-            }
             $this ->XoaSP($CurrentUrl);
             return "Cập nhật sản phẩm hoàn tất";
         }
