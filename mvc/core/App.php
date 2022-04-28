@@ -124,10 +124,6 @@ class App{
                 array_push($returnArr, 'LienHe');
                 if (isset($arr[1])) return array('NotFound');
                 break;
-            case 'quan-li':
-                $returnArr = $arr;
-                $returnArr[0] = 'QuanLi';
-                break;
             case 'login':
                 array_push($returnArr, 'Login');
                 if (isset($arr[1])) return array('NotFound');
@@ -135,6 +131,70 @@ class App{
             case 'logout':
                 array_push($returnArr, 'Logout');
                 if (isset($arr[1])) return array('NotFound');
+                break;
+            case 'quan-li':
+                array_push($returnArr, 'QuanLi');
+                if (isset($arr[1])) {
+                    switch ($arr[1]) {
+                        case 'quan-li-san-pham':
+                            array_push($returnArr, 'QuanLiSanPham');
+                            if (isset($arr[2])) {
+                                switch ($arr[2]) {
+                                    case 'them-san-pham':
+                                        $returnArr[1] = 'ThemSanPham';
+                                        //xet tham so
+                                        break;
+                                    case 'chi-tiet':
+                                        $returnArr[1] = 'ChiTietSanPham';
+                                        $returnArr[2] = $arr[3];
+                                        //xet tham so
+                                        break;
+                                    case 'chinh-sua':
+                                        $returnArr[1] = 'ChinhSuaSanPham';
+                                        if (isset($arr[3]))
+                                        $returnArr[2] = $arr[3];
+                                        //xet tham so
+                                        break;
+                                    case 'xoa':
+                                        $returnArr[1] = 'XoaSanPham';
+                                        //xet ts
+                                        break;
+                                    default:
+                                        return array('NotFound');
+                                        break;
+                                }
+                            } 
+                            break;
+                        case 'quan-li-danh-muc':
+                            array_push($returnArr, 'QuanLiDanhMuc');
+                            if (isset($arr[2])) {
+                                switch ($arr[2]) {
+                                    case 'them-danh-muc':
+                                        $returnArr[1] = 'ThemDanhMuc';
+                                        //xet tham so
+                                        break;
+                                    case 'chinh-sua':
+                                        $returnArr[1] = 'ChinhSuaDanhMuc';
+                                        //xet tham so
+                                        break;
+                                    case 'xoa':
+                                        $returnArr[1] = 'XoaDanhMuc';
+                                        //xet ts
+                                        break;
+                                    default:
+                                        return array('NotFound');
+                                        break;
+                                }
+                            } 
+                            break;
+                        default:
+                            return array('NotFound');
+                            break;
+                    }   
+                } 
+                else {
+                    return $returnArr;
+                }
                 break;
             default:
                 return array('NotFound');

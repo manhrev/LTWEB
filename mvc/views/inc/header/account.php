@@ -17,6 +17,12 @@
             <span>Đăng kí</span>
         </a>
     </div>
+    <div>
+        <a class="register" href="<?= BASE_URL ?>quan-li/" rel="nofollow" title="Register Account">
+            <i class="fa fa-list-check"></i>
+            <span>Quản lí</span>
+        </a>
+    </div>
     <!-- <div>
                                     <a class="check-out" href="product-checkout.html" rel="nofollow" title="Checkout">
                                         <i class="fa fa-check" aria-hidden="true"></i>
