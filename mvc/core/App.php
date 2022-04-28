@@ -128,6 +128,14 @@ class App{
                 $returnArr = $arr;
                 $returnArr[0] = 'QuanLi';
                 break;
+            case 'login':
+                array_push($returnArr, 'Login');
+                if (isset($arr[1])) return array('NotFound');
+                break;
+            case 'logout':
+                array_push($returnArr, 'Logout');
+                if (isset($arr[1])) return array('NotFound');
+                break;
             default:
                 return array('NotFound');
                 break;
