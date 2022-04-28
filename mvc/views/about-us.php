@@ -55,13 +55,13 @@
 						<div class="breadcrumb">
 							<ol>
 								<li>
-									<a href="#">
-										<span>Home</span>
+									<a href="<?=BASE_URL?>">
+										<span>Trang chủ</span>
 									</a>
 								</li>
 								<li>
 									<a href="#">
-										<span>About us</span>
+										<span>Đăng nhập</span>
 									</a>
 								</li>
 							</ol>
