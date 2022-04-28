@@ -21,7 +21,7 @@
     <h3 class="mt-5">Các sản phẩm</h3>
     <!-- Modal button -->
     <div class="py-4 text-center">
-      <a class="btn btn-success" href="them-sanpham.html">Thêm sản phẩm
+      <a class="btn btn-success" href="<?=BASE_URL?>/quan-li/quan-li-san-pham/them-san-pham/">Thêm sản phẩm
         mới</a>
     </div>
     <table class="table">
