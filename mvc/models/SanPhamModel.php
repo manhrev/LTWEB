@@ -12,6 +12,21 @@ class SanPhamModel extends DB {
         }
         return $resultArray;
     }
+
+    //Get all sp (moi den cu) + danh muc
+    public function TatCaSanPhamDM()
+    {
+        $query = "select * from product order by date_created DESC";
+        $result = $this -> con -> query($query);
+
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $cate = $this->GetDanhMucSP($item['url']);
+            $item['categories'] = $cate;
+            $resultArray[] = $item;
+        }
+
+        return $resultArray;
+    }
     //Get product via url
     public function GetSanPham($url)
     {
@@ -33,6 +48,19 @@ class SanPhamModel extends DB {
 
         return $resultArray;
     }
+
+    // Get dm 1 sp theo url
+    public function GetDanhMucSP($url) {
+        $query1  = " SELECT ct.name, ct.url FROM category as ct INNER JOIN category_details as ct_dt ON ct.url=ct_dt.category_url INNER JOIN product as pd ON pd.url=ct_dt.product_url WHERE pd.url= '$url' ";
+
+        $result1 = $this ->con -> query($query1);
+        while ($item = mysqli_fetch_array($result1, MYSQLI_ASSOC))
+        {
+            $CateNameArray[] = $item;
+        }
+        return $CateNameArray;
+    }
+
     // used for both BoLoc and SanPhamNoiBat
     public function BanChayNhat()
     {
@@ -55,7 +83,7 @@ class SanPhamModel extends DB {
                 $resultArray=$this -> BanChayNhat();
                 break;
             case 'moi-nhat':
-                $query = "select  url, name, images, price, description, date_created  from product";
+                $query = "select  *  from product";
                 $result = $this -> con -> query($query);
                 while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
                 {
@@ -69,9 +97,9 @@ class SanPhamModel extends DB {
         }
         return $resultArray;
     }
-    public function GetCategory()
+    public function GetCategory($all = true)
     {
-        $query = "select * from category";
+        $query = "select " .($all?' * ':' name, url ') . "from category";
         $result = $this -> con -> query($query);
         
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))
