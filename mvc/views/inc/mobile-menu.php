@@ -525,11 +525,6 @@
                                 <i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a>
 
                         </li>
-                        <li class="item has-sub">
-                
-                            <a href="#" title="Blog">
-                                <i class="fa fa-address-book" aria-hidden="true"></i>Blog</a>
-                        </li>
                         <li class="item group has-sub">
                             <span class="arrow collapsed" data-toggle="collapse" data-target="#page" aria-expanded="false" role="status">
                                 <i class="zmdi zmdi-minus"></i>
@@ -581,6 +576,11 @@
                                     </li>
                                 </ul>
                             </div>
+                        </li>
+                        <li class="item has-sub">
+                
+                            <a href="#" title="Blog">
+                                <i class="fa fa-address-book" aria-hidden="true"></i>Blog</a>
                         </li>
                         <li class="item has-sub">
                             <a href="<?=BASE_URL?>lien-he" title="Contact us">

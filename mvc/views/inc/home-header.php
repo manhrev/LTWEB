@@ -105,11 +105,11 @@
         <div class="margin-0 row">
 
             <!-- menu -->
-            <div class="d-flex icon-menu align-items-center justify-content-center">
+            <!--<div class="d-flex icon-menu align-items-center justify-content-center">
                 <a href="#">
                     <i class="fa fa-bars" aria-hidden="true" id="icon-menu"></i>
                 </a>
-            </div>
+            </div> -->
 
 
             <!-- logo -->
