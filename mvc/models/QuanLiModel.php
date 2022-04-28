@@ -57,7 +57,6 @@ class QuanLiModel extends DB {
         if ($notice== "Thêm danh mục thành công !!!" )
         {
             //Thay đổi các khóa ngoại
-            $arr=[];
             $query = "SELECT * FROM category_details where category_url='$CurrentUrl'";
             $result = $this -> con -> query($query); 
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {    
@@ -72,7 +71,11 @@ class QuanLiModel extends DB {
             $this -> XoaCategory($CurrentUrl);
             return "Cập nhật danh mục hoàn tất";
         }
-        else
+        elseif($notice=='Không thể thêm vì tên danh mục đã tồn tại. Vui lòng chọn tên khác!')
+        {
+            $query ="UPDATE category SET image = $ImageLink WHERE url= '$CurrentUrl'";
+        }
+        else 
         {
             return $notice;
         }
@@ -181,24 +184,6 @@ class QuanLiModel extends DB {
             $query = "UPDATE product SET price='$Price', images='$Images', description= '$Description', tag='$Tag', view_count='$View_count' WHERE  url = '$CurrentUrl'";
             if ($this -> con -> query($query)=== True)
             {
-                $arr=[];
-                $query = "SELECT * FROM category_details where product_url='$CurrentUrl'";
-                $result = $this -> con -> query($query);
-                //Lặp, Chỉnh sửa trên toàn bộ kết quả tìm kiếm được 
-                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
-                {    
-                    //Xóa khóa ngoại cũ
-                    $deletequery = "DELETE FROM category_details WHERE `category_url`= '".$row['category_url']."' AND `product_url` = '$CurrentUrl'";
-    
-                    $this -> con -> query($deletequery);
-    
-                }
-                for ($i=0; $i<count($Categorys); $i++)
-                {
-                    $query = "INSERT INTO `category_details` (`category_url`, `product_url`) VALUES ( '".$Categorys[$i]."', '$url')";
-    
-                    $this -> con -> query($query);
-                }
                 return "Cập nhật sản phẩm hoàn tất";
             }
             else
