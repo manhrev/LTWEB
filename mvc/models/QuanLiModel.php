@@ -124,8 +124,8 @@ class QuanLiModel extends DB {
         else
         {
             //Thêm sản phẩm vào database.
-            $sql = "INSERT INTO product (url, name, images, description, tag, view_count) 
-                    VALUES ('$url','$Name', '$Images','$Description','$Tag','$View_count')";
+            $sql = "INSERT INTO product (url, name, price, images, description, tag, view_count) 
+                    VALUES ('$url','$Name', '$Price', '$Images','$Description','$Tag','$View_count')";
 
             if ($this->con->query($sql) === TRUE)
             {
