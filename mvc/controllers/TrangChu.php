@@ -17,6 +17,7 @@ class TrangChu extends Controller{
         //get random 6 categories for homepage banner
         $rand = array_rand($categories, 6);
         foreach ($rand as $index) $categories6[] = $categories[$index];
+
         $this->view('home', [
             'view' => 0,
             "SPnoibat" => $sanphamnoibat,

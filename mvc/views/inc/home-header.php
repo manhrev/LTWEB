@@ -61,7 +61,7 @@
 
             <!-- menu left -->
             <div id="mobile_mainmenu" class="item-mobile-top">
-                <i class="fa fa-bars" aria-hidden="true"></i>
+                <!--<i class="fa fa-bars" aria-hidden="true"></i>-->
             </div>
 
             <!-- logo -->
