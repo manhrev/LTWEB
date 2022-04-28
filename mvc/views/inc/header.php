@@ -22,12 +22,12 @@
             </div>
 
             <!-- search -->
-            <div id="mobile_search" class="d-flex">
+            <div id="mobile_search" class="d-flex" onkeydown="return event.key != 'Enter';">
                 <div id="mobile_search_content">
                     <form method="get" action="#">
 
-                        <input type="text" name="s" value="" placeholder="Search">
-                        <button type="submit">
+                        <input type="text" id="saerch" value="" placeholder="Search">
+                        <button type="button" onclick="window.location.href='<?= BASE_URL ?>tim-kiem/'+document.getElementById('saerch').value">
                             <i class="fa fa-search"></i>
                         </button>
                     </form>
@@ -60,11 +60,11 @@
 
                     <!-- search and acount -->
                     <div class="col-sm-5 col-md-5 d-flex align-items-center justify-content-end" id="search_widget">
-                        <form method="get" action="#">
+                        <form method="get" action="#" onkeydown="return event.key != 'Enter';">
 
                             <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                            <input type="text" name="s" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off">
-                            <button type="submit">
+                            <input type="text" id="searck" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off">
+                            <button type="button" onclick="window.location.href='<?= BASE_URL ?>tim-kiem/'+document.getElementById('searck').value">
                                 <i class="fa fa-search"></i>
                             </button>
                         </form>

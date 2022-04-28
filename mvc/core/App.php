@@ -109,7 +109,9 @@ class App{
                 array_push($returnArr, 'TimKiem');
                 array_push($returnArr, 'Search');
                 if (count($arr) < 2 || count($arr) > 3) {
-                    return array('NotFound');
+                    // return array('NotFound');
+                    //chuyen qua tat ca san pham
+                    return [0 => 'SanPham'];
                 }
                 else {
                     for ($i = 1; $i<count($arr); $i++) {
@@ -125,6 +127,14 @@ class App{
             case 'quan-li':
                 $returnArr = $arr;
                 $returnArr[0] = 'QuanLi';
+                break;
+            case 'login':
+                array_push($returnArr, 'Login');
+                if (isset($arr[1])) return array('NotFound');
+                break;
+            case 'logout':
+                array_push($returnArr, 'Logout');
+                if (isset($arr[1])) return array('NotFound');
                 break;
             default:
                 return array('NotFound');

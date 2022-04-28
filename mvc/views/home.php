@@ -52,7 +52,7 @@
             <div class="menu-banner d-xs-none">
                 <div class="tiva-verticalmenu block">
                     <div class="box-content">
-                        <div class="verticalmenu" role="navigation">
+                        <!-- <div class="verticalmenu" role="navigation">
                             <ul class="menu level1">
                                 <li class="item parent">
                                     <a href="#" class="hasicon" title="SIDE TABLE">
@@ -564,7 +564,7 @@
                                     <i class="zmdi zmdi-close"></i>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -577,13 +577,13 @@
                     <section class="page-home">
                         <!-- banner -->
                         <div class="spacing-10 group-image-special">
-                            <div class="row">
+                            <div class="row" >
 
-                                <?php foreach ($data['categories'] as $category) { ?>
+                                <?php foreach ($data['categoriesBanner'] as $category) { ?>
                                     <div class="col-lg-4 col-md-4">
                                         <div class="block">
                                             <div class="effect">
-                                                <a href="product-grid-sidebar-left.html">
+                                                <a href="<?=BASE_URL.'danh-muc/'.$category['url']?>">
                                                     <span style="color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><?= $category['name'] ?></span>
                                                     <img class="img-fluid width-100" src="<?= $category['image'] ?>" alt="banner-1" title="banner-1">
                                                 </a>
@@ -671,7 +671,7 @@
                             </div>
 
                             <div class="content-showmore text-center has-showmore" >
-                                <a href="#" type="button" class="btn btn-default novShowMore">
+                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat" type="button" class="btn btn-default novShowMore">
                                     <span>Xem thêm sản phẩm</span>
                                 </a>
                             </div>

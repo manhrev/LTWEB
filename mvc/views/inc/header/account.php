@@ -6,7 +6,7 @@
                                     </a>
                                 </div> -->
     <div>
-        <a class="login" href="user-login.html" rel="nofollow" title="Log in to your customer account">
+        <a class="login" href="<?= BASE_URL ?>login" rel="nofollow" title="Log in to your customer account">
             <i class="fa fa-sign-in"></i>
             <span>Đăng nhập</span>
         </a>

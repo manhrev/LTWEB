@@ -1,5 +1,5 @@
 <!-- menu mobie left -->
-<div class="mobile-top-menu d-md-none">
+<!-- <div class="mobile-top-menu d-md-none">
     <button type="button" class="close" aria-label="Close">
         <i class="zmdi zmdi-close"></i>
     </button>
@@ -505,7 +505,7 @@
         </div>
     </div>
 
-</div>
+</div> -->
 
 <!-- menu mobie right -->
 <div id="mobile-pagemenu" class="mobile-boxpage d-flex hidden-md-up active d-md-none">
@@ -520,117 +520,57 @@
                 <div id="megamenu" class="clearfix">
                     <ul class="menu level1">
                         <li class="item home-page has-sub">
-                            <span class="arrow collapsed" data-toggle="collapse" data-target="#home1" aria-expanded="true" role="status">
-                                <i class="zmdi zmdi-minus"></i>
-                                <i class="zmdi zmdi-plus"></i>
-                            </span>
-                            <a href="index-2.html" title="Home">
-                                <i class="fa fa-home" aria-hidden="true"></i>Home</a>
-                            <div class="subCategory collapse" id="home1" aria-expanded="true" role="status">
-                                <ul>
-                                    <li class="item">
-                                        <a href="index-2.html" title="Home Page 1">Home Page 1</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="home2.html" title="Home Page 2">Home Page 2</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="home3.html" title="Home Page 3">Home Page 3</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="home4.html" title="Home Page 4">Home Page 4</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="home5.html" title="Home Page 5">Home Page 5</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="item has-sub">
-                            <span class="arrow collapsed" data-toggle="collapse" data-target="#blog" aria-expanded="false" role="status">
-                                <i class="zmdi zmdi-minus"></i>
-                                <i class="zmdi zmdi-plus"></i>
-                            </span>
-                            <a href="#" title="Blog">
-                                <i class="fa fa-address-book" aria-hidden="true"></i>Blog</a>
+                            
+                            <a href="<?=BASE_URL?>" title="Home">
+                                <i class="fa fa-home" aria-hidden="true"></i>Trang chủ</a>
 
-                            <div class="subCategory collapse" id="blog" aria-expanded="true" role="status">
-                                <ul>
-                                    <li class="item">
-                                        <a href="blog-list-sidebar-left.html" title="Blog List (Sidebar Left)">Blog List (Sidebar Left)</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="blog-list-sidebar-left2.html" title="Blog List (Sidebar Left) 2">Blog List (Sidebar Left) 2</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="blog-list-sidebar-right.html" title="Category Blog (Right column)">Blog List (Sidebar Right)</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="blog-list-no-sidebar.html" title="Blog List (No Sidebar)">Blog List (No Sidebar)</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="blog-grid-no-sidebar.html" title="Blog Grid (No Sidebar)">Blog Grid (No Sidebar)</a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="blog-detail.html" title="Blog Detail">Blog Detail</a>
-                                    </li>
-                                </ul>
-                            </div>
                         </li>
                         <li class="item group has-sub">
                             <span class="arrow collapsed" data-toggle="collapse" data-target="#page" aria-expanded="false" role="status">
                                 <i class="zmdi zmdi-minus"></i>
                                 <i class="zmdi zmdi-plus"></i>
                             </span>
-                            <a href="#" title="Page">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i>page</a>
+                            <a href="<?=BASE_URL?>san-pham/tat-ca-san-pham" title="Page">
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i>Sản phẩm</a>
                             <div class="subCategory collapse" id="page" aria-expanded="true" role="status">
                                 <ul class="group-page">
                                     <li class="item container group">
                                         <div>
                                             <ul>
                                                 <li class="item col-md-4 ">
-                                                    <span class="menu-title">Category Style</span>
+                                                    <span class="menu-title">Danh mục sản phẩm</span>
                                                     <div class="menu-content">
                                                         <ul class="col">
                                                             <li>
-                                                                <a href="product-grid-sidebar-left.html">Product Grid (Sidebar Left)</a>
+                                                                <a href="<?=BASE_URL?>san-pham/tat-ca-san-pham">Tất cả sản phẩm</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="product-grid-sidebar-right.html">Product Grid (Sidebar Right)</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="product-list-sidebar-left.html">Product List (Sidebar Left) </a>
-                                                            </li>
+
+                                                            <?php foreach ($data['categories'] as $cate) {?>
+                                                                <li>
+                                                                    <a href="<?=BASE_URL.'danh-muc/'.$cate['url']?>"><?=ucfirst($cate['name'])?></a>
+                                                                </li>
+                                                            <?php }?>
+                                                        
                                                         </ul>
                                                     </div>
                                                 </li>
                                                 <li class="item col-md-4 html">
-                                                    <span class="menu-title">Product Detail Style</span>
+                                                    <span class="menu-title">Bộ lọc</span>
                                                     <div class="menu-content">
                                                         <ul>
                                                             <li>
-                                                                <a href="product-detail.html">Product Detail (Sidebar Left)</a>
+                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Sản phẩm mới nhất</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#">Product Detail (Sidebar Right)</a>
+                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Sản phẩm bán chạy</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#">Sản phẩm giảm giá</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                 </li>
-                                                <li class="item col-md-4 html">
-                                                    <span class="menu-title">Bonus Page</span>
-                                                    <div class="menu-content">
-                                                        <ul>
-                                                            <li>
-                                                                <a href="404.html">404 Page</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="about-us.html">About Us Page</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </li>
+                                              
                                             </ul>
                                         </div>
                                     </li>
@@ -638,8 +578,13 @@
                             </div>
                         </li>
                         <li class="item has-sub">
-                            <a href="contact.html" title="Contact us">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>Contact us</a>
+                
+                            <a href="#" title="Blog">
+                                <i class="fa fa-address-book" aria-hidden="true"></i>Blog</a>
+                        </li>
+                        <li class="item has-sub">
+                            <a href="<?=BASE_URL?>lien-he" title="Contact us">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>Liên hệ</a>
                         </li>
                     </ul>
                 </div>

@@ -1,12 +1,12 @@
 <?php
 
-class LienHe extends Controller{
+class Login extends Controller{
 
     function Default(){
         $model= $this->model('SanPhamModel');
         $categories = $model->GetCategory();
-        $this->view('about-us', [
-            'view' => 3,
+        $this->view('user-login', [
+            'view' => 0,
             'categories' => $categories,
         ]);
     }

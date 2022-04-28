@@ -28,6 +28,13 @@ class SanPham extends Controller{
             header("Location: ".BASE_URL."Error");
         }
         $categories = $model->GetCategory();
+
+        //all tags (max 12) //get random 11 tags
+        $tagss = $model->GetAllTag();
+        $rand = array_rand($tagss, min(11, count($tagss)));
+        foreach ($rand as $index) {
+            $tags[] = $tagss[$index];
+        }
         $this->view('product-grid', [
             'view' => 2,
             'pageTitle' => $filter=='moi-nhat'?'Sản phẩm mới nhất':'Sản phẩm bán chạy',
@@ -36,8 +43,19 @@ class SanPham extends Controller{
             'currentPage' => $page,
             'numOfPage' => $number_of_pages,
             'perPage' => self::PER_PAGE,
-            'url' => BASE_URL.'san-pham/tat-ca-san-pham/',
-            'categories' => $categories
+            'url' => BASE_URL.'san-pham/bo-loc/'.$filter.'/',
+            'categories' => $categories,
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> $filter=='moi-nhat'?'Sản phẩm mới nhất':'Sản phẩm bán chạy',
+                    'url' => BASE_URL.'san-pham/bo-loc/'.$filter
+                ]
+            ]
         ]);
     }
 
@@ -60,6 +78,14 @@ class SanPham extends Controller{
         if ($page<=0 || $page>$number_of_pages) {
             header("Location: ".BASE_URL."Error");
         }
+
+        //all tags (max 12) //get random 11 tags
+        $tagss = $model->GetAllTag();
+        $rand = array_rand($tagss, min(11, count($tagss)));
+        foreach ($rand as $index) {
+            $tags[] = $tagss[$index];
+        }
+
         $categories = $model->GetCategory();
         $this->view('product-grid', [
             'view' => 2,
@@ -70,7 +96,18 @@ class SanPham extends Controller{
             'numOfPage' => $number_of_pages,
             'perPage' => self::PER_PAGE,
             'url' => BASE_URL.'san-pham/tat-ca-san-pham/',
-            'categories' => $categories
+            'categories' => $categories,
+            'tags' => $tags,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> 'Tất cả sản phẩm',
+                    'url' => BASE_URL.'san-pham/tat-ca-san-pham'
+                ]
+            ]
         ]);
     }
 
@@ -91,11 +128,17 @@ class SanPham extends Controller{
         $dmmodel = $this->model('DanhMucModel');
         $SPlienquan = $dmmodel->GetSPDanhMuc($arr[1][0]['url']);
         $SPlienquan = array_slice($SPlienquan, 0, 3);
+        foreach ($SPlienquan as $key=>$arra) {
+            if ($arra['name'] == $arr[0]['name'])
+                unset($SPlienquan[$key]);
+        }
         
         //all tags (max 12) //get random 11 tags
-        $tags = $model->GetAllTag();
-        // $tags = array_rand($tags, min(11, count($tags)));
-        
+        $tagss = $model->GetAllTag();
+        $rand = array_rand($tagss, min(11, count($tagss)));
+        foreach ($rand as $index) {
+            $tags[] = $tagss[$index];
+        }
 
 
         $this->view('product-detail', [
@@ -104,7 +147,17 @@ class SanPham extends Controller{
             'categories' => $categories,
             'tags' => $tags,
             'banchay' => $SPbanchay,
-            'lienquan' => $SPlienquan
+            'lienquan' => $SPlienquan,
+            'path' => [
+                0 => [
+                    'name'=>'Sản phẩm',
+                    'url' => BASE_URL.'san-pham'
+                ],
+                1 => [
+                    'name'=> ucfirst($arr[0]['name']),
+                    'url' => BASE_URL.'san-pham'.$url
+                ]
+            ]
         ]);
     }
 }

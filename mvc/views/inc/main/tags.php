@@ -5,9 +5,9 @@
     <div class="block-content">
         <ul class="listSidebarBlog list-unstyled">
 
-            <?php foreach ($data['tags'] as $tag) { print_r($tag);?>
+            <?php foreach ($data['tags'] as $tag) { ?>
                 <li>
-                    <a href="#" title="Show products matching tag <?=$tag['']?>">Hot Trend</a>
+                    <a href="<?=BASE_URL?>/tim-kiem/<?=$tag?>" title="Show products matching tag <?=$tag?>" ><?=$tag?></a>
                 </li>
             <?php }?>
 

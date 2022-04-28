@@ -3,7 +3,7 @@
         <li <?=$data['view']==0?'class="nav-link"':''?> >
             <a href="<?=BASE_URL?>" class="parent">Trang chủ</a>
         </li>
-        <li <?=$data['view']==1?'class="nav-link"':''?> >
+        <li style="display: none">
             <a href="#" class="parent">Blog</a>
             <!-- <div class="dropdown-menu">
                 <ul>
@@ -86,8 +86,33 @@
                 </ul>
             </div>
         </li>
+        <li <?=$data['view']==1?'class="nav-link"':''?>>
+            <a href="#" class="parent">Blog</a>
+            <!-- <div class="dropdown-menu">
+                <ul>
+                    <li class="item">
+                        <a href="blog-list-sidebar-left.html" title="Blog List (Sidebar Left)">Blog List (Sidebar Left)</a>
+                    </li>
+                    <li class="item">
+                        <a href="blog-list-sidebar-left2.html" title="Blog List (Sidebar Left) 2">Blog List (Sidebar Left) 2</a>
+                    </li>
+                    <li class="item">
+                        <a href="blog-list-sidebar-right.html" title="Category Blog (Right column)">Blog List (Sidebar Right)</a>
+                    </li>
+                    <li class="item">
+                        <a href="blog-list-no-sidebar.html" title="Blog List (No Sidebar)">Blog List (No Sidebar)</a>
+                    </li>
+                    <li class="item">
+                        <a href="blog-grid-no-sidebar.html" title="Blog Grid (No Sidebar)">Blog Grid (No Sidebar)</a>
+                    </li>
+                    <li class="item">
+                        <a href="blog-detail.html" title="Blog Detail">Blog Detail</a>
+                    </li>
+                </ul>
+            </div> -->
+        </li>
         <li <?=$data['view']==3?'class="nav-link"':''?> >
-            <a href="contact.html" class="parent">Liên hệ</a>
+            <a href="<?=BASE_URL.'lien-he'?>" class="parent">Liên hệ</a>
         </li>
     </ul>
 </div>
