@@ -6,7 +6,7 @@ class TimKiem extends Controller{
         $model= $this->model('TimKiemModel');
         //$search : url, name, images, price, description (Các sản phẩm có từ khóa là $tag)
         $search =$model->Search($tag);
-        print_r($search);
+        print_r($search);             
     }
     
 }
