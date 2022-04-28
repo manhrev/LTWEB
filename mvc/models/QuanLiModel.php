@@ -24,7 +24,7 @@ class QuanLiModel extends DB {
             return 1;
         }
     }
-    
+
     public function ThemCategory($Name, $ImageLink)
     {
         $url = convert_name($Name);
@@ -119,7 +119,7 @@ class QuanLiModel extends DB {
         // Nếu đã tồn tại thì báo lỗi ngược lại thì thêm vào database.
         if ($check ==0)
         {
-            return " Sản phẩm đã tồn tại, vui lòng thêm sản phẩm khác";
+            return "Sản phẩm đã tồn tại, vui lòng thêm sản phẩm khác";
         }
         else
         {
@@ -161,21 +161,54 @@ class QuanLiModel extends DB {
             //Lặp, Chỉnh sửa trên toàn bộ kết quả tìm kiếm được 
             while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
             {    
-                //Cập nhật khóa ngoại mới.
-                $updatequery = "UPDATE `category_details` SET `category_url`= '$url' WHERE `category_url`= '".$row['category_url']."' AND `product_url` = '$CurrentUrl'";
-
                 //Xóa khóa ngoại cũ
                 $deletequery = "DELETE FROM category_details WHERE `category_url`= '".$row['category_url']."' AND `product_url` = '$CurrentUrl'";
-                $this -> con -> query($updatequery);
+
                 $this -> con -> query($deletequery);
 
+            }
+            for ($i=0;$i<count($Categorys);$i++)
+            {
+                $query = "INSERT INTO `category_details` (`category_url`, `product_url`) VALUES ('$url', '".$Categorys[$i]."')";
+
+                $this -> con -> query($query);
             }
             $this ->XoaSP($CurrentUrl);
             return "Cập nhật sản phẩm hoàn tất";
         }
+        elseif ($notice== "Sản phẩm đã tồn tại, vui lòng thêm sản phẩm khác")
+        {
+            $query = "UPDATE product SET price='$Price', images='$Images', description= '$Description', tag='$Tag', view_count='$View_count' WHERE  url = '$CurrentUrl'";
+            if ($this -> con -> query($query)=== True)
+            {
+                $arr=[];
+                $query = "SELECT * FROM category_details where product_url='$CurrentUrl'";
+                $result = $this -> con -> query($query);
+                //Lặp, Chỉnh sửa trên toàn bộ kết quả tìm kiếm được 
+                while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+                {    
+                    //Xóa khóa ngoại cũ
+                    $deletequery = "DELETE FROM category_details WHERE `category_url`= '".$row['category_url']."' AND `product_url` = '$CurrentUrl'";
+    
+                    $this -> con -> query($deletequery);
+    
+                }
+                for ($i=0; $i<count($Categorys); $i++)
+                {
+                    $query = "INSERT INTO `category_details` (`category_url`, `product_url`) VALUES ( '".$Categorys[$i]."', '$url')";
+    
+                    $this -> con -> query($query);
+                }
+                return "Cập nhật sản phẩm hoàn tất";
+            }
+            else
+            {
+                return "Lỗi hệ thống, không kết nối được với Database :<";
+            }
+        }
         else
         {
-            return $notice;
+            return notice;
         }
     }
     public function XoaSP($CurrentUrl)
