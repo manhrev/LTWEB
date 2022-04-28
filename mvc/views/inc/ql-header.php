@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Trang chủ</a>
+        <a class="navbar-brand" href="<?=BASE_URL?>">Trang chủ</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav w-100">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="ql-sanpham.html">Quản lí sản phẩm</a>
+              <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-san-pham">Quản lí sản phẩm</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="ql-danhmuc.html">Quản lí danh mục</a>
+              <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-danh-muc">Quản lí danh mục</a>
             </li>
 
           </ul>
