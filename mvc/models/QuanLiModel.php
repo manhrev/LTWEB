@@ -170,6 +170,10 @@ class QuanLiModel extends DB {
                 $this -> con -> query($deletequery);
 
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0a80840928bac6c58ab99c2b294244c4b2a6766
             $this ->XoaSP($CurrentUrl);
             // for ($i=0;$i<count($Categorys);$i++)
             // {
