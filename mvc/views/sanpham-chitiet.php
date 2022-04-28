@@ -75,7 +75,7 @@
           <th scope="row">Danh mục</th>
           <td>
             <?php foreach ($cate as $key => $cat) {
-              if ($key == count($cate) - 2) {
+              if ($key == count($cate) - 1) {
                 echo $cat['name'];
               } else echo $cat['name'] . ', ';
             } ?>
