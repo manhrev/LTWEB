@@ -122,8 +122,11 @@ class QuanLi extends Controller{
                 $current_url = $_POST['url'];
 
                 $model = $this->model('QuanLiModel');
-                //echo $model->SuaSP($current_url, $name, $price, $images, $description, $tags, $view_count, $categories);
-               
+                $message = $model->SuaSP($current_url, $name, $price, $images, $description, $tags, $view_count, $categories);
+                echo "<script>
+                alert('".$message."');
+                window.location.href='".BASE_URL."quan-li/quan-li-san-pham/';
+                </script>"; 
                 
             } else {
                 header('Location: '.BASE_URL.'quan-li/quan-li-san-pham');
