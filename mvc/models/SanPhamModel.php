@@ -93,7 +93,6 @@ class SanPhamModel extends DB {
                 $resultString .= array_values($item)[0];
         }
         $resultArray=array_filter(explode(",",$resultString));
-
         return array_unique($resultArray);
     }
 }
