@@ -5,8 +5,9 @@ class QuanLi extends Controller{
 
     //render trang quan li, lua chon ql sp, ql danh muc...
     function Default(){
-        $model= $this->model('QuanLiModel');
-        echo "trang quan li chinh";
+        $this->view('quan-li', [
+
+        ]);
 
         //TẤT CẢ CÁC HÀM ĐỀU TRẢ VỀ STRING THÔNG BÁO ĐÃ THỰC HIỆN YÊU CẦU HAY BỊ LỖI. VÍ DỤ: Thêm sản phẩm thành công !!, Sản phẩm đã tồn tại,....
 
