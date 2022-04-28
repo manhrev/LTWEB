@@ -208,7 +208,7 @@ class QuanLiModel extends DB {
         }
         else
         {
-            return notice;
+            return $notice;
         }
     }
     public function XoaSP($CurrentUrl)
