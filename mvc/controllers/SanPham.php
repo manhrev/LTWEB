@@ -155,7 +155,7 @@ class SanPham extends Controller{
                 ],
                 1 => [
                     'name'=> ucfirst($arr[0]['name']),
-                    'url' => BASE_URL.'san-pham'.$url
+                    'url' => BASE_URL.'san-pham/'.$url
                 ]
             ]
         ]);
