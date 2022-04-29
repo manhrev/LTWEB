@@ -30,11 +30,22 @@ class QuanLi extends Controller{
     }
      // san pham
     function QuanLiSanPham() {
-        $spModel = $this->model('SanPhamModel');
-        $allSP = $spModel->TatCaSanPhamDM();
-        $this->view('ql-sanpham', [
-            'allSP' => $allSP
-        ]);
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $url = $_POST['url'];
+            $qlModel = $this->model('QuanLiModel');
+            $message = $qlModel->XoaSP($url);
+            echo "<script>
+            alert('".$message."');
+            window.location.href='".BASE_URL."quan-li/quan-li-san-pham/';
+            </script>"; 
+        }
+        else {
+            $spModel = $this->model('SanPhamModel');
+            $allSP = $spModel->TatCaSanPhamDM();
+            $this->view('ql-sanpham', [
+                'allSP' => $allSP
+            ]);
+        }
     }
 
     function ThemSanPham() {
@@ -92,11 +103,17 @@ class QuanLi extends Controller{
 
             //get categories (khac categories cua san pham hien tai)
             $categories = $spModel->GetCategory(false);
-            $categories = array_diff_key($categories, $SP[1]);
+            foreach ($categories as $val1) {
+                if (!in_array($val1,$SP[1]))
+                {
+                    $categoriesView[]= $val1;
+                }
+                
+            }
     
             $this->view('sanpham-chinhsua', [
                 'sanpham' => $SP,
-                'diff-categories' => $categories
+                'diff-categories' => $categoriesView
             ]);
         }
         else {
