@@ -202,26 +202,23 @@ class QuanLiModel extends DB {
             
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
         {
-            $resultArray[] = $item;
+            $deletequery = "DELETE FROM category_details WHERE product_url='$CurrentUrl'";
+            $this->con->query($deletequery);
+
         }
-        //Nếu còn danh mục chứa sản phẩm hiện tại thì không cho xóa
-        if (count($resultArray)>0)
+
+        //Nếu còn danh mục chứa sản phẩm hiện tại thì xóa hết khóa ngoại.
+
+        $query = "DELETE FROM product WHERE url='$CurrentUrl'" ;
+            
+        if ($this->con->query($query ) === TRUE)
         {
-            return "Còn danh mục chứa sản phẩm này, không thể xóa.";
+            return "Xóa sản phẩm thành công !!";
         }
-        //Ngược lại thì xóa
         else
         {
-            $query = "DELETE FROM product WHERE url='$CurrentUrl'" ;
-            
-            if ($this->con->query($query ) === TRUE)
-            {
-                return "Xóa sản phẩm thành công !!";
-            }
-            else
-            {
-                return "Lỗi hệ thống, không kết nối được với Database :<";
-            }
+            return "Lỗi hệ thống, không kết nối được với Database :<";
         }
     }
+
 }
