@@ -87,6 +87,7 @@ class App{
                         default:
                             array_push($returnArr, 'GetSanPham');
                             array_push($returnArr, $arr[1]);
+                            if (isset($arr[2])) return array('NotFound');
                             break;
                     }
                 } else {
@@ -194,6 +195,27 @@ class App{
                 } 
                 else {
                     return $returnArr;
+                }
+                break;
+            case 'gio-hang':
+                array_push($returnArr, 'GioHang');
+                if (isset($arr[1])) {
+                   
+                        switch ($arr[1]) {
+                            case "xoa-san-pham":
+                                array_push($returnArr, 'XoaSanPham');
+                                if (count($arr) < 3 || count($arr) > 4) {
+                                    return array('NotFound');
+                                }
+                                if (isset($arr[2])) {
+                                    array_push($returnArr, $arr[2]);
+                                }
+                    
+                                break;
+                            default:
+                                return array('NotFound');
+                        }
+                    
                 }
                 break;
             default:

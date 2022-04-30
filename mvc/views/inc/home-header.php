@@ -140,7 +140,10 @@
                             <span class="cart-products-count"><?=$_SESSION['cart']?count($_SESSION['cart']):0?></span>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         </div>
+                        <div style="position: relative; right: -200px">
                         <?php require_once "./mvc/views/inc/header/desktop-cart.php" ?>
+                        </div>
+                        
 
                     </div>
                 </div>

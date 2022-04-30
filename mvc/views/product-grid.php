@@ -166,11 +166,14 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product-buttons d-flex justify-content-center">
-                                                                        <form action="" method="post" class="formAddToCart">
-                                                                            <input type="hidden" name="id_product" value="1">
-                                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                        <form action="<?=BASE_URL?>san-pham/<?=$sp['url']?>" method="post" class="formAddToCart">
+                                                                        <input type="hidden" name='url' value='<?=$sp['url']?>'>
+                                                                                        <input type="hidden" name='name' value='<?=$sp['name']?>'>
+                                                                                        <input type="hidden" name='price' value='<?=$sp['price']?>'>
+                                                                                        <input type="hidden" name='image' value='<?=$images[0]?>'>
+                                                                            <button class="add-to-cart" href="#" data-button-action="add-to-cart">
                                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                            </a>
+                                                                        </button>
                                                                         </form>
                                                                         <a class="addToWishlist" href="" data-rel="1" onclick="">
                                                                             <i class="fa fa-heart" aria-hidden="true"></i>

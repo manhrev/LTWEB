@@ -223,14 +223,14 @@ class QuanLiModel extends DB {
         $Order_str=$Order_detail[0];
         for ($i =1; $i<count($Order_detail);$i++)
         {
-            $Order_str .= ", "
-            $Order_str .= $Order_detail[i];
+            $Order_str .= ", ";
+            $Order_str .= $Order_detail[$i];
         }
         $query= "INSERT INTO order_infor (name, phone_number, address, order_detail)
                         VALUES ('$Name','$Phone_number','$Address','$Order_str')";
                 if ($this->con->query($query ) === TRUE)
                 {
-                    return "Cảm ơn quý khách đã đặt hàng. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất"
+                    return "Cảm ơn quý khách đã đặt hàng. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất";
                 }
                 else
                 {
