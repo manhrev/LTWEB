@@ -170,16 +170,7 @@ class QuanLiModel extends DB {
                 $this -> con -> query($deletequery);
 
             }
-            $this ->XoaSP($CurrentUrl);
-            // for ($i=0;$i<count($Categorys);$i++)
-            // {
-            //     $query = "INSERT INTO `category_details` (`category_url`, `product_url`) VALUES ( '".$Categorys[$i]."','$url')";
-            //     echo $query;
-                
-            //     //$this -> con -> query($query);
-            // }
-            // exit();
-    
+            $this ->XoaSP($CurrentUrl);    
             return "Cập nhật sản phẩm hoàn tất";
         }
         elseif ($notice== "Sản phẩm đã tồn tại, vui lòng thêm sản phẩm khác")
@@ -212,7 +203,6 @@ class QuanLiModel extends DB {
         {
             $deletequery = "DELETE FROM category_details WHERE product_url='$CurrentUrl'";
             $this->con->query($deletequery);
-
         }
 
         //Nếu còn danh mục chứa sản phẩm hiện tại thì xóa hết khóa ngoại.
@@ -227,6 +217,40 @@ class QuanLiModel extends DB {
         {
             return "Lỗi hệ thống, không kết nối được với Database :<";
         }
+    }
+    public function ThemOrder($Name,$Phone_number,$Address, $Order_detail)
+    {
+        $Order_str=$Order_detail[0];
+        for ($i =1; $i<count($Order_detail);$i++)
+        {
+            $Order_str .= ", "
+            $Order_str .= $Order_detail[i];
+        }
+        $query= "INSERT INTO order_infor (name, phone_number, address, order_detail)
+                        VALUES ('$Name','$Phone_number','$Address','$Order_str')";
+                if ($this->con->query($query ) === TRUE)
+                {
+                    return "Cảm ơn quý khách đã đặt hàng. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất"
+                }
+                else
+                {
+                    return "Lỗi hệ thống, vui lòng thử lại sau.";
+                }
+    }
+    public function QuanLiOrder()
+    {
+        $query = "SELECT * FROM order_infor  ORDER BY date_created DESC";
+
+        $resultArray =[];
+            
+        $result = $this -> con -> query($query);
+            
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+        {
+            $resultArray[]=$item;
+        }
+        
+        return $resultArray;
     }
 
 }
