@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <?php require_once "./mvc/views/inc/font_inc/font.php" ?>
 
     <!-- libs CSS -->
     <link rel="stylesheet" href="<?=STATIC_URL?>libs/bootstrap/css/bootstrap.min.css">
