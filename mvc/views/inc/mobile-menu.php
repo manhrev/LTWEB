@@ -508,7 +508,7 @@
 </div> -->
 
 <!-- menu mobie right -->
-<div id="mobile-pagemenu" class="mobile-boxpage d-flex hidden-md-up active d-md-none">
+<div id="mobile-pagemenu" class="mobile-boxpage d-flex hidden-md-up active d-md-none" style="width: 100vw">
     <div class="content-boxpage col">
         <div class="box-header d-flex justify-content-between align-items-center">
             <div class="title-box">Menu</div>
