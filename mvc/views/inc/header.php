@@ -5,12 +5,12 @@
 
                 <!-- menu left -->
                 <div id="mobile_mainmenu" class="item-mobile-top">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <!--<i class="fa fa-bars" aria-hidden="true"></i>-->
                 </div>
 
                 <!-- logo -->
                 <div class="mobile-logo">
-                    <a href="index-2.html">
+                    <a href="<?=BASE_URL?>">
                         <img class="logo-mobile img-fluid" src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="Prestashop_Furnitica">
                     </a>
                 </div>

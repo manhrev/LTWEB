@@ -808,7 +808,7 @@ textarea:focus {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=block-cart] [class~=dropdown-content] [class~=cart-content] table tr:last-child,
@@ -1328,7 +1328,7 @@ textarea:focus {
 }
 
 [class~=title-block] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=title-block] {
@@ -1530,7 +1530,7 @@ a:hover,
 }
 
 [class~=title-product] h2 {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=block] [class~=contact-content] [class~=mr-2] {
@@ -2247,7 +2247,7 @@ li {
 
 footer [class~=title-block],
 #tiva-searchBox [class~=tiva-seachBoxInner] [class~=title-search] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home3 header [class~=topbar] [class~=search_widget] [class~=desktop-currency-selector] #currency [class~=currency-item] {
@@ -2500,7 +2500,7 @@ footer [class~=title-block] {
 
 [class~=tab-content] [class~=item] [class~=product-miniature] [class~=product-description] [class~=product-groups] [class~=product-group-price] [class~=price],
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li a {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home3 header [class~=topbar] [class~=search_widget] [class~=desktop-currency-selector] #currency [class~=currency-item] {
@@ -2689,7 +2689,7 @@ footer [class~=title-block] {
 #wrapper-site #content-wrapper #main [class~=living-room] [class~=groupcategoriestab-vertical] [class~=grouptab] [class~=flex-3] [class~=block-title-content] [class~=title-block],
 [class~=main-menu] [class~=menu] [class~=menu-top] li [class~=parent],
 #tiva-searchBox [class~=tiva-seachBoxInner] [class~=title-search] span {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home2 header [class~=header-top] [class~=margin-0] #search_widget #block_myaccount_infos {
@@ -4769,7 +4769,7 @@ footer [class~=title-block],
 }
 
 [class~=block-newsletter] [class~=input-group] [class~=input-group-btn] [class~=btn-secondary] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #nav_icon3[class~=open] span:nth-child(2) {
@@ -5402,7 +5402,7 @@ footer [class~=title-block],
 }
 
 #tiva-searchBox [class~=tiva-seachBoxInner] #search form button {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home5 footer [class~=inner-footer] [class~=footer-top] [class~=block] [class~=contact-content] [class~=mr-2] {
@@ -5888,7 +5888,7 @@ footer [class~=title-block],
 }
 
 #home2 .wrap-banner .menu-banner .box-content .pull-left .toggle-nav {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home4 header [class~=header-top] [class~=margin-0] [class~=icon-menu] {
@@ -6064,7 +6064,7 @@ footer [class~=title-block],
 }
 
 #acount [class~=account-list-content] #desktop_currency_selector ul li {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .sidebar-3 .sidebar-block .title-block {
@@ -6522,7 +6522,7 @@ footer [class~=title-block],
 }
 
 .sidebar-3 .sidebar-block .title-block {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home3 #wrapper-site #content-wrapper #main [class~=deal-of-day] [class~=tab-content] [class~=product-description] [class~=product-buttons] [class~=add-to-cart],
@@ -6859,7 +6859,7 @@ footer [class~=title-block],
 }
 
 [class~=sidebar-3] [class~=sidebar-block] [class~=title-product] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #wrapper-site #content-wrapper #main .groupbanner-special .tiva-lookbook .items .tiva-content-lookbook .item-lookbook .number-lookbook {
@@ -7126,7 +7126,7 @@ footer [class~=title-block],
 
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-menu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=group-category] [class~=mt-20] [class~=d-flex] [class~=col] [class~=menu-title],
 #home3 #wrapper-site #content-wrapper #main [class~=deal-of-day] [class~=tab-content] [class~=product-description] [class~=product-groups] [class~=product-group-price] [class~=price] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .menu-banner .verticalmenu .menu li .dropdown-menu .menu-items .item .menu-content .tags ul .list-inline-item:before {
@@ -7388,7 +7388,7 @@ footer [class~=title-block],
 }
 
 #home5 .wrap-banner .menu-banner .box-content .pull-left .toggle-nav {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=main-menu] [class~=menu] {
@@ -8049,7 +8049,7 @@ footer [class~=title-block],
 }
 
 .tab-content .item .product-miniature .product-description .product-groups .product-title a {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-menu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=group-category] [class~=mt-20] [class~=d-flex] [class~=col] [class~=menu-title] {
@@ -8460,7 +8460,7 @@ footer [class~=title-block],
 
 #acount [class~=account-list-content] #desktop_language_selector ul li,
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-submenu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=group-category] [class~=mt-20] [class~=d-flex] [class~=col] [class~=menu-title] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #wrapper-site #content-wrapper #main [class~=groupbanner-special] [class~=tiva-lookbook] [class~=items] [class~=tiva-content-lookbook] [class~=item-lookbook] [class~=content-lookbook] [class~=main-lookbook] {
@@ -8704,7 +8704,7 @@ footer [class~=title-block],
 }
 
 #tiva-searchBox [class~=tiva-seachBoxInner] #search form [class~=ui-autocomplete-input] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-submenu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=group-category] [class~=mt-20] [class~=d-flex] [class~=col] [class~=menu-title] {
@@ -9260,7 +9260,7 @@ footer [class~=title-block],
 }
 
 #wrapper-site #content-wrapper #main .best-sellers .groupproductlist .flex-4 .title-block .sub-title {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .user-wishlist #wrapper-site table.std td {
@@ -11889,7 +11889,7 @@ footer [class~=title-block],
 
 [class~=main-menu] [class~=menu] [class~=menu-top] li [class~=dropdown-menu] ul [class~=item] [class~=dropdown-menu] ul li [class~=menu-title],
 #currency [class~=account-list-content] #desktop_currency_selector ul li {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .tab-content .item .product-miniature .thumbnail-container a .image-secondary {
@@ -13290,7 +13290,7 @@ footer [class~=title-block],
 }
 
 #wrapper-site #content-wrapper #main .testimonial-block .desc-testimonial .text {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #product-detail .content .main-product-detail .product-detail .page-content .js-qv-mask {
@@ -14622,7 +14622,7 @@ footer [class~=title-block],
 }
 
 #currency [class~=account-list-content] #desktop_language_selector ul li {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #product-sidebar-left [class~=main-content] [class~=content] [class~=product-container] [class~=nav-top] [class~=products-sort-order] [class~=select-title] {
@@ -15043,7 +15043,7 @@ footer [class~=title-block],
 }
 
 [class~=page-home] [class~=btn] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home2 header [class~=header-top] {
@@ -15796,7 +15796,7 @@ footer [class~=title-block],
 }
 
 [class~=footer-one] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=blog] #wrapper-site #content-wrapper #main [class~=content] [class~=main-blogs] [class~=page-list] ul li a {
@@ -16164,7 +16164,7 @@ footer [class~=title-block],
 }
 
 [class~=product-checkout] #checkout [class~=check-info] [class~=checkout-personal-step] [class~=step-title] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=user-acount] [class~=btn][class~=btn-primary] {
@@ -17087,7 +17087,7 @@ footer [class~=title-block],
 }
 
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-menu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=tags] [class~=title] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #blog-list-sidebar-left [class~=main-content] #wrapper-site [class~=main-blogs] [class~=list-content] {
@@ -17282,7 +17282,7 @@ footer [class~=title-block],
 }
 
 [class~=product-checkout] #checkout [class~=check-info] [class~=nav] [class~=nav-link] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=sidebar-3] [class~=sidebar-block] [class~=by-color] span [class~=color-item2] {
@@ -17792,7 +17792,7 @@ footer [class~=title-block],
 }
 
 #language .account-list-content #desktop_currency_selector ul li {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #blog-list-sidebar-left .main-content #wrapper-site .main-blogs .late-item {
@@ -19579,7 +19579,7 @@ footer [class~=title-block],
 }
 
 [class~=menu-banner] [class~=verticalmenu] [class~=menu] li [class~=dropdown-submenu] [class~=menu-items] [class~=item] [class~=menu-content] [class~=tags] [class~=title] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .product-cart #cart .product-price.total {
@@ -19958,7 +19958,7 @@ footer [class~=title-block],
 
 #product-sidebar-left .main-content .content .product-container h1,
 #language [class~=account-list-content] #desktop_language_selector ul li {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 [class~=sidebar-3] [class~=sidebar-block] [class~=by-color] span [class~=color-item4] {
@@ -20350,7 +20350,7 @@ footer [class~=title-block],
 }
 
 [class~=blog] #wrapper-site #content-wrapper #main [class~=content] [class~=main-blogs] h2 {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home4 header [class~=header-top] [class~=margin-0] #search_widget #block_myaccount_infos,
@@ -20854,7 +20854,7 @@ footer [class~=title-block],
 }
 
 [class~=breadcrumb-bg] [class~=breadcrumb] ol {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #language [class~=account-list-content] #desktop_language_selector ul li,
@@ -21108,7 +21108,7 @@ footer [class~=title-block],
 }
 
 #page-404 [class~=page-home] [class~=h4] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .main-menu .menu .menu-top li .dropdown-menu ul .item .dropdown-menu ul li .menu-content ul li a {
@@ -22640,7 +22640,7 @@ footer [class~=title-block],
 }
 
 #home2 [class~=main-content] #wrapper-site #main [class~=page-home] [class~=living-room] [class~=tiva-row-wrap] [class~=groupcategoriestab-vertical] [class~=flex-9] [class~=content-filter] [class~=tiva-filter-title] {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 .sidebar-3 .sidebar-block .new-item-content ul.scroll-product label {
@@ -22912,7 +22912,7 @@ footer [class~=title-block],
 }
 
 #product-detail .content .main-product-detail .product-info .detail-description .price-del .price {
-  font-family: "Poppins", sans-serif;
+  font-family:  sans-serif;
 }
 
 #home5 [class~=main-content] #wrapper-site #content-wrapper #main [class~=page-home] [class~=featured-product] [class~=content-showmore] button {

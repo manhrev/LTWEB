@@ -590,7 +590,7 @@
                                         <div class="col-lg-4 col-md-4">
                                             <div class="block">
                                                 <div class="effect">
-                                                    <a href="<?= BASE_URL . 'danh-muc/' . $category['url'] ?>">
+                                                    <a style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"href="<?= BASE_URL . 'danh-muc/' . $category['url'] ?>">
                                                         <span style="color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><?= $category['name'] ?></span>
                                                         <img class="img-fluid width-100" src="<?= $category['image'] ?>" alt="banner-1" title="banner-1">
                                                     </a>
