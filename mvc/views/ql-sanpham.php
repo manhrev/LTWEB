@@ -79,7 +79,7 @@
 
     <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <form class="modal-content" method="post" action="#">
+        <form class="modal-content" method="post" action="<?=BASE_URL?>quan-li/quan-li-san-pham">
           <div class="modal-header">
             <h5 class="modal-title" id="addUserModalLabel">Xóa sản phẩm</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

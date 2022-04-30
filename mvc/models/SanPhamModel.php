@@ -97,9 +97,9 @@ class SanPhamModel extends DB {
         }
         return $resultArray;
     }
-    public function GetCategory($all = true)
+    public function GetCategory($all = true, $sortByDayAdded = false)
     {
-        $query = "select " .($all?' * ':' name, url ') . "from category";
+        $query = "select " .($all?' * ':' name, url ') . "from category".($sortByDayAdded?'order by date_created DESC':'');
         $result = $this -> con -> query($query);
         
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC))

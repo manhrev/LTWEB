@@ -311,9 +311,14 @@
 
                                                 <div class="tab-content">
                                                     <div id="description" class="tab-pane fade in active show">
-                                                        <p>
-                                                            <?= $sp['description'] ?>
-                                                        </p>
+                                                        <?php $descriptionList = explode(PHP_EOL, $sp['description']) ?>
+                                             
+                                                            <?php foreach ($descriptionList as $paragraph) { ?>
+                                                                <p>
+                                                                    <?= $paragraph ?>
+                                                                </p>
+                                                            <?php } ?>
+                                               
 
                                                     </div>
 

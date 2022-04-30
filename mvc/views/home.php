@@ -575,107 +575,114 @@
             <div id="content-wrapper" class="full-width">
                 <div id="main">
                     <section class="page-home">
-                        <!-- banner -->
-                        <div class="spacing-10 group-image-special">
-                            <div class="row" >
-
-                                <?php foreach ($data['categoriesBanner'] as $category) { ?>
-                                    <div class="col-lg-4 col-md-4">
-                                        <div class="block">
-                                            <div class="effect">
-                                                <a href="<?=BASE_URL.'danh-muc/'.$category['url']?>">
-                                                    <span style="color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><?= $category['name'] ?></span>
-                                                    <img class="img-fluid width-100" src="<?= $category['image'] ?>" alt="banner-1" title="banner-1">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                <?php } ?>
-
-
+                        <div class="row justify-content-center mt-5">
+                            <div class="title-product justify-content-between">
+                                <h2>DANH MỤC SẢN PHẨM</h2>
+                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp</p>
                             </div>
                         </div>
+                        <div class="tab-content row">
+                            <!-- banner -->
+                            <div class="spacing-10 group-image-special">
+                                <div class="row">
 
-                        <!--FEATURED PRODUCTS -->
-                        <div class="featured-product">
-                            <div class="title-tab-content  text-center">
-                                <div class="title-product justify-content-between">
-                                    <h2>SẢN PHẨM NỔI BẬT</h2>
-                                    <p>Những sản phẩm được mua nhiều từ chúng tôi </p>
+                                    <?php foreach ($data['categoriesBanner'] as $category) { ?>
+                                        <div class="col-lg-4 col-md-4">
+                                            <div class="block">
+                                                <div class="effect">
+                                                    <a href="<?= BASE_URL . 'danh-muc/' . $category['url'] ?>">
+                                                        <span style="color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><?= $category['name'] ?></span>
+                                                        <img class="img-fluid width-100" src="<?= $category['image'] ?>" alt="banner-1" title="banner-1">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+
+
                                 </div>
                             </div>
-                            <div class="tab-content row">
 
-                                <?php foreach ($data['SPnoibat'] as $sp) { ?>
-                                    <div class="col-md-3 item text-center">
-                                        <div class="product-miniature js-product-miniature item-one first-item">
-                                            <div class="thumbnail-container">
-                                                <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
-                                                    <?php $images = explode(',', $sp['images']) ?>
+                            <!--FEATURED PRODUCTS -->
+                            <div class="featured-product">
+                                <div class="title-tab-content  text-center">
+                                    <div class="title-product justify-content-between">
+                                        <h2>SẢN PHẨM NỔI BẬT</h2>
+                                        <p>Những sản phẩm được mua nhiều từ chúng tôi </p>
+                                    </div>
+                                </div>
+                                <div class="tab-content row">
 
-                                                    <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img">
-                                                    <?php if (isset($images[1])) { ?>
-                                                        <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img">
-                                                    <?php } ?>
-                                                </a>
-                                                <div class="highlighted-informations">
-                                                    <div class="variant-links">
-                                                        <a class="color beige" title="Beige"></a>
-                                                        <a class="color orange" title="Orange"></a>
-                                                        <a class="color green" title="Green"></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="product-description">
-                                                <div class="product-groups">
-                                                    <div class="product-title">
-                                                        <a style="text-transform: uppercase" href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>"><?= $sp['name'] ?></a>
-                                                    </div>
-                                                    <div class="rating">
-                                                        <div class="star-content">
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                            <div class="star"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="product-group-price">
-                                                        <div class="product-price-and-shipping">
-                                                            <span class="price">
-                                                                <?php if ($sp['price'] > 0) echo number_format($sp['price']) . 'đ';
-                                                                else echo 'Liên hệ' ?>
-                                                            </span>
+                                    <?php foreach ($data['SPnoibat'] as $sp) { ?>
+                                        <div class="col-md-3 item text-center">
+                                            <div class="product-miniature js-product-miniature item-one first-item">
+                                                <div class="thumbnail-container">
+                                                    <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
+                                                        <?php $images = explode(',', $sp['images']) ?>
+
+                                                        <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img">
+                                                        <?php if (isset($images[1])) { ?>
+                                                            <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img">
+                                                        <?php } ?>
+                                                    </a>
+                                                    <div class="highlighted-informations">
+                                                        <div class="variant-links">
+                                                            <a class="color beige" title="Beige"></a>
+                                                            <a class="color orange" title="Orange"></a>
+                                                            <a class="color green" title="Green"></a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="product-buttons d-flex justify-content-center">
-                                                    <form action="#" method="post" class="formAddToCart">
-                                                        <input type="hidden" name="id_product" value="1">
-                                                        <a class="add-to-cart" href="#" data-button-action="add-to-cart">
-                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                <div class="product-description">
+                                                    <div class="product-groups">
+                                                        <div class="product-title">
+                                                            <a style="text-transform: uppercase" href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>"><?= $sp['name'] ?></a>
+                                                        </div>
+                                                        <div class="rating">
+                                                            <div class="star-content">
+                                                                <div class="star"></div>
+                                                                <div class="star"></div>
+                                                                <div class="star"></div>
+                                                                <div class="star"></div>
+                                                                <div class="star"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-group-price">
+                                                            <div class="product-price-and-shipping">
+                                                                <span class="price">
+                                                                    <?php if ($sp['price'] > 0) echo number_format($sp['price']) . 'đ';
+                                                                    else echo 'Liên hệ' ?>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="product-buttons d-flex justify-content-center">
+                                                        <form action="#" method="post" class="formAddToCart">
+                                                            <input type="hidden" name="id_product" value="1">
+                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                            </a>
+                                                        </form>
+                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                            <i class="fa fa-heart" aria-hidden="true"></i>
                                                         </a>
-                                                    </form>
-                                                    <a class="addToWishlist" href="#" data-rel="1" onclick="">
-                                                        <i class="fa fa-heart" aria-hidden="true"></i>
-                                                    </a>
-                                                    <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
-                                                        <i class="fa fa-eye" aria-hidden="true"></i>
-                                                    </a>
+                                                        <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
+                                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                <?php } ?>
+                                    <?php } ?>
 
-                            </div>
+                                </div>
 
-                            <div class="content-showmore text-center has-showmore" >
-                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat" type="button" class="btn btn-default novShowMore">
-                                    <span>Xem thêm sản phẩm</span>
-                                </a>
+                                <div class="content-showmore text-center has-showmore">
+                                    <a href="<?= BASE_URL ?>san-pham/bo-loc/moi-nhat" type="button" class="btn btn-default novShowMore">
+                                        <span>Xem thêm sản phẩm</span>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
                     </section>
                 </div>
             </div>

@@ -91,7 +91,7 @@ class QuanLi extends Controller{
     function ChiTietSanPham($url) {
         $spModel = $this->model('SanPhamModel');
         $SP = $spModel->GetSanPham($url);
-        $this->view('sanpham-chitiet', [
+        $this->view('ql-sanpham-chitiet', [
             'sanpham' => $SP,
         ]);
     }
@@ -111,7 +111,7 @@ class QuanLi extends Controller{
                 
             }
     
-            $this->view('sanpham-chinhsua', [
+            $this->view('ql-sanpham-chinhsua', [
                 'sanpham' => $SP,
                 'diff-categories' => $categoriesView
             ]);
@@ -168,7 +168,46 @@ class QuanLi extends Controller{
 
     // danh muc
     function QuanLiDanhMuc() {
-        echo 'quan li dm';
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['action'])) {
+                if ($_POST['action'] == 'remove') {
+                    if (isset($_POST['url'])) {
+                        $url = $_POST['url'];
+                        $qlModel = $this->model("QuanLiModel");
+                        $message = $qlModel->XoaCategory($url);
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-danh-muc/';
+                        </script>"; 
+                    } 
+                    else echo "Error!";
+                }
+                elseif ($_POST['action'] == 'add') {
+                    //verify $_Post data!
+                    $name = $_POST['name'];
+                    $image = $_POST['image'];
+                    $qlModel = $this->model("QuanLiModel");
+                    $message = $qlModel->ThemCategory($name, $image);
+                    echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-danh-muc/';
+                        </script>"; 
+
+                }
+                else {
+                    echo 'Error!';
+                }
+            } else {
+                echo 'Error!';
+            }
+        }
+        else {
+            $spModel = $this->model('SanPhamModel');
+            $allDM = $spModel->GetCategory();
+            $this->view('ql-danhmuc', [
+                'allDM' => $allDM
+            ]);
+        }
     }
 
     function ThemDanhMuc() {
