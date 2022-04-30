@@ -91,7 +91,7 @@
             <div class="desktop_cart">
                 <div class="blockcart block-cart cart-preview tiva-toggle">
                     <div class="header-cart tiva-toggle-btn">
-                        <span class="cart-products-count">1</span>
+                        <span class="cart-products-count"><?=$_SESSION['cart']?count($_SESSION['cart']):0?></span>
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                     <?php require_once "./mvc/views/inc/header/mobile-cart.php" ?>
@@ -137,7 +137,7 @@
                 <div class="desktop_cart align-items-center d-flex">
                     <div class="blockcart block-cart cart-preview tiva-toggle">
                         <div class="header-cart tiva-toggle-btn">
-                            <span class="cart-products-count">1</span>
+                            <span class="cart-products-count"><?=$_SESSION['cart']?count($_SESSION['cart']):0?></span>
                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         </div>
                         <?php require_once "./mvc/views/inc/header/desktop-cart.php" ?>

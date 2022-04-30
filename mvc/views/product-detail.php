@@ -211,10 +211,16 @@
                                                                         <span class="add">
                                                                             <div style="display: flex; align-items: stretch">
                                                                                 <div style="display: flex; align-items: center">
-                                                                                    <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
-                                                                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                                                        <span>Thêm vào giỏ hàng</span>
-                                                                                    </button>
+                                                                                    <form method="post" action="<?=BASE_URL?>san-pham/<?=$sp['url']?>">
+                                                                                        <input type="hidden" name='url' value='<?=$sp['url']?>'>
+                                                                                        <input type="hidden" name='name' value='<?=$sp['name']?>'>
+                                                                                        <input type="hidden" name='price' value='<?=$sp['price']?>'>
+                                                                                        <input type="hidden" name='image' value='<?=$images[0]?>'>
+                                                                                        <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
+                                                                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                                                            <span>Thêm vào giỏ hàng</span>
+                                                                                        </button>
+                                                                                    </form>
                                                                                 </div>
                                                                                 <div style="display: flex; align-items: center">
                                                                                     <a class="addToWishlist" href="#">
@@ -312,13 +318,13 @@
                                                 <div class="tab-content">
                                                     <div id="description" class="tab-pane fade in active show">
                                                         <?php $descriptionList = explode(PHP_EOL, $sp['description']) ?>
-                                             
-                                                            <?php foreach ($descriptionList as $paragraph) { ?>
-                                                                <p>
-                                                                    <?= $paragraph ?>
-                                                                </p>
-                                                            <?php } ?>
-                                               
+
+                                                        <?php foreach ($descriptionList as $paragraph) { ?>
+                                                            <p>
+                                                                <?= $paragraph ?>
+                                                            </p>
+                                                        <?php } ?>
+
 
                                                     </div>
 

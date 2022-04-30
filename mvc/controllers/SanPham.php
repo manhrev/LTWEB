@@ -112,53 +112,73 @@ class SanPham extends Controller{
     }
 
     function GetSanPham($url) {
-        $model= $this->model('SanPhamModel');
-        $arr = $model->GetSanPham($url);
-        
-        if (!isset($arr[0])) {
-            header("Location: ".BASE_URL.'Error');
-        }
+        //handle add to cart
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['url']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image'])) {
+                $key = $_POST['url'];
+                $sp_to_cart = [
+                    'name' => $_POST['name'],
+                    'price' => $_POST['price'],
+                    'image' => $_POST['image']
+                ];
+                if (isset($_SESSION['cart'])) {
+                    if (!array_key_exists($key, $_SESSION['cart']))
+                    $_SESSION['cart'][$key] = $sp_to_cart;
+                } else {
+                    $_SESSION['cart'][$key] = $sp_to_cart;
+                }
+                header("Location: ".BASE_URL.'san-pham/'.$_POST['url']);
+            } else {
+                header("Location: ".BASE_URL.'Error');
+            }
+        } 
+        else {
+            $model= $this->model('SanPhamModel');
+            $arr = $model->GetSanPham($url);
+            
+            if (!isset($arr[0])) {
+                header("Location: ".BASE_URL.'Error');
+            }
 
-        $categories = $model->GetCategory();
-        //ban chay
-        $SPbanchay = $model->BanChayNhat();
-        $SPbanchay = array_slice($SPbanchay, 0, 3);
-        
-        //sp lien quan
-        $dmmodel = $this->model('DanhMucModel');
-        $SPlienquan = $dmmodel->GetSPDanhMuc($arr[1][0]['url']);
-        $SPlienquan = array_slice($SPlienquan, 0, 3);
-        foreach ($SPlienquan as $key=>$arra) {
-            if ($arra['name'] == $arr[0]['name'])
-                unset($SPlienquan[$key]);
-        }
-        
-        //all tags (max 12) //get random 11 tags
-        $tagss = $model->GetAllTag();
-        $rand = array_rand($tagss, min(11, count($tagss)));
-        foreach ($rand as $index) {
-            $tags[] = $tagss[$index];
-        }
-
-
-        $this->view('product-detail', [
-            'view' => 2,
-            'SP' => $arr,
-            'categories' => $categories,
-            'tags' => $tags,
-            'banchay' => $SPbanchay,
-            'lienquan' => $SPlienquan,
-            'path' => [
-                0 => [
-                    'name'=>'Sản phẩm',
-                    'url' => BASE_URL.'san-pham'
-                ],
-                1 => [
-                    'name'=> ucfirst($arr[0]['name']),
-                    'url' => BASE_URL.'san-pham/'.$url
+            $categories = $model->GetCategory();
+            //ban chay
+            $SPbanchay = $model->BanChayNhat();
+            $SPbanchay = array_slice($SPbanchay, 0, 3);
+            
+            //sp lien quan
+            $dmmodel = $this->model('DanhMucModel');
+            $SPlienquan = $dmmodel->GetSPDanhMuc($arr[1][0]['url']);
+            $SPlienquan = array_slice($SPlienquan, 0, 3);
+            foreach ($SPlienquan as $key=>$arra) {
+                if ($arra['name'] == $arr[0]['name'])
+                    unset($SPlienquan[$key]);
+            }
+            
+            //all tags (max 12) //get random 11 tags
+            $tagss = $model->GetAllTag();
+            $rand = array_rand($tagss, min(11, count($tagss)));
+            foreach ($rand as $index) {
+                $tags[] = $tagss[$index];
+            }
+            $this->view('product-detail', [
+                'view' => 2,
+                'SP' => $arr,
+                'categories' => $categories,
+                'tags' => $tags,
+                'banchay' => $SPbanchay,
+                'lienquan' => $SPlienquan,
+                'path' => [
+                    0 => [
+                        'name'=>'Sản phẩm',
+                        'url' => BASE_URL.'san-pham'
+                    ],
+                    1 => [
+                        'name'=> ucfirst($arr[0]['name']),
+                        'url' => BASE_URL.'san-pham/'.$url
+                    ]
                 ]
-            ]
-        ]);
+            ]);
+        }
     }
 }
 ?>
