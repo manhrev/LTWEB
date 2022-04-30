@@ -212,6 +212,12 @@ class App{
                                 }
                     
                                 break;
+                            case "dat-hang":
+                                array_push($returnArr, 'DatHang');
+                                if (isset($arr[2])) {
+                                    return array('NotFound');
+                                }
+                                break;
                             default:
                                 return array('NotFound');
                         }

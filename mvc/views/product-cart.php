@@ -156,10 +156,9 @@
                                     <?php 
                                         } else {   
                                     ?>
-                                    <a href="product-checkout.html" class="continue btn btn-primary pull-xs-right">
+                                    <a href="<?=BASE_URL?>gio-hang/dat-hang" class="continue btn btn-primary pull-xs-right">
                                         Đặt hàng
                                     </a>
-                                    <span>Sau khi đặt hàng, chúng tôi sẽ liên hệ đến bạn trong thời gian ngắn nhất</span>
                                     <?php 
                                         }   
                                     ?>
