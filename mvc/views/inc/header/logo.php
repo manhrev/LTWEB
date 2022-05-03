@@ -1,5 +1,5 @@
 <div id="logo">
     <a href="<?= BASE_URL ?>">
-        <img src="<?= STATIC_URL ?>img/home/logo.png" alt="logo" class="img-fluid">
+        <img src="<?= STATIC_URL ?>img/home/logo.png" alt="logo" class="img-fluid" style="max-height: 80px">
     </a>
 </div>
