@@ -41,7 +41,10 @@
 </head>
 
 <body id="product-sidebar-left" class="product-grid-sidebar-left">
-
+    <!-- contact pop -->
+    <?php require_once "./mvc/views/inc/phone.php" ?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+    
     <!-- header -->
     <?php require_once "./mvc/views/inc/header.php" ?>
     <!-- !header -->

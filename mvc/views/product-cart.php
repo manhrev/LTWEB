@@ -41,6 +41,11 @@
 </head>
 
 <body class="product-cart checkout-cart blog">
+    
+    <!-- contact pop -->
+    <?php require_once "./mvc/views/inc/phone.php" ?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+
     <?php require_once "./mvc/views/inc/header.php" ?>
 
     <!-- main content -->
