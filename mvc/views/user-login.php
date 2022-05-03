@@ -15,7 +15,7 @@
 
     <meta name="keywords" content="Furniture, Decor, Interior">
     <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
-    <meta name="author" content="tivatheme">
+
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -77,28 +77,28 @@
                     <div class="container">
                         <h1 class="text-center title-page">Đăng nhập</h1>
                         <div class="login-form">
-                            <form id="customer-form" action="#" method="post">
+                            <form id="customer-form" action="<?=BASE_URL?>login" method="post">
                                 <div>
-                                    <input type="hidden" name="back" value="my-account">
+            
                                     <div class="form-group no-gutters">
-                                        <input class="form-control" name="email" type="email" placeholder="Username">
+                                        <input required class="form-control" name="username" type="text" placeholder="Tên người dùng">
                                     </div>
                                     <div class="form-group no-gutters">
                                         <div class="input-group js-parent-focus">
-                                            <input class="form-control js-child-focus js-visible-password" name="password" type="password" value="" placeholder="Password">
+                                            <input required class="form-control js-child-focus js-visible-password" name="password" type="password" placeholder="Mật khẩu">
                                         </div>
                                     </div>
                                     <div class="no-gutters text-center">
                                         <div class="forgot-password">
                                             <span >
-                                                Nếu quên mật khẩu, liên hệ
+                                                Quên mật khẩu?
                                             </span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="clearfix">
                                     <div class="text-center no-gutters">
-                                        <input type="hidden" name="submitLogin" value="1">
+                
                                         <button class="btn btn-primary" data-link-action="sign-in" type="submit">
                                             Đăng nhập
                                         </button>

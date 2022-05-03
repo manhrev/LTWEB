@@ -1,3 +1,4 @@
+<?php require_once './mvc/helper/authorization.php';?>
 <!-- menu mobie left -->
 <!-- <div class="mobile-top-menu d-md-none">
     <button type="button" class="close" aria-label="Close">
@@ -586,6 +587,26 @@
                             <a href="<?=BASE_URL?>lien-he" title="Contact us">
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>Liên hệ</a>
                         </li>
+                        <li class="item has-sub">
+                            Người dùng
+                        </li>
+                        <?php if (!isLoggedIn()) { ?>
+                            <li class="item has-sub">
+                                <a href="<?=BASE_URL?>login" title="Đăng nhập">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</a>
+                            </li>
+                        <?php } if (isAdmin()) {?>
+
+                            <li class="item has-sub">
+                                <a href="<?=BASE_URL?>quan-li" title="Quản lí">
+                                    <i class="fa fa-bars " aria-hidden="true"></i>Quản lí</a>
+                            </li>
+                        <?php } if (isLoggedIn()) { ?>
+                            <li class="item has-sub">
+                                <a href="<?=BASE_URL?>logout" title="Đăng xuât">
+                                    <i class="fa fa-sign-in" aria-hidden="true"></i>Đăng xuất</a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </div>
             </nav>
