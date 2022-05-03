@@ -5,24 +5,36 @@
                                         <span>My Account</span>
                                     </a>
                                 </div> -->
-    <div>
-        <a class="login" href="<?= BASE_URL ?>login" rel="nofollow" title="Log in to your customer account">
-            <i class="fa fa-sign-in"></i>
-            <span>Đăng nhập</span>
-        </a>
-    </div>
-    <div>
-        <a class="register" href="user-register.html" rel="nofollow" title="Register Account">
-            <i class="fa fa-user"></i>
-            <span>Đăng kí</span>
-        </a>
-    </div>
-    <div>
-        <a class="register" href="<?= BASE_URL ?>quan-li/" rel="nofollow" title="Register Account">
-            <i class="fa fa-list-check"></i>
-            <span>Quản lí</span>
-        </a>
-    </div>
+    <?php if (!isLoggedIn()) { ?>
+        <div>
+            <a class="login" href="<?= BASE_URL ?>login" rel="nofollow" title="Đăng nhập vào tài khoản">
+                <i class="fa fa-sign-in"></i>
+                <span>Đăng nhập</span>
+            </a>
+        </div>
+        <!-- <div>
+            <a class="register" href="user-register.html" rel="nofollow" title="Register Account">
+                <i class="fa fa-user"></i>
+                <span>Đăng kí</span>
+            </a>
+        </div> -->
+    <?php } ?>
+    <?php if (isAdmin()) { ?>
+        <div>
+            <a class="register" href="<?= BASE_URL ?>quan-li/" rel="nofollow" title="Quản lí">
+                <i class="fa fa-bars "></i>
+                <span>Quản lí</span>
+            </a>
+        </div>
+    <?php } ?>
+    <?php if (isLoggedIn()) { ?>
+        <div>
+            <a class="login" href="<?= BASE_URL ?>logout" rel="nofollow" title="Đăng xuất khỏi tải khoản">
+                <i class="fa fa-sign-out"></i>
+                <span>Đăng xuất</span>
+            </a>
+        </div>
+    <?php }?>
     <!-- <div>
                                     <a class="check-out" href="product-checkout.html" rel="nofollow" title="Checkout">
                                         <i class="fa fa-check" aria-hidden="true"></i>

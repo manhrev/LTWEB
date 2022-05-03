@@ -1,13 +1,17 @@
 <?php
-
+require_once './mvc/helper/authorization.php';
 class QuanLi extends Controller{
     
 
     //render trang quan li, lua chon ql sp, ql danh muc...
     function Default(){
-        $this->view('quan-li', [
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        } 
 
-        ]);
+        $this->view('quan-li', []);
+        
 
         //TẤT CẢ CÁC HÀM ĐỀU TRẢ VỀ STRING THÔNG BÁO ĐÃ THỰC HIỆN YÊU CẦU HAY BỊ LỖI. VÍ DỤ: Thêm sản phẩm thành công !!, Sản phẩm đã tồn tại,....
 
@@ -30,6 +34,11 @@ class QuanLi extends Controller{
     }
      // san pham
     function QuanLiSanPham() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $url = $_POST['url'];
             $qlModel = $this->model('QuanLiModel');
@@ -49,6 +58,11 @@ class QuanLi extends Controller{
     }
 
     function ThemSanPham() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
         //if post to this
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $i = 0;
@@ -89,6 +103,12 @@ class QuanLi extends Controller{
     }
 
     function ChiTietSanPham($url) {
+
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
         $spModel = $this->model('SanPhamModel');
         $SP = $spModel->GetSanPham($url);
         $this->view('ql-sanpham-chitiet', [
@@ -97,6 +117,11 @@ class QuanLi extends Controller{
     }
 
     function ChinhSuaSanPham($url=null) {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
         if ($url) {
             $spModel = $this->model('SanPhamModel');
             $SP = $spModel->GetSanPham($url);
@@ -163,11 +188,18 @@ class QuanLi extends Controller{
     }
 
     function XoaSanPham() {
-
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
     }
 
     // danh muc
     function QuanLiDanhMuc() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['action'])) {
                 if ($_POST['action'] == 'remove') {
@@ -211,14 +243,26 @@ class QuanLi extends Controller{
     }
 
     function ThemDanhMuc() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
         echo 'them dm';
     }
 
     function XoaDanhMuc() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
         echo 'xoa dm';
     }
 
     function ChinhSuaDanhMuc() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
         echo 'sua dm';
     }
     

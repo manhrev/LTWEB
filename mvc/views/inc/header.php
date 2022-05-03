@@ -1,3 +1,4 @@
+<?php require_once './mvc/helper/authorization.php';?>
 <header>
         <!-- header left mobie -->
         <div class="header-mobile d-md-none">

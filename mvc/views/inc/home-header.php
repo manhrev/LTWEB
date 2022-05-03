@@ -1,3 +1,4 @@
+<?php require_once './mvc/helper/authorization.php';?>
 <header>
     <!-- search -->
     <div id="tiva-searchBox" class="d-flex align-items-center text-center active">

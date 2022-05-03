@@ -17,7 +17,7 @@
 
           </ul>
           <div class="d-flex flex-row-reverse w-100">   
-            <a class="btn btn-danger" aria-current="page" href="ql-danhmuc.html">Đăng xuất</a>
+            <a class="btn btn-danger" aria-current="page" href="<?=BASE_URL.'logout'?>">Đăng xuất</a>
         </div>
       </div>
         </div>
