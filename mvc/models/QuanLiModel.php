@@ -252,5 +252,18 @@ class QuanLiModel extends DB {
         
         return $resultArray;
     }
+    public function XoaOrder($url)
+    {
+        $query = "DELETE FROM order_infor WHERE url='$url'" ;
+            
+        if ($this->con->query($query ) === TRUE)
+        {
+            return "Xóa đơn hàng thành công !!";
+        }
+        else
+        {
+            return "Lỗi hệ thống, không kết nối được với Database :<";
+        }
+    }
 
 }
