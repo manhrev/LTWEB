@@ -9,7 +9,7 @@
                             <div class="block-content">
                                 <div class="policy-item text-center">
                                     <div class="policy-content iconpolicy1 text-center">
-                                        <img src="<?=STATIC_URL?>img/home/home1-policy.png" alt="img">
+                                        <img src="<?= STATIC_URL ?>img/home/home1-policy.png" alt="img">
                                         <div class="description">
                                             <div class="policy-name mb-5">VẬN CHUYỂN NHANH</div>
                                             <div class="policy-des"></div>
@@ -24,7 +24,7 @@
                             <div class="block-content">
                                 <div class="policy-item">
                                     <div class="policy-content iconpolicy2 text-center">
-                                        <img src="<?=STATIC_URL?>img/home/home1-policy2.png" alt="img">
+                                        <img src="<?= STATIC_URL ?>img/home/home1-policy2.png" alt="img">
                                         <div class="discription">
                                             <div class="policy-name mb-5">MIỄN PHÍ LẮP ĐẶT</div>
                                             <div class="policy-des"></div>
@@ -39,7 +39,7 @@
                             <div class="block-content">
                                 <div class="policy-item">
                                     <div class="policy-content iconpolicy3 text-center">
-                                        <img src="<?=STATIC_URL?>img/home/home1-policy3.png" alt="img">
+                                        <img src="<?= STATIC_URL ?>img/home/home1-policy3.png" alt="img">
                                         <div class="discription">
                                             <div class="policy-name mb-5">CHẾ ĐỘ BẢO HÀNH TỐT</div>
                                             <div class="policy-des"></div>
@@ -51,15 +51,15 @@
                     </div>
                 </div>
             </div>
-			
+
             <div class="footer-top">
                 <div class="row">
                     <div class="col-sm-6 col-xs-12 col-lg-4 col-md-6 padding-right">
                         <div class="block">
                             <div class="block-content">
                                 <div class="title-block">
-                                    <a href="<?=BASE_URL?>">
-                                        <img src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="noi that gia vuong logo">
+                                    <a href="<?= BASE_URL ?>">
+                                        <img src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="noi that gia vuong logo">
                                     </a>
                                 </div>
                                 <div class="contact-content">
@@ -74,7 +74,8 @@
                                         <i class="fa fa-clock-o float-left" aria-hidden="true"></i>
 
                                         <div class="content-data">
-                                            <b class="mr-2">Giờ hoạt động:</b>08:00 - 20:00</div>
+                                            <b class="mr-2">Giờ hoạt động:</b>08:00 - 20:00
+                                        </div>
                                     </div>
                                     <div class="support d-flex">
                                         <div class="data d-flex align-self-stretch mail-support">
@@ -94,6 +95,11 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6">
+                        <div class="block-content">
+                            <p class="img-payment ">
+                                <img class="img-fluid" style="width: 200px" src="<?= STATIC_URL ?>img/home/bct.png" alt="Đã thông báo bộ công thương">
+                            </p>
+                        </div>
                         <!-- <div class="block">
                             <div class="block-content">
                                 <div class="title-block">Newsletter</div>
@@ -160,7 +166,7 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="<?=BASE_URL?>lien-he">Về chúng tôi</a>
+                                        <a href="<?= BASE_URL ?>lien-he">Về chúng tôi</a>
                                     </li>
                                     <li>
                                         <a href="https://goo.gl/maps/NkEPsr7xR2dexQH48">Bản đồ</a>
@@ -173,9 +179,9 @@
             </div>
         </div>
 
-        
+
     </footer>
-    
+
     <!-- back top top -->
     <div class="back-to-top">
         <a href="#">

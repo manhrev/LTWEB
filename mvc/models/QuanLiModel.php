@@ -73,7 +73,9 @@ class QuanLiModel extends DB {
         }
         elseif($notice=='Không thể thêm vì tên danh mục đã tồn tại. Vui lòng chọn tên khác!')
         {
-            $query ="UPDATE category SET image = $ImageLink WHERE url= '$CurrentUrl'";
+            $query ="UPDATE category SET image = '$ImageLink' WHERE url= '$CurrentUrl'";
+            $this -> con -> query($query);
+            return "Cập nhật danh mục hoàn tất";
         }
         else 
         {
@@ -252,9 +254,9 @@ class QuanLiModel extends DB {
         
         return $resultArray;
     }
-    public function XoaOrder($url)
+    public function XoaOrder($id)
     {
-        $query = "DELETE FROM order_infor WHERE url='$url'" ;
+        $query = "DELETE FROM order_infor WHERE id='$id'" ;
             
         if ($this->con->query($query ) === TRUE)
         {
@@ -265,6 +267,13 @@ class QuanLiModel extends DB {
             return "Lỗi hệ thống, không kết nối được với Database :<";
         }
     }
+
+    public function GetNewIdImage() {
+        $query = "SELECT max(id) from images_store";
+        $result = $this->con->query($query);
+        return  mysqli_fetch_array($result, MYSQLI_ASSOC)['max(id)'] +1;
+    }
+
     public function ThemImage($ImageLink)
     {
         $query= "INSERT INTO images_store (link)

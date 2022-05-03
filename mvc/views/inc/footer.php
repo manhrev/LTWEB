@@ -29,7 +29,7 @@
                         <div class="block">
                             <div class="block-content">
                                 <p class="img-payment ">
-                                    <img class="img-fluid" src="<?= STATIC_URL ?>img/home/bct.jpg" alt="img">
+                                    <img class="img-fluid" src="<?= STATIC_URL ?>img/home/bct.png" alt="đã thông báo bộ công thương">
                                 </p>
                             </div>
                         </div>
