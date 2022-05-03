@@ -265,5 +265,45 @@ class QuanLiModel extends DB {
             return "Lỗi hệ thống, không kết nối được với Database :<";
         }
     }
+    public function ThemImage($ImageLink)
+    {
+        $query= "INSERT INTO images_store (link)
+        VALUES ('$ImageLink')";
+        if ($this->con->query($query ) === TRUE)
+        {
+            return "Thêm ảnh thành công";
+        }
+        else
+        {       
+            return "Lỗi hệ thống, không kết nối được với Database :<";
+        }
+    }
+    public function GetImages()
+    {
+        $query= "SELECT * FROM images_store ORDER BY date_created DESC";
+        $resultArray =[];
+            
+        $result = $this -> con -> query($query);
+            
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+        {
+            $resultArray[]=$item;
+        }
+        
+        return $resultArray;
+    }
+    public function XoaImage($id)
+    {
+        $query = "DELETE FROM images_store WHERE id='$id'" ;
+            
+        if ($this->con->query($query ) === TRUE)
+        {
+            return "Xóa ảnh thành công !!";
+        }
+        else
+        {
+            return "Lỗi hệ thống, không kết nối được với Database :<";
+        } 
+    }
 
 }
