@@ -12,10 +12,23 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Nội thất Gia Vương</title>
+    <meta property="og:type" content="website">
+    
+    <meta property="og:url" content="<?=BASE_URL?>">
+    <meta name="revisit-after" content="1 day">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:site_name" content="Nội thất Gia Vương">
 
-    <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+    <title>Nội thất Gia Vương</title>
+    <meta property="og:title" content="Nội Thất Gia Vương">
+    
+    <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Gia Vương, 
+    nội thất, Nội thất quảng nam, nội thất gia đình, bàn, tủ, ghế, vách, cầu thang, sản phẩm, đồ gỗ,
+     funiture">
+    <meta name="description" content="
+    NỘI THẤT GIA VƯƠNG là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… Gia Vương thiết kế và thi công nội thất theo mỗi phong cách riêng biệt từ cổ điển tới hiện đại, từ không gian hẹp đến không gian sống rộng.
+    ">
 
 
     <!-- Mobile Meta -->

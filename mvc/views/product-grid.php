@@ -12,11 +12,19 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Các sản phẩm - Nội thất Gia Vương</title>
+    <title><?=isset($data['danhmuc'])?$data['danhmuc']:$data['pageTitle']?> - Nội thất Gia Vương</title>
+    <meta property="og:url" content="<?=BASE_URL?>">
+    <meta name="revisit-after" content="1 day">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:site_name" content="Nội thất Gia Vương">
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
-    <meta name="author" content="tivatheme">
+    <meta name="keywords" content="Nội thất Gia Vương,nội thất Đà Nẵng, nội thất, funiture, 
+    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>">
+    <meta name="description" content="Các sản phẩm ở Nội thất Gia Vương luôn đem đến sự hài lòng cho người sử dụng,
+    với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
+    ">
+
 
 
     <!-- Mobile Meta -->
