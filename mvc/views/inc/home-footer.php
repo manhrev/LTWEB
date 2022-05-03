@@ -66,27 +66,27 @@
                                     <div class="data align-self-stretch d-flex">
                                         <i class="fa fa-home float-left" aria-hidden="true"></i>
                                         <div class="content-data">
-                                            <b class="mr-2">Showroom:</b>
-                                            123 Suspendis matti, Visaosang Building, VST District NY Accums, Kansas City, North American.
+                                            <b class="mr-2">Địa chỉ:</b>
+                                            422 Văn Tiến Dũng, P.Hòa Xuân, Q.Cẩm Lệ, TP.Đà Nẵng
                                         </div>
                                     </div>
                                     <div class="data align-self-stretch d-flex">
                                         <i class="fa fa-clock-o float-left" aria-hidden="true"></i>
 
                                         <div class="content-data">
-                                            <b class="mr-2">Opening Hours:</b>08.00AM - 19.00</div>
+                                            <b class="mr-2">Giờ hoạt động:</b>08:00 - 20:00</div>
                                     </div>
                                     <div class="support d-flex">
                                         <div class="data d-flex align-self-stretch mail-support">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <div>support@domain.com</div>
+                                            <div>noithatgiavuong86@gmail.com</div>
                                         </div>
                                     </div>
                                     <div class="data d-flex align-self-stretch phone-support">
                                         <div class="title-icon">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </div>
-                                        <div>+0012-345-67890</div>
+                                        <div>0934 413 314</div>
                                     </div>
 
                                 </div>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6">
-                        <div class="block">
+                        <!-- <div class="block">
                             <div class="block-content">
                                 <div class="title-block">Newsletter</div>
                                 <div class="sub-title">Sign up to our newsletter to get the latest articles, lookbooks voucher codes direct to your
@@ -114,26 +114,26 @@
                                     </form>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6 padding-left">
                         <div class="block">
                             <div class="block-content">
                                 <div class="title-block">
-                                    Follow Us On
+                                    Theo dõi chúng tôi
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.facebook.com/Noithatgiavuong86">
                                             <i class="fa fa-facebook" aria-hidden="true"></i>Facebook
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
-                                            <i class="fa fa-instagram" aria-hidden="true"></i>Instagram
+                                        <a href="https://zalo.me/0934413314">
+                                            <i class="fa fa-phone-square" aria-hidden="true"></i>Zalo
                                         </a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="#">
                                             <i class="fa fa-twitter" aria-hidden="true"></i>Twitter
                                         </a>
@@ -147,7 +147,7 @@
                                         <a href="#">
                                             <i class="fa fa-pinterest-p" aria-hidden="true"></i>Pinterest
                                         </a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -156,23 +156,14 @@
                         <div class="block">
                             <div class="block-content">
                                 <div class="title-block">
-                                    Information
+                                    Thông tin
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="#">About Us</a>
+                                        <a href="<?=BASE_URL?>lien-he">Về chúng tôi</a>
                                     </li>
                                     <li>
-                                        <a href="#">Customer service</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Privacy policy</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Site Map</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Search Terms</a>
+                                        <a href="https://goo.gl/maps/NkEPsr7xR2dexQH48">Bản đồ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -182,18 +173,7 @@
             </div>
         </div>
 
-        <div id="tiva-copyright">
-            <div class="row">
-                <div class="block-inline col-md-6 align-items-center justify-content-md-start justify-content-sm-center d-flex pb-xs-max-20 flex-center">
-                    <span>
-                       <a target="_blank" href="https://www.templateshub.net">Templates Hub</a>
-                    </span>
-                </div>
-                <div class="payment-image col-md-6 align-items-center justify-content-md-end justify-content-sm-center d-flex flex-center">
-                    <img src="<?=STATIC_URL?>img/home/payment.png" alt="img">
-                </div>
-            </div>
-        </div>
+        
     </footer>
     
     <!-- back top top -->
