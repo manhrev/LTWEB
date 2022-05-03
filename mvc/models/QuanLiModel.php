@@ -302,7 +302,7 @@ class QuanLiModel extends DB {
         }
         else
         {
-            return "Lỗi hệ thống, không kết nối được với Database :<";
+            return "Lỗi hệ thống, không kết nối được với Database ";
         } 
     }
 
