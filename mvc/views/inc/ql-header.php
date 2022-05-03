@@ -14,7 +14,13 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-danh-muc">Quản lí danh mục</a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-don-hang">Quản lí đơn hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-anh">Quản lí ảnh</a>
+            </li>
+            
           </ul>
           <div class="d-flex flex-row-reverse w-100">   
             <a class="btn btn-danger" aria-current="page" href="<?=BASE_URL.'logout'?>">Đăng xuất</a>

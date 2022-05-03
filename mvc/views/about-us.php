@@ -14,8 +14,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Giới thiệu - Nội thất Gia Vương</title>
 
-	<meta name="keywords" content="Furniture, Decor, Interior">
-	<meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+	<meta name="keywords" content="Nội thất gia vương, nội thất, gia vương, nội thất đẹp, nội thất cao cấp">
+	<meta name="description" content="Giới thiệu về nội thất Gia Vương">
 
 
 

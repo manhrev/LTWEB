@@ -187,13 +187,6 @@ class QuanLi extends Controller{
         }
     }
 
-    function XoaSanPham() {
-        if (!isAdmin()) {
-            header("Location: ".BASE_URL.'login');
-            exit();
-        }
-    }
-
     // danh muc
     function QuanLiDanhMuc() {
         if (!isAdmin()) {
@@ -212,6 +205,20 @@ class QuanLi extends Controller{
                         window.location.href='".BASE_URL."quan-li/quan-li-danh-muc/';
                         </script>"; 
                     } 
+                    else echo "Error!";
+                }
+                elseif ($_POST['action'] == 'edit') {
+                    if (isset($_POST['url'])) {
+                        $url = $_POST['url'];
+                        $name = $_POST['name'];
+                        $image = $_POST['image'];
+                        $qlModel = $this->model("QuanLiModel");
+                        $message = $qlModel->SuaCategory($url, $name, $image);
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-danh-muc/';
+                        </script>"; 
+                    }
                     else echo "Error!";
                 }
                 elseif ($_POST['action'] == 'add') {
@@ -242,30 +249,134 @@ class QuanLi extends Controller{
         }
     }
 
-    function ThemDanhMuc() {
+    function QuanLiDonHang() {
         if (!isAdmin()) {
             header("Location: ".BASE_URL.'login');
             exit();
         }
-        echo 'them dm';
-    }
 
-    function XoaDanhMuc() {
-        if (!isAdmin()) {
-            header("Location: ".BASE_URL.'login');
-            exit();
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['action'])) {
+                if ($_POST['action'] == 'remove') {
+                    if (isset($_POST['id'])) {
+                        $id = $_POST['id'];
+                        $qlModel = $this->model("QuanLiModel");
+                        $message = $qlModel->XoaOrder($id);
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-don-hang/';
+                        </script>"; 
+                    } 
+                    else echo "Error!";
+                }
+                else {
+                    echo 'Error!';
+                }
+            } else {
+                echo 'Error!';
+            }
         }
-        echo 'xoa dm';
-    }
-
-    function ChinhSuaDanhMuc() {
-        if (!isAdmin()) {
-            header("Location: ".BASE_URL.'login');
-            exit();
+        else {
+        $qlModel = $this->model('QuanLiModel');
+            $orders = $qlModel->QuanLiOrder();
+            $this->view('ql-donhang', [
+                'orders' => $orders
+            ]);
         }
-        echo 'sua dm';
     }
     
+    function QuanLiAnh() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $target_dir = "./public/img/sanpham/";
+            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+            $uploadOk = 1;
+            $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+            $extension = explode('.',basename($_FILES["fileToUpload"]["name"]))[1];
+
+            $qlModel = $this->model('QuanLiModel');
+            $fileNameId = $qlModel->GetNewIdImage();
+        
+            // Check if image file is a actual image or fake image
+            if (isset($_POST["submit"])) {
+                $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+                if ($check !== false) {
+                    echo "File is an image - " . $check["mime"] . ".";
+                    $uploadOk = 1;
+                } else {
+                    echo "File is not an image.";
+                    $uploadOk = 0;
+                }
+            }
+
+            // Check if file already exists
+            if (file_exists($target_file)) {
+                echo "<script>
+                        alert('File đã tồn tại');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>";
+                $uploadOk = 0;
+            }
+
+            // Check file size
+            if ($_FILES["fileToUpload"]["size"] > 500000) {
+                echo "<script>
+                        alert('Xin lỗi, file quá nặng');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>";
+                $uploadOk = 0;
+            }
+
+            // Allow certain file formats
+            if (
+                $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                && $imageFileType != "gif"
+            ) {
+                echo "<script>
+                        alert('Xin lỗi, chỉ file định dạng: JPG, JPEG, PNG là hợp lệ');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>";
+                $uploadOk = 0;
+            }
+
+            // Check if $uploadOk is set to 0 by an error
+            if ($uploadOk == 0
+            ) {
+                echo "<script>
+                        alert('Upfile không thành công');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>";
+                // if everything is ok, try to upload file
+            } else {
+                if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_dir.$fileNameId.'.'.$extension)) {
+                    $imglink = STATIC_URL . 'img/sanpham/' . $fileNameId . '.' . $extension;
+                    $message = $qlModel->ThemImage($imglink);
+                    echo "<script>
+                        alert('" . $message . "');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>"; 
+                } else {
+                    echo "<script>
+                        alert('Upfile không thành công');
+                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+                        </script>";
+                }
+                
+
+            }
+        } else {
+            $qlModel = $this->model("QuanLiModel");
+            $images = $qlModel->GetImages();
+            $this->view('ql-anh', [
+                'images' => $images
+            ]);
+        }
+
+    }
 }
 
 ?>

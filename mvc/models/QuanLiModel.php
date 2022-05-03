@@ -267,6 +267,13 @@ class QuanLiModel extends DB {
             return "Lỗi hệ thống, không kết nối được với Database :<";
         }
     }
+
+    public function GetNewIdImage() {
+        $query = "SELECT max(id) from images_store";
+        $result = $this->con->query($query);
+        return  mysqli_fetch_array($result, MYSQLI_ASSOC)['max(id)'] +1;
+    }
+
     public function ThemImage($ImageLink)
     {
         $query= "INSERT INTO images_store (link)

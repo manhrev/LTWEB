@@ -49,7 +49,22 @@
                             <?php } ?>
                         </td>
                         <td>
-                            <button type="button" class="btn btn-primary">Xem</button>
+                        <button 
+                            id="<?= $cate['url'] . $key ?>" 
+                            type="button" 
+                            class="btn btn-primary" 
+                            data-bs-toggle="modal" 
+                            data-bs-target="#editModal"
+                             data-val="<?= $cate['url'] ?>" 
+                             data-name="<?= $cate['name'] ?>" 
+                             data-img="<?= $cate['image'] ?>"
+                             onclick="
+                                document.getElementById('url-sua').value = document.getElementById('<?= $cate['url'] . $key ?>').getAttribute('data-val');
+                                document.getElementById('name-sua').value = document.getElementById('<?= $cate['url'] . $key ?>').getAttribute('data-name');
+                                document.getElementById('image-sua').value = document.getElementById('<?= $cate['url'] . $key ?>').getAttribute('data-img');
+                                ">
+                                Sửa
+                            </button>
                             <button id="<?= $cate['url'] . $key ?>" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#addUserModal" data-val="<?= $cate['url'] ?>" data-name="<?= $cate['name'] ?>" onclick="
                                 document.getElementById('url-sp').value = document.getElementById('<?= $cate['url'] . $key ?>').getAttribute('data-val');
                                 document.getElementById('to-delete').innerHTML = document.getElementById('<?= $cate['url'] . $key ?>').getAttribute('data-name');
@@ -109,6 +124,37 @@
                         <input required type="text" class="form-control" id="image" name="image" placeholder="Điền link ảnh">
                     </div>
                     <input type="hidden" name="action" value="add">
+                    <p>Lưu ý: Chỉ thêm duy nhất 1 ảnh</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">OK</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Sua danh muc -->
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form class="modal-content" method="POST" action="<?=BASE_URL?>quan-li/quan-li-danh-muc/">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editModalLabel">Sửa danh mục</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body col-10 mx-auto">
+
+                    <!-- Form field -->
+                    <div class="form-group py-2">
+                        <label for="name">Tên</label>
+                        <input required type="text" class="form-control" id="name-sua" name="name" placeholder="Điền tên danh mục" value="">
+                    </div>
+                    <div class="form-group py-2">
+                        <label for="image">Ảnh</label>
+                        <input required type="text" class="form-control" id="image-sua" name="image" placeholder="Điền link ảnh" value="">
+                    </div>
+                    <input type="hidden" name="action" value="edit">
+                    <input type="hidden" id='url-sua' name="url" value="">
                     <p>Lưu ý: Chỉ thêm duy nhất 1 ảnh</p>
                 </div>
                 <div class="modal-footer">

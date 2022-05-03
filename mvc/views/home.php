@@ -14,7 +14,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Nội thất Gia Vương</title>
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
+    <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Interior">
     <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
     
 
@@ -578,7 +578,7 @@
                         <div class="row justify-content-center mt-5">
                             <div class="title-product justify-content-between">
                                 <h2>DANH MỤC SẢN PHẨM</h2>
-                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp</p>
+                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp, <br><a href="<?=BASE_URL?>san-pham">xem tất cả sản phẩm ở đây</a></p>
                             </div>
                         </div>
                         <div class="tab-content row">

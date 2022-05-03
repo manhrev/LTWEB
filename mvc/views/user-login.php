@@ -13,8 +13,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Đăng nhập - Nội thất Gia Vương</title>
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+    <meta name="keywords" content="Nội thất Gia Vương, đăng nhập, login, noi that, nội thất">
+    <meta name="description" content="Đăng nhập hệ thống, Nội thất gia vương">
 
 
     <!-- Mobile Meta -->

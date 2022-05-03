@@ -46,7 +46,7 @@
                             <label for="price" class="form-label">Giá</label>
                         </th>
                         <td>
-                            <input required type="number" class="form-control" id="price" name="price" value="" placeholder="Điền giá (đơn vị vnđ)">
+                            <input required type="number" class="form-control" id="price" name="price" value="" placeholder="Điền giá (đơn vị vnđ, 0đ -> liên hệ)">
                         </td>
                     </tr>
                     <tr>

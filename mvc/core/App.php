@@ -170,23 +170,23 @@ class App{
                             array_push($returnArr, 'QuanLiDanhMuc');
                             if (isset($arr[2])) {
                                 switch ($arr[2]) {
-                                    case 'them-danh-muc':
-                                        $returnArr[1] = 'ThemDanhMuc';
-                                        //xet tham so
-                                        break;
                                     case 'chinh-sua':
                                         $returnArr[1] = 'ChinhSuaDanhMuc';
                                         //xet tham so
-                                        break;
-                                    case 'xoa':
-                                        $returnArr[1] = 'XoaDanhMuc';
-                                        //xet ts
                                         break;
                                     default:
                                         return array('NotFound');
                                         break;
                                 }
                             } 
+                            break;
+                        case 'quan-li-don-hang':
+                            array_push($returnArr, 'QuanLiDonHang');
+                            //xet tham so
+                            break;
+                        case 'quan-li-anh':
+                            array_push($returnArr, 'QuanLiAnh');
+                            //xet tham so
                             break;
                         default:
                             return array('NotFound');
