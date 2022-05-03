@@ -11,7 +11,7 @@
                 <!-- logo -->
                 <div class="mobile-logo">
                     <a href="<?=BASE_URL?>">
-                        <img class="logo-mobile img-fluid" src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="Prestashop_Furnitica">
+                        <img class="logo-mobile img-fluid" src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="Noi that gia vuong logo">
                     </a>
                 </div>
 
@@ -26,7 +26,7 @@
                 <div id="mobile_search_content">
                     <form method="get" action="#">
 
-                        <input type="text" id="saerch" value="" placeholder="Search">
+                        <input type="text" id="saerch" value="" placeholder="Tìm kiếm">
                         <button type="button" onclick="window.location.href='<?= BASE_URL ?>tim-kiem/'+document.getElementById('saerch').value">
                             <i class="fa fa-search"></i>
                         </button>
@@ -63,7 +63,7 @@
                         <form method="get" action="#" onkeydown="return event.key != 'Enter';">
 
                             <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span>
-                            <input type="text" id="searck" value="" placeholder="Search" class="ui-autocomplete-input" autocomplete="off">
+                            <input type="text" id="searck" value="" placeholder="Tìm kiếm" class="ui-autocomplete-input" autocomplete="off">
                             <button type="button" onclick="window.location.href='<?= BASE_URL ?>tim-kiem/'+document.getElementById('searck').value">
                                 <i class="fa fa-search"></i>
                             </button>

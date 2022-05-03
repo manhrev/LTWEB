@@ -7,7 +7,7 @@
                         <div class="block">
                             <div class="block-content">
                                 <p class="logo-footer">
-                                    <img src="<?= STATIC_URL ?>img/home/logo.png" alt="img">
+                                    <img src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="Noi that gia vuong logo">
                                 </p>
                                 <p class="content-logo">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt
                                     ut labore et dolore magna aliqua. Ut enim ad minim

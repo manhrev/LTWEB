@@ -58,8 +58,8 @@
                         <div class="block">
                             <div class="block-content">
                                 <div class="title-block">
-                                    <a href="#">
-                                        <img src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="img">
+                                    <a href="<?=BASE_URL?>">
+                                        <img src="<?=STATIC_URL?>img/home/logo-mobie.png" alt="noi that gia vuong logo">
                                     </a>
                                 </div>
                                 <div class="contact-content">

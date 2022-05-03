@@ -67,7 +67,7 @@
             <!-- logo -->
             <div class="mobile-logo">
                 <a href="<?= BASE_URL ?>">
-                    <img class="logo-mobile img-fluid" src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="Prestashop_Furnitica">
+                    <img class="logo-mobile img-fluid" src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="Noi that gia vuong logo">
                 </a>
             </div>
 
