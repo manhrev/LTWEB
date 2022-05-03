@@ -37,7 +37,7 @@
                     <span class="product-price">...</span>
                 </td>
                 </tr>
-                <?php }}?>
+                <?php }} else echo '<span>Giỏ hàng trống</span>';?>
                 <!-- <tr class="total">
                     <td colspan="2">Total:</td>
                     <td>£92.96</td>

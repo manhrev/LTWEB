@@ -71,7 +71,7 @@
                         <div class="container">
                             <div class="content">
                                 <div class="row">
-                                    <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4">
+                                    <div class="sidebar-3 sidebar-collection col-lg-3 col-md-3 col-sm-4 order-2 order-sm-1">
 
                                         <!-- category -->
                                         <?php require_once "./mvc/views/inc/main/categories.php" ?>
@@ -84,7 +84,7 @@
                                     </div>
 
                                     <?php $sp = $data['SP'][0] ?>
-                                    <div class="col-sm-8 col-lg-9 col-md-9">
+                                    <div class="col-sm-8 col-lg-9 col-md-9 order-1 order-sm-2">
                                         <div class="main-product-detail">
                                             <h2 style="text-transform: uppercase"><?= $sp['name'] ?></h2>
                                             <div class="product-single row">
@@ -282,7 +282,7 @@
                                                                     <?php
                                                                     $cates = $data['SP'][1];
                                                                     foreach ($cates as $key => $cate) { ?>
-                                                                        <a><?= $cate['name'] ?></a><?= $key != (count($cates) - 1) ? ',' : '' ?>
+                                                                        <a href="<?=BASE_URL."danh-muc/".$cate['url']?>"><?= $cate['name'] ?></a><?= $key != (count($cates) - 1) ? ',' : '' ?>
                                                                     <?php } ?>
 
                                                                 </span>
@@ -293,7 +293,7 @@
                                                                     $tags = explode(',', $sp['tag']);
                                                                     foreach ($tags as $index => $tag) {
                                                                     ?>
-                                                                        <a><?= $tag ?></a><?= $index != count($tags) - 1 ? ',' : '' ?>
+                                                                        <a href="<?=BASE_URL."tim-kiem/".$tag?>"><?= $tag ?></a><?= $index != count($tags) - 1 ? ',' : '' ?>
                                                                     <?php } ?>
                                                                 </span>
                                                             </p>

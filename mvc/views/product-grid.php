@@ -72,7 +72,7 @@
                         <div class="container">
                             <div class="content">
                                 <div class="row">
-                                    <div class="sidebar-3 sidebar-collection col-lg-3 col-md-4 col-sm-4">
+                                    <div class="sidebar-3 sidebar-collection col-lg-3 col-md-4 col-sm-4 order-2 order-sm-1">
 
                                         <!-- category menu -->
                                         <?php require_once "./mvc/views/inc/main/categories.php" ?>
@@ -84,7 +84,7 @@
                                         <?php require_once "./mvc/views/inc/main/tags.php" ?>
 
                                     </div>
-                                    <div class="col-sm-8 col-lg-9 col-md-8 product-container">
+                                    <div class="col-sm-8 col-lg-9 col-md-8 product-container order-1 order-sm-2">
                                         <h1><?= $data['pageTitle'] ?></h1>
                                         <div class="js-product-list-top firt nav-top">
                                             <div class="d-flex justify-content-around row">

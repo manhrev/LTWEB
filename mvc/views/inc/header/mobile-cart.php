@@ -30,7 +30,7 @@
                 </tr>
                 <?php      
                         }
-                    }
+                    } else echo '<span class="text-center">Giỏ hàng trống</span>';
                 ?>
                 
                 <?php if (isset($_SESSION['cart'])) { if (count($_SESSION['cart']) >4) {?>
