@@ -8,6 +8,7 @@
 
 <!-- 40410:55-->
 <head>
+    <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">

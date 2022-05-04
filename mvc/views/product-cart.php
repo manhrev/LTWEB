@@ -19,7 +19,7 @@
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+    <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <!-- Google Fonts -->
     <?php require_once "./mvc/views/inc/font_inc/font.php" ?>
 

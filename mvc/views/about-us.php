@@ -10,6 +10,7 @@
 
 <head>
 	<!-- Basic Page Needs -->
+	<link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Giới thiệu - Nội thất Gia Vương</title>

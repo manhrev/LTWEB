@@ -24,7 +24,7 @@
     <meta name="description" content="Các sản phẩm ở Nội thất Gia Vương luôn đem đến sự hài lòng cho người sử dụng,
     với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
     ">
-
+    <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
 
 
     <!-- Mobile Meta -->
