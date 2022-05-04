@@ -188,6 +188,10 @@ class App{
                             array_push($returnArr, 'QuanLiAnh');
                             //xet tham so
                             break;
+                        case 'quan-li-thi-cong':
+                            array_push($returnArr, 'QuanLiThiCong');
+                            //xet tham so
+                            break;
                         default:
                             return array('NotFound');
                             break;

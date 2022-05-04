@@ -13,8 +13,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <meta property="og:type" content="website">
-    
-    <meta property="og:url" content="<?=BASE_URL?>">
+
+    <meta property="og:url" content="<?= BASE_URL ?>">
     <meta name="revisit-after" content="1 day">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="true">
@@ -22,7 +22,7 @@
 
     <title>Nội thất Gia Vương</title>
     <meta property="og:title" content="Nội Thất Gia Vương">
-    
+
     <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Gia Vương, 
     nội thất, Nội thất quảng nam, nội thất gia đình, bàn, tủ, ghế, vách, cầu thang, sản phẩm, đồ gỗ,
      funiture">
@@ -57,7 +57,7 @@
 
     <!-- contact pop -->
     <?php require_once "./mvc/views/inc/phone.php" ?>
-    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php" ?>
 
     <!-- header -->
     <?php require_once "./mvc/views/inc/home-header.php" ?>
@@ -594,7 +594,7 @@
                 <div id="main">
                     <section class="page-home">
                         <div class="row justify-content-center mt-5">
-                            <div class="title-product justify-content-between">
+                            <div class="title-product justify-content-between mt-4">
                                 <h2>DANH MỤC SẢN PHẨM</h2>
                                 <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem tất cả sản phẩm ở đây</a></p>
                             </div>
@@ -619,6 +619,33 @@
 
 
                                 </div>
+                            </div>
+
+                            <!-- THI CONG-->
+                            <div class="container-fluid">
+                                <div class="row justify-content-center mt-5">
+                                    <div class="title-product justify-content-between mt-4">
+                                        <h2>Hình ảnh thi công</h2>
+                                        <p style='text-align: center'>Các công trình mà chúng tôi đã thi công</p>
+                                    </div>
+                                </div>
+                                <!-- slide show -->
+                                <div class="tab-content">
+                                    <div class="category-product-item owl-carousel owl-theme">
+                                        <?php foreach ($data['DMthicong'] as $key=> $thicong) { ?>
+                                            <div class="item">
+                                                <img src="<?=$thicong['image']?>" alt="Ảnh thi công <?=$key+1?>">
+                                                <div class="d-flex justify-content-center mt-2">
+                                                    <span style="font-size: 17px"><?=$thicong['name']?></span>
+                                                </div>
+                                            </div>
+                                        <?php }?>
+
+    
+                                    </div>
+                                </div>
+
+
                             </div>
 
                             <!--FEATURED PRODUCTS -->

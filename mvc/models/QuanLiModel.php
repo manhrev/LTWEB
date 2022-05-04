@@ -317,7 +317,7 @@ class QuanLiModel extends DB {
     public function ThemAnhThiCong($Name, $ImageLink)
     {
         $query= "INSERT INTO thicong_images (name, image)
-        VALUE $Name, $ImageLink";
+        VALUES ('$Name', '$ImageLink')";
         if ($this->con->query($query ) === TRUE)
             {
                 return "Thêm ảnh thành công !!";

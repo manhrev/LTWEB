@@ -284,7 +284,57 @@ class QuanLi extends Controller{
             ]);
         }
     }
-    
+
+    function QuanLiThiCong() {
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['action'])) {
+                if ($_POST['action'] == 'remove') {
+                    if (isset($_POST['id'])) {
+                        $id = $_POST['id'];
+                        $qlModel = $this->model("QuanLiModel");
+
+                        $message = $qlModel->XoaAnhThiCong($id);
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-thi-cong/';
+                        </script>"; 
+                    } 
+                    else echo "Error!";
+                }
+                elseif ($_POST['action'] == 'add') {
+                    //verify $_Post data!
+                    $name = $_POST['name'];
+                    $image = $_POST['image'];
+                    $qlModel = $this->model("QuanLiModel");
+                    
+                    $message = $qlModel->ThemAnhThiCong($name, $image);
+                    echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-li-thi-cong/';
+                        </script>"; 
+
+                }
+                else {
+                    echo 'Error!';
+                }
+            } else {
+                echo 'Error!';
+            }
+        }
+        else {
+            $qlModel = $this->model("QuanLiModel");
+            $DMthicong = $qlModel->GetAnhThiCong();
+            $this->view('ql-thicong', [
+                'DMthicong' => $DMthicong
+            ]);
+        }
+    }
+
     function QuanLiAnh() {
         if (!isAdmin()) {
             header("Location: ".BASE_URL.'login');
@@ -323,13 +373,13 @@ class QuanLi extends Controller{
             }
 
             // Check file size
-            if ($_FILES["fileToUpload"]["size"] > 500000) {
-                echo "<script>
-                        alert('Xin lỗi, file quá nặng');
-                        window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
-                        </script>";
-                $uploadOk = 0;
-            }
+            // if ($_FILES["fileToUpload"]["size"] > 500000) {
+            //     echo "<script>
+            //             alert('Xin lỗi, file quá nặng');
+            //             window.location.href='" . BASE_URL . "quan-li/quan-li-anh/';
+            //             </script>";
+            //     $uploadOk = 0;
+            // }
 
             // Allow certain file formats
             if (
