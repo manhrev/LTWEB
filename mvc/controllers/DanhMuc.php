@@ -1,7 +1,7 @@
 <?php
 
 class DanhMuc extends Controller{
-    const PER_PAGE = 6;
+    const PER_PAGE = 12;
 
     function GetSPDanhMuc($tenDanhMucUrl, $page = 1) {
         $model= $this->model('SanPhamModel');

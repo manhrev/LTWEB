@@ -2,7 +2,7 @@
 
 class TimKiem extends Controller{
 
-    const PER_PAGE = 6;
+    const PER_PAGE = 12;
 
     function Search($tag, $page =1) {
         $model= $this->model('SanPhamModel');

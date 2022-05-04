@@ -1,7 +1,7 @@
 <?php
 
 class SanPham extends Controller{
-    const PER_PAGE = 6;
+    const PER_PAGE = 12;
 
     function Default() {
         $this->TatCaSanPham();
