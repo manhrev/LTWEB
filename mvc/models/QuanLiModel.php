@@ -314,5 +314,46 @@ class QuanLiModel extends DB {
             return "Lỗi hệ thống, không kết nối được với Database ";
         } 
     }
+    public function ThemAnhThiCong($Name, $ImageLink)
+    {
+        $query= "INSERT INTO thicong_images (name, image)
+        VALUE $Name, $ImageLink";
+        if ($this->con->query($query ) === TRUE)
+            {
+                return "Thêm ảnh thành công !!";
+            }
+        else
+            {
+                return "Lỗi hệ thống, không kết nối được với Database ";
+            } 
+    }
+    public function GetAnhThiCong()
+    {
+        $query= "SELECT * FROM thicong_images ORDER BY date_created DESC";
+        $resultArray =[];
+            
+        $result = $this -> con -> query($query);
+            
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+        {
+            $resultArray[]=$item;
+        }
+        
+        return $resultArray;
+    }
+    public function XoaAnhThiCong($id)
+    {
+        $query = "DELETE FROM thicong_images WHERE id='$id'" ;
+            
+        if ($this->con->query($query ) === TRUE)
+        {
+            return "Xóa ảnh thành công !!";
+        }
+        else
+        {
+            return "Lỗi hệ thống, không kết nối được với Database ";
+        } 
+    }
+
 
 }
