@@ -36,6 +36,7 @@ class DanhMuc extends Controller{
         $this->view('product-grid', [
             'view' => 2,
             'pageTitle' => 'Danh mục: '.ucfirst($tenDanhMuc),
+            'danhmuc' => ucfirst($tenDanhMuc),
             'numOfSP' => count($allSP),
             'allSP' => $sliced_data,
             'currentPage' => $page,

@@ -1,4 +1,5 @@
-.suntory-alo-phone {
+<style>
+    .suntory-alo-phone {
   background-color: transparent;
   cursor: pointer;
   height: 120px;
@@ -207,3 +208,10 @@
     transform: rotate(0deg) scale(1) skew(1deg);
   }
 }
+</style>
+<a href="tel:0934413314" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="left: 0px; bottom: -20px;">
+    <span id='tel' style="font-size: 16px; font-weight: bold; position: relative; bottom: 10px; left: 10px">0934413314</span>
+    <div class="suntory-alo-ph-circle"></div>
+    <div class="suntory-alo-ph-circle-fill"></div>
+    <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
+</a>

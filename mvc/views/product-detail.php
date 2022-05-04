@@ -13,10 +13,15 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title><?=ucfirst($data['SP'][0]['name'])?> - Nội thất Gia Vương</title>
+    <meta property="og:url" content="<?=BASE_URL?>">
+    <meta name="revisit-after" content="1 day">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:site_name" content="Nội thất Gia Vương">
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
-    <meta name="author" content="tivatheme">
+    <meta name="keywords" content="<?=$data['SP'][0]['tag']?>,Nội thất Gia Vương,nội thất Đà Nẵng, nội thất, funiture">
+    <meta name="description" content="<?=$data['SP'][0]['description']?>">
+
 
 
     <!-- Mobile Meta -->
@@ -41,6 +46,11 @@
 </head>
 
 <body id="product-detail">
+
+    <!-- contact pop -->
+    <?php require_once "./mvc/views/inc/phone.php" ?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+    
     <!-- header -->
     <?php require_once "./mvc/views/inc/header.php" ?>
     <!-- !header -->

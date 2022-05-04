@@ -12,11 +12,24 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Nội thất Gia Vương</title>
-
-    <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+    <meta property="og:type" content="website">
     
+    <meta property="og:url" content="<?=BASE_URL?>">
+    <meta name="revisit-after" content="1 day">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <meta property="og:site_name" content="Nội thất Gia Vương">
+
+    <title>Nội thất Gia Vương</title>
+    <meta property="og:title" content="Nội Thất Gia Vương">
+    
+    <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Gia Vương, 
+    nội thất, Nội thất quảng nam, nội thất gia đình, bàn, tủ, ghế, vách, cầu thang, sản phẩm, đồ gỗ,
+     funiture">
+    <meta name="description" content="
+    NỘI THẤT GIA VƯƠNG là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… Gia Vương thiết kế và thi công nội thất theo mỗi phong cách riêng biệt từ cổ điển tới hiện đại, từ không gian hẹp đến không gian sống rộng.
+    ">
+
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -36,17 +49,16 @@
     <!-- Template CSS -->
     <link rel="stylesheet" type="text/css" href="<?= STATIC_URL ?>css/style.css">
     <link rel="stylesheet" type="text/css" href="<?= STATIC_URL ?>css/reponsive.css">
-    <link rel="stylesheet" type="text/css" href="<?= STATIC_URL ?>css/call.css">
+
 
 </head>
 
 <body id="home5">
-    
-    <a href="tel:0934413314" class="suntory-alo-phone suntory-alo-green" id="suntory-alo-phoneIcon" style="left: 0px; bottom: 0px;">
-        <div class="suntory-alo-ph-circle"></div>
-        <div class="suntory-alo-ph-circle-fill"></div>
-        <div class="suntory-alo-ph-img-circle"><i class="fa fa-phone"></i></div>
-    </a>
+
+    <!-- contact pop -->
+    <?php require_once "./mvc/views/inc/phone.php" ?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+
     <!-- header -->
     <?php require_once "./mvc/views/inc/home-header.php" ?>
     <!-- !header -->
@@ -584,7 +596,7 @@
                         <div class="row justify-content-center mt-5">
                             <div class="title-product justify-content-between">
                                 <h2>DANH MỤC SẢN PHẨM</h2>
-                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp, <br><a href="<?=BASE_URL?>san-pham">xem tất cả sản phẩm ở đây</a></p>
+                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem tất cả sản phẩm ở đây</a></p>
                             </div>
                         </div>
                         <div class="tab-content row">
@@ -596,7 +608,7 @@
                                         <div class="col-lg-4 col-md-4">
                                             <div class="block">
                                                 <div class="effect">
-                                                    <a style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif"href="<?= BASE_URL . 'danh-muc/' . $category['url'] ?>">
+                                                    <a style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" href="<?= BASE_URL . 'danh-muc/' . $category['url'] ?>">
                                                         <span style="color: #fff; text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;"><?= $category['name'] ?></span>
                                                         <img class="img-fluid width-100" src="<?= $category['image'] ?>" alt="banner-1" title="banner-1">
                                                     </a>
