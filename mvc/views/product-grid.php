@@ -20,7 +20,7 @@
     <meta property="og:site_name" content="Nội thất Gia Vương">
 
     <meta name="keywords" content="Nội thất Gia Vương,nội thất Đà Nẵng, nội thất, funiture, 
-    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>">
+    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong">
     <meta name="description" content="Các sản phẩm ở Nội thất Gia Vương luôn đem đến sự hài lòng cho người sử dụng,
     với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
     ">
