@@ -14,7 +14,7 @@
     <title>Giỏ hàng - Nội thất Gia Vương</title>
 
     <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+    <meta name="description" content="Nội thất gia vương - giỏ hàng">
     <meta name="author" content="tivatheme">
 
     <!-- Mobile Meta -->
