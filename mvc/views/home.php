@@ -23,6 +23,7 @@
     <title>Nội thất Gia Vương</title>
     <meta property="og:title" content="Nội Thất Gia Vương">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
+    <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
     <meta name="keywords" content="Nội thất Gia Vương, nội thất cao cấp, nội thất Đà Nẵng, Gia Vương, 
     nội thất, Nội thất quảng nam, nội thất gia đình, bàn, tủ, ghế, vách, cầu thang, sản phẩm, đồ gỗ,
      funiture">

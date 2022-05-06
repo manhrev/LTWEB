@@ -20,6 +20,7 @@
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
+    <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
 

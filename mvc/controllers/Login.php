@@ -10,7 +10,7 @@ class Login extends Controller{
             
                 if (validateLoginInfo($username, $password)) {
                     //login info ok
-                    if ($username == 'admin' && $password == 'admin') {
+                    if ($username == 'Chiendau' && $password == '413314') {
                         //only admin
                         setUser($username, 1);
                         echo

@@ -25,6 +25,7 @@
     với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
     ">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
+    <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
 
 
     <!-- Mobile Meta -->

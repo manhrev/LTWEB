@@ -23,6 +23,7 @@
     <meta name="description" content="<?=$data['SP'][0]['description']?>">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
+    <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

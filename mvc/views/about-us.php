@@ -14,6 +14,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Giới thiệu - Nội thất Gia Vương</title>
+	<link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
+    <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
 
 	<meta name="keywords" content="Nội thất gia vương, nội thất, gia vương, nội thất đẹp, nội thất cao cấp">
 	<meta name="description" content="Giới thiệu về nội thất Gia Vương">
