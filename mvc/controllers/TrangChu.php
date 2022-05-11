@@ -13,9 +13,12 @@ class TrangChu extends Controller{
         // san pham noi bat min4 max 8
         $sanphamnoibat = array_slice($sanphamnoibat, 0, 8);
         $categories = $model->GetCategory();
+
+        // array_slice($categories,0,3);
         
         //get random 6 categories for homepage banner
-        $rand = array_rand($categories, 6);
+        $max = count($categories);
+        $rand = array_rand($categories, min(6, $max));
         foreach ($rand as $index) $categories6[] = $categories[$index];
         
         // lay danh muc thi cong
