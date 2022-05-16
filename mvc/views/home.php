@@ -633,12 +633,12 @@
                                         <div class="col-md-3 item text-center">
                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                 <div class="thumbnail-container">
-                                                    <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
+                                                    <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?> " style="max-width: 316px">
                                                         <?php $images = explode(',', $sp['images']) ?>
 
-                                                        <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img">
+                                                        <img class="img-fluid image-cover" src="<?= $images[0] ?>" alt="img" style="max-width: 316px">
                                                         <?php if (isset($images[1])) { ?>
-                                                            <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img">
+                                                            <img class="img-fluid image-secondary" src="<?= $images[1] ?>" alt="img" style="max-width: 316px">
                                                         <?php } ?>
                                                     </a>
                                                     <div class="highlighted-informations">
