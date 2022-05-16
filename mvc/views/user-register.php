@@ -78,27 +78,34 @@
                             <div id="content" class="page-content">
                                 <div class="register-form text-center">
                                     <h1 class="text-center title-page">Tạo tài khoản</h1>
-                                    <form action="#" id="customer-form" class="js-customer-form" method="post">
+                                    <form action="<?=BASE_URL?>signup" id="customer-form" class="js-customer-form" method="post">
                                         <div>
                                             <div class="form-group">
                                                 <div>
-                                                    <input class="form-control" name="firstname" type="text" placeholder="First name">
+                                                    <input required class="form-control" name="fullname" type="text" placeholder="Tên đầy đủ">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
-                                                    <input class="form-control" name="lastname" type="text" placeholder="Last name">
+                                                    <input required class="form-control" name="phone" type="tel" placeholder="Số điện thoại (format 10 số)" 
+                                                    pattern="[0-9]{4}[0-9]{3}[0-9]{3}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
-                                                    <input class="form-control" name="email" type="email" placeholder="Email">
+                                                    <input required class="form-control" name="address" type="text" placeholder="Địa chỉ">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <input required class="form-control" name="username" type="text" placeholder="Tên người dùng"
+                                                    >
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div>
                                                     <div class="input-group js-parent-focus">
-                                                        <input class="form-control js-child-focus js-visible-password" name="password" type="password" placeholder="Password">
+                                                        <input required class="form-control js-child-focus js-visible-password" name="password" type="password" placeholder="Mật khẩu">
                                                     </div>
                                                 </div>
                                             </div>

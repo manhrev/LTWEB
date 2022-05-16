@@ -11,10 +11,10 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Đặt hàng - Nội thất Gia Vương</title>
+    <title>Đặt hàng - UEH Burger</title>
 
     <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Nội thất Gia Vương, thanh toán">
+    <meta name="description" content="UEH Burger, thanh toán">
     <meta name="author" content="tivatheme">
 
     <!-- Mobile Meta -->

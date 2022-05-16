@@ -12,7 +12,7 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Không tìm thấy kết quả - Nội thất Gia Vương</title>
+    <title>Không tìm thấy kết quả - UEH Burger</title>
 
     <meta name="keywords" content="Furniture, Decor, Interior">
     <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">

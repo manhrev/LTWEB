@@ -7,9 +7,9 @@
                         <div class="block">
                             <div class="block-content">
                                 <p class="logo-footer">
-                                    <img src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="Noi that gia vuong logo">
+                                    <img src="<?= STATIC_URL ?>img/home/logo-mobile.png" alt="Noi that gia vuong logo">
                                 </p>
-                                <p class="content-logo">Công ty TNHH thương mại, xây dựng & nội thất Gia Vương là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… 
+                                <p class="content-logo">Công ty TNHH thương mại, xây dựng & UEH Burger là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… 
                                 </p>
                             </div>
                         </div>
@@ -26,13 +26,13 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="block">
+                        <!-- <div class="block">
                             <div class="block-content">
                                 <p class="img-payment ">
                                     <img class="img-fluid" src="<?= STATIC_URL ?>img/home/bct.png" alt="đã thông báo bộ công thương">
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="nov-html col-lg-4 col-sm-6">
                         <div class="block m-top">
