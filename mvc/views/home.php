@@ -622,32 +622,7 @@
                                 </div>
                             </div>
 
-                            <!-- THI CONG-->
-                            <div class="container-fluid">
-                                <div class="row justify-content-center mt-5">
-                                    <div class="title-product justify-content-between mt-4">
-                                        <h2>Hình ảnh thi công</h2>
-                                        <p style='text-align: center'>Các công trình mà chúng tôi đã thi công</p>
-                                    </div>
-                                </div>
-                                <!-- slide show -->
-                                <div class="tab-content">
-                                    <div class="category-product-item owl-carousel owl-theme">
-                                        <?php foreach ($data['DMthicong'] as $key=> $thicong) { ?>
-                                            <div class="item">
-                                                <img src="<?=$thicong['image']?>" alt="Ảnh thi công <?=$key+1?>">
-                                                <div class="d-flex justify-content-center mt-2">
-                                                    <span style="font-size: 17px"><?=$thicong['name']?></span>
-                                                </div>
-                                            </div>
-                                        <?php }?>
-
-    
-                                    </div>
-                                </div>
-
-
-                            </div>
+                            
 
                             <!--FEATURED PRODUCTS -->
                             <div class="featured-product">
