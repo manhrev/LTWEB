@@ -9,14 +9,7 @@ class UserModel extends DB {
         $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
         if ($item['password']==$password)
         {
-            if ($item['role']==0)
-            {
-                return 1;
-            }
-            else
-            {
-                return 2;
-            }
+            return $item['role'];
         }
         return 0;
 
@@ -33,7 +26,7 @@ class UserModel extends DB {
         }
         else
         {
-            $signupquery = "INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`,`role`) VALUES ('$username', '$password', '$name', '$address', '$phonenumber','0')";
+            $signupquery = "INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`,`role`) VALUES ('$username', '$password', '$name', '$address', '$phonenumber','1')";
             if ( $this -> con -> query($signupquery)===TRUE)
             {
                 return "Đăng kí thành công";
@@ -44,4 +37,12 @@ class UserModel extends DB {
             }
         } 
     }
+    public function GetUser($username)
+    {
+        $query = " SELECT username, name, address, phone_number, date_created FROM user WHERE username = '$username'";
+        $result = $this -> con -> query($query); 
+        $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        return $item;
+    }
+
 }
