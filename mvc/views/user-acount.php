@@ -72,38 +72,32 @@
             <div class="acount head-acount">
                 <div class="container">
                     <div id="main">
-                        <h1 class="title-page">My Account</h1>
+                        <h1 class="title-page">Thông tin tài khoản</h1>
                         <div class="content" id="block-history">
                             <table class="std table">
                                 <tbody>
+                                    <?php $udata = $data['userdata']?>
                                     <tr>
-                                        <th class="first_item">My Name :</th>
-                                        <td>David James</td>
+                                        <th class="first_item">Họ tên :</th>
+                                        <td><?=$udata['name']?></td>
                                     </tr>
                                     <tr>
-                                        <th class="first_item">Company :</th>
-                                        <td>TivaTheme</td>
+                                        <th class="first_item">Username :</th>
+                                        <td><?=$udata['username']?></td>
                                     </tr>
                                     <tr>
-                                        <th class="first_item">Address :</th>
-                                        <td>123 canberra Street, New York, USA</td>
+                                        <th class="first_item">Địa chỉ :</th>
+                                        <td><?=$udata['address']?></td>
                                     </tr>
                                     <tr>
-                                        <th class="first_item">City :</th>
-                                        <td>New York</td>
+                                        <th class="first_item">Số điện thoại :</th>
+                                        <td><?=$udata['phone_number']?></td>
                                     </tr>
                                     <tr>
-                                        <th class="first_item">Postal/Zip Code :</th>
-                                        <td>10001</td>
+                                        <th class="first_item">Ngày đăng kí :</th>
+                                        <td><?=date_format(date_create($udata['date_created']),"Y/m/d H:i:s");?></td>
                                     </tr>
-                                    <tr>
-                                        <th class="first_item">Phone :</th>
-                                        <td>0123456789</td>
-                                    </tr>
-                                    <tr>
-                                        <th class="first_item">Country:</th>
-                                        <td>USA</td>
-                                    </tr>
+                    
                                 </tbody>
                             </table>
 
