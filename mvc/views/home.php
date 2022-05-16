@@ -24,13 +24,8 @@
     <meta property="og:title" content="UEH Burger">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
-    <meta name="keywords" content="UEH Burger, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong, nội thất cao cấp, nội thất Đà Nẵng, Gia Vương, 
-    nội thất, Nội thất quảng nam, nội thất gia đình, bàn, tủ, ghế, vách, cầu thang, sản phẩm, đồ gỗ, đồ nội thất
-     funiture">
-    <meta name="description" content="
-    UEH Burger là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… Gia Vương thiết kế và thi công nội thất theo mỗi phong cách riêng biệt từ cổ điển tới hiện đại, từ không gian hẹp đến không gian sống rộng.
-    ">
-
+    <meta name="keywords" content="UEH Burger">
+    <meta name="description" content="UEH Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.">
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

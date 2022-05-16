@@ -19,7 +19,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta property="og:site_name" content="UEH Burger">
 
-    <meta name="keywords" content="<?=$data['SP'][0]['tag']?>,UEH Burger,nội thất Đà Nẵng, nội thất, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong,funiture">
+    <meta name="keywords" content="<?=$data['SP'][0]['tag']?>,UEH Burger">
     <meta name="description" content="<?=$data['SP'][0]['description']?>">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">

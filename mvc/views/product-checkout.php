@@ -13,7 +13,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Đặt hàng - UEH Burger</title>
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
+    <meta name="keywords" content="UEH Burger">
     <meta name="description" content="UEH Burger, thanh toán">
     <meta name="author" content="tivatheme">
 

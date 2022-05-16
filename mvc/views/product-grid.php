@@ -20,7 +20,7 @@
     <meta property="og:site_name" content="UEH Burger">
 
     <meta name="keywords" content="UEH Burger,nội thất Đà Nẵng, nội thất, funiture, 
-    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong">
+    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>,UEH Burger">
     <meta name="description" content="Các sản phẩm ở UEH Burger luôn đem đến sự hài lòng cho người sử dụng,
     với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
     ">

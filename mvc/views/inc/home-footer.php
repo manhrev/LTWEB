@@ -67,27 +67,28 @@
                                         <i class="fa fa-home float-left" aria-hidden="true"></i>
                                         <div class="content-data">
                                             <b class="mr-2">Địa chỉ:</b>
-                                            422 Văn Tiến Dũng, P.Hòa Xuân, Q.Cẩm Lệ, TP.Đà Nẵng
+                                            59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM
                                         </div>
                                     </div>
                                     <div class="data align-self-stretch d-flex">
                                         <i class="fa fa-clock-o float-left" aria-hidden="true"></i>
 
-                                        <div class="content-data">
-                                            <b class="mr-2">Giờ hoạt động:</b>08:00 - 20:00
-                                        </div>
+                                        <div style="display: flex; flex-direction: column">
+                                            <b class="mr-2" style="min">Buffet Sáng:</b>6AM – 10AM (10:30AM vào Cuối tuần)
+                                            <b class="mr-2" >Buổi tối:</b> Thứ 4 - Chủ nhật  | 12PM – 2PM
+                                        </div>  
                                     </div>
                                     <div class="support d-flex">
                                         <div class="data d-flex align-self-stretch mail-support">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <div>noithatgiavuong86@gmail.com</div>
+                                            <div>support@burgerueh.vn</div>
                                         </div>
                                     </div>
                                     <div class="data d-flex align-self-stretch phone-support">
                                         <div class="title-icon">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </div>
-                                        <div>0934 413 314</div>
+                                        <div>+84 345 678 99</div>
                                     </div>
 
                                 </div>
@@ -130,12 +131,12 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="https://www.facebook.com/Noithatgiavuong86">
+                                        <a href="">
                                             <i class="fa fa-facebook" aria-hidden="true"></i>Facebook
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="https://zalo.me/0934413314">
+                                        <a href="">
                                             <i class="fa fa-phone-square" aria-hidden="true"></i>Zalo
                                         </a>
                                     </li>
@@ -169,7 +170,7 @@
                                         <a href="<?= BASE_URL ?>lien-he">Về chúng tôi</a>
                                     </li>
                                     <li>
-                                        <a href="https://goo.gl/maps/NkEPsr7xR2dexQH48">Bản đồ</a>
+                                        <a href="https://goo.gl/maps/niwTmkfdncyyHz9a9">Bản đồ</a>
                                     </li>
                                 </ul>
                             </div>

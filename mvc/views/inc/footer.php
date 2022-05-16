@@ -9,7 +9,7 @@
                                 <p class="logo-footer">
                                     <img src="<?= STATIC_URL ?>img/home/logo-mobile.png" alt="Noi that gia vuong logo">
                                 </p>
-                                <p class="content-logo">Công ty TNHH thương mại, xây dựng & UEH Burger là một công ty chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực : Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư, nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc, công trình công cộng… 
+                                <p class="content-logo">UEH Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.
                                 </p>
                             </div>
                         </div>
@@ -20,7 +20,7 @@
                                         <a href="<?=BASE_URL?>lien-he">Về chúng tôi</a>
                                     </li>
                                     <li>
-                                        <a href="https://goo.gl/maps/NkEPsr7xR2dexQH48">Bản đồ</a>
+                                        <a href="https://goo.gl/maps/niwTmkfdncyyHz9a9">Bản đồ</a>
                                     </li>
 
                                 </ul>
@@ -46,7 +46,7 @@
                                         <span>Địa chỉ:</span>
                                     </div>
                                     <div class="content-contact address-contact">
-                                        <p>422 Văn Tiến Dũng, P.Hòa Xuân, Q.Cẩm Lệ, TP.Đà Nẵng
+                                        <p>59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM
                                         </p>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                         <span>Email:</span>
                                     </div>
                                     <div class="content-contact mail-contact">
-                                        <p>noithatgiavuong86@gmail.com</p>
+                                        <p>support@burgerueh.vn</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -65,7 +65,7 @@
                                         <span>Hotline :</span>
                                     </div>
                                     <div class="content-contact phone-contact">
-                                        <p>0934 413 314</p>
+                                        <p>+84 345 678 99</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -74,8 +74,8 @@
                                         <span>Giờ mở cửa:</span>
                                     </div>
                                     <div class="content-contact hours-contact">
-                                        <p>Thứ hai - Chủ Nhật / 08:00- 20:00</p>
-                                        <span>(Trừ ngày lễ)</span>
+                                        <p>Buffet Sáng: 6AM – 10AM (10:30AM vào Cuối tuần)</p>
+                                        <span>Buổi tối: 12PM – 2PM | Thứ 4 - Chủ nhật </span>
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +95,12 @@
                                         <div class="social">
                                             <ul class="list-inline mb-0 justify-content-end">
                                                 <li class="list-inline-item mb-0">
-                                                    <a href="https://www.facebook.com/Noithatgiavuong86" target="_blank">
+                                                    <a href="" target="_blank">
                                                         <i class="fa fa-facebook"></i>
                                                     </a>
                                                 </li>
                                                 <li class="list-inline-item mb-0">
-                                                    <a href="https://zalo.me/0934413314" target="_blank">
+                                                    <a href="" target="_blank">
                                                         <span>Zalo</span>
                                                     </a>
                                                 </li>
