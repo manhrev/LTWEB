@@ -7,7 +7,7 @@ class DB {
     protected $host = '127.0.0.1';
     protected $user = 'root';
     protected $password = '';
-    protected $database = 'ueh_buger';
+    protected $database = 'ueh_burger';
 
     //note: "You must update or insert data in your database at least once ever 30 days to remain active."
 
