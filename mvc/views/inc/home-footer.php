@@ -74,7 +74,7 @@
                                         <i class="fa fa-clock-o float-left" aria-hidden="true"></i>
 
                                         <div style="display: flex; flex-direction: column">
-                                            <b class="mr-2" style="min">Buffet Sáng:</b>6AM – 10AM (10:30AM vào Cuối tuần)
+                                            <b class="mr-2">Buffet Sáng:</b>6AM – 10AM (10:30AM vào Cuối tuần)
                                             <b class="mr-2" >Buổi tối:</b> Thứ 4 - Chủ nhật  | 12PM – 2PM
                                         </div>  
                                     </div>
