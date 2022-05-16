@@ -59,7 +59,7 @@
                             <div class="block-content">
                                 <div class="title-block">
                                     <a href="<?= BASE_URL ?>">
-                                        <img src="<?= STATIC_URL ?>img/home/logo-mobie.png" alt="noi that gia vuong logo">
+                                        <img src="<?= STATIC_URL ?>img/home/logo-mobile.png" alt="noi that gia vuong logo">
                                     </a>
                                 </div>
                                 <div class="contact-content">
@@ -95,11 +95,11 @@
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6">
-                        <div class="block-content">
+                        <!-- <div class="block-content">
                             <p class="img-payment ">
                                 <img class="img-fluid" style="width: 200px" src="<?= STATIC_URL ?>img/home/bct.png" alt="Đã thông báo bộ công thương">
                             </p>
-                        </div>
+                        </div> -->
                         <!-- <div class="block">
                             <div class="block-content">
                                 <div class="title-block">Newsletter</div>

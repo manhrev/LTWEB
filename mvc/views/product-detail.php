@@ -12,14 +12,14 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title><?=ucfirst($data['SP'][0]['name'])?> - Nội thất Gia Vương</title>
+    <title><?=ucfirst($data['SP'][0]['name'])?> - UEH Burger</title>
     <meta property="og:url" content="<?=BASE_URL?>">
     <meta name="revisit-after" content="1 day">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="true">
-    <meta property="og:site_name" content="Nội thất Gia Vương">
+    <meta property="og:site_name" content="UEH Burger">
 
-    <meta name="keywords" content="<?=$data['SP'][0]['tag']?>,Nội thất Gia Vương,nội thất Đà Nẵng, nội thất, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong,funiture">
+    <meta name="keywords" content="<?=$data['SP'][0]['tag']?>,UEH Burger,nội thất Đà Nẵng, nội thất, noithatgiavuong, noi that gia vuong, noi that, noithat, noithat gia vuong, gia vương, giavuong,funiture">
     <meta name="description" content="<?=$data['SP'][0]['description']?>">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">

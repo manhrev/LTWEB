@@ -13,12 +13,12 @@
 	<link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
 	<meta charset="utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-	<title>Giới thiệu - Nội thất Gia Vương</title>
+	<title>Giới thiệu - UEH Burger</title>
 	<link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
 
-	<meta name="keywords" content="Nội thất gia vương, nội thất, gia vương, nội thất đẹp, nội thất cao cấp">
-	<meta name="description" content="Giới thiệu về nội thất Gia Vương">
+	<meta name="keywords" content="UEH Burger, nội thất, gia vương, nội thất đẹp, nội thất cao cấp">
+	<meta name="description" content="Giới thiệu về UEH Burger">
 
 
 
@@ -93,7 +93,7 @@
 										<div class="col-lg-6 col-md-6 col-sm-6 left">
 											<div class="cms-block f-right">
 												<h3 class="page-subheading">Chúng tôi là ai?</h3>
-												<p>Công ty TNHH thương mại, xây dựng & nội thất Gia Vương là một công ty
+												<p>Công ty TNHH thương mại, xây dựng & UEH Burger là một công ty
 													chuyên nghiệp cung cấp các giải pháp tư vấn trong các lĩnh vực :
 													Tư vấn thiết kế thi công nội ngoại thất nhà ở dân dụng, nhà ở chung cư,
 													nhà ở biệt thự, nhà hàng khách sạn, quán bar cà phê, văn phòng làm việc,

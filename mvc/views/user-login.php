@@ -11,10 +11,10 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Đăng nhập - Nội thất Gia Vương</title>
+    <title>Đăng nhập - UEH Burger</title>
 
-    <meta name="keywords" content="Nội thất Gia Vương, đăng nhập, login, noi that, nội thất">
-    <meta name="description" content="Đăng nhập hệ thống, Nội thất gia vương">
+    <meta name="keywords" content="UEH Burger, đăng nhập, login, noi that, nội thất">
+    <meta name="description" content="Đăng nhập hệ thống, UEH Burger">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
@@ -92,7 +92,7 @@
                                     <div class="no-gutters text-center">
                                         <div class="forgot-password">
                                             <span >
-                                                Quên mật khẩu?
+                                                Chưa có tài khoản? <a href="<?=BASE_URL?>signup">Đăng kí</a>
                                             </span>
                                         </div>
                                     </div>
