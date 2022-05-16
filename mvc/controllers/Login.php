@@ -3,10 +3,11 @@ require_once './mvc/helper/authorization.php';
 class Login extends Controller{
 
     function Default(){
-        $model = $this->model('UserModel');
-        $categories = $model->Login('manhre','12345');
-        echo($categories);
-        exit();
+        if (isLoggedIn()) {
+            header("Location: ".BASE_URL);
+            exit();
+        }
+        
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['username']) && isset($_POST['password'])) {
                 $username = $_POST['username'];

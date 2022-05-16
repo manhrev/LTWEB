@@ -595,6 +595,10 @@
                                 <a href="<?=BASE_URL?>login" title="Đăng nhập">
                                     <i class="fa fa-sign-in" aria-hidden="true"></i>Đăng nhập</a>
                             </li>
+                            <li class="item has-sub">
+                                <a href="<?=BASE_URL?>signup" title="Đăng kí">
+                                    <i class="fa fa-user-plus" aria-hidden="true"></i>Đăng kí</a>
+                            </li>
                         <?php } if (isAdmin()) {?>
 
                             <li class="item has-sub">
@@ -602,6 +606,10 @@
                                     <i class="fa fa-bars " aria-hidden="true"></i>Quản lí</a>
                             </li>
                         <?php } if (isLoggedIn()) { ?>
+                            <li class="item has-sub">
+                                <a href="<?=BASE_URL?>tai-khoan" title="Tài khoản">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>Tài khoản của tôi</a>
+                            </li>
                             <li class="item has-sub">
                                 <a href="<?=BASE_URL?>logout" title="Đăng xuât">
                                     <i class="fa fa-sign-in" aria-hidden="true"></i>Đăng xuất</a>

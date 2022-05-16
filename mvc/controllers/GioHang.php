@@ -1,5 +1,5 @@
 <?php
-
+require_once './mvc/helper/authorization.php';
 class GioHang extends Controller{
 
     function Default(){
@@ -21,6 +21,10 @@ class GioHang extends Controller{
     }
 
     function DatHang() {
+        if (!isLoggedIn()) {
+            header("Location: ".BASE_URL.'gio-hang');
+            exit();
+        }
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (count($_POST)>3 && isset($_SESSION['cart']) && isset($_POST['fullname'])&& isset($_POST['address']) && isset($_POST['phone'])) {
                 $qlModel = $this->model('QuanLiModel');
