@@ -23,14 +23,14 @@ class Login extends Controller{
                             alert('".'Tên đăng nhập hoặc mật khẩu sai, vui lòng thử lại!'."');
                             window.location.href='".BASE_URL."login';
                         </script>"; 
-                    } elseif ($role == 2) {
+                    } elseif ($role == 1) {
                         setUser($username, $role);
                         echo 
                         "<script>
                             alert('".'Đăng nhập admin thành công!'."');
                             window.location.href='".BASE_URL."login';
                         </script>"; 
-                    } elseif ($role == 1) {
+                    } elseif ($role == 2) {
                         setUser($username, $role);
                         echo 
                         "<script>

@@ -26,7 +26,7 @@ class UserModel extends DB {
         }
         else
         {
-            $signupquery = "INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`,`role`) VALUES ('$username', '$password', '$name', '$address', '$phonenumber','1')";
+            $signupquery = "INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`,`role`) VALUES ('$username', '$password', '$name', '$address', '$phonenumber','2')";
             if ( $this -> con -> query($signupquery)===TRUE)
             {
                 return "Đăng kí thành công";
