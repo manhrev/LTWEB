@@ -51,7 +51,7 @@ class DanhMuc extends Controller{
                     'url' => BASE_URL.'san-pham'
                 ],
                 1 => [
-                    'name'=> 'Danh mục sản phẩm',
+                    'name'=> 'danh mục món ăn',
                     'url' => '#',
                 ],
                 2 => [

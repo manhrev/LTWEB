@@ -1,6 +1,6 @@
 <div class="sidebar-block">
     <div class="title-block">
-        Sản phẩm bán chạy
+        Món ăn bán chạy
     </div>
     <div class="product-content tab-content">
         <div class="row">

@@ -37,7 +37,7 @@ class SanPham extends Controller{
         }
         $this->view('product-grid', [
             'view' => 2,
-            'pageTitle' => $filter=='moi-nhat'?'Sản phẩm mới nhất':'Sản phẩm bán chạy',
+            'pageTitle' => $filter=='moi-nhat'?'Món ăn mới nhất':'Món ăn bán chạy',
             'numOfSP' => count($allSP),
             'allSP' => $sliced_data,
             'currentPage' => $page,
@@ -52,7 +52,7 @@ class SanPham extends Controller{
                     'url' => BASE_URL.'san-pham'
                 ],
                 1 => [
-                    'name'=> $filter=='moi-nhat'?'Sản phẩm mới nhất':'Sản phẩm bán chạy',
+                    'name'=> $filter=='moi-nhat'?'Món ăn mới nhất':'Món ăn bán chạy',
                     'url' => BASE_URL.'san-pham/bo-loc/'.$filter
                 ]
             ]
@@ -89,7 +89,7 @@ class SanPham extends Controller{
         $categories = $model->GetCategory();
         $this->view('product-grid', [
             'view' => 2,
-            'pageTitle' => 'Tất cả sản phẩm',
+            'pageTitle' => 'Tất cả món ăn',
             'numOfSP' => count($allSP),
             'allSP' => $sliced_data,
             'currentPage' => $page,
@@ -104,7 +104,7 @@ class SanPham extends Controller{
                     'url' => BASE_URL.'san-pham'
                 ],
                 1 => [
-                    'name'=> 'Tất cả sản phẩm',
+                    'name'=> 'Tất cả món ăn',
                     'url' => BASE_URL.'san-pham/tat-ca-san-pham'
                 ]
             ]

@@ -591,8 +591,8 @@
                     <section class="page-home">
                         <div class="row justify-content-center mt-5">
                             <div class="title-product justify-content-between mt-4">
-                                <h2>DANH MỤC SẢN PHẨM</h2>
-                                <p style='text-align: center'>Các danh mục sản phẩm chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem tất cả sản phẩm ở đây</a></p>
+                                <h2>danh mục món ăn</h2>
+                                <p style='text-align: center'>Các danh mục món ăn chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem Tất cả món ăn ở đây</a></p>
                             </div>
                         </div>
                         <div class="tab-content row">
@@ -617,39 +617,14 @@
                                 </div>
                             </div>
 
-                            <!-- THI CONG-->
-                            <div class="container-fluid">
-                                <div class="row justify-content-center mt-5">
-                                    <div class="title-product justify-content-between mt-4">
-                                        <h2>Hình ảnh thi công</h2>
-                                        <p style='text-align: center'>Các công trình mà chúng tôi đã thi công</p>
-                                    </div>
-                                </div>
-                                <!-- slide show -->
-                                <div class="tab-content">
-                                    <div class="category-product-item owl-carousel owl-theme">
-                                        <?php foreach ($data['DMthicong'] as $key=> $thicong) { ?>
-                                            <div class="item">
-                                                <img src="<?=$thicong['image']?>" alt="Ảnh thi công <?=$key+1?>">
-                                                <div class="d-flex justify-content-center mt-2">
-                                                    <span style="font-size: 17px"><?=$thicong['name']?></span>
-                                                </div>
-                                            </div>
-                                        <?php }?>
-
-    
-                                    </div>
-                                </div>
-
-
-                            </div>
+                            
 
                             <!--FEATURED PRODUCTS -->
                             <div class="featured-product">
                                 <div class="title-tab-content  text-center">
                                     <div class="title-product justify-content-between">
-                                        <h2>SẢN PHẨM NỔI BẬT</h2>
-                                        <p>Những sản phẩm được mua nhiều từ chúng tôi </p>
+                                        <h2>Món ăn nổi bật</h2>
+                                        <p>Những món ăn được mua nhiều</p>
                                     </div>
                                 </div>
                                 <div class="tab-content row">
@@ -720,7 +695,7 @@
 
                                 <div class="content-showmore text-center has-showmore">
                                     <a href="<?= BASE_URL ?>san-pham/bo-loc/moi-nhat" type="button" class="btn btn-default novShowMore">
-                                        <span>Xem thêm sản phẩm</span>
+                                        <span>Xem thêm</span>
                                     </a>
                                 </div>
                             </div>
