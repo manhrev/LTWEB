@@ -29,18 +29,18 @@
             </div> -->
         </li>
         <li <?=$data['view']==2?'class="nav-link"':''?> >
-            <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>" class="parent">Sản phẩm</a>
+            <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>" class="parent">Thực đơn</a>
             <div class="dropdown-menu drop-tab">
                 <ul>
                     <li class="item container group">
                         <div class="dropdown-menu dropdown-tab" style="width: 500px;">
                             <ul>
                                 <li class="item col-md-6 float-left">
-                                    <span class="menu-title">Danh mục sản phẩm</span>
+                                    <span class="menu-title">danh mục món ăn</span>
                                     <div class="menu-content">
                                         <ul class="col">
                                             <li>
-                                                <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>">Tất cả sản phẩm</a>
+                                                <a href="<?=BASE_URL.'san-pham/tat-ca-san-pham'?>">Tất cả món ăn</a>
                                             </li>
                                             <?php foreach ($data['categories'] as $cate) {?>
                                                 <li>
@@ -56,13 +56,13 @@
                                     <div class="menu-content">
                                         <ul>
                                             <li>
-                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Sản phẩm mới nhất</a>
+                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Món ăn mới nhất</a>
                                             </li>
                                             <li>
-                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Sản phẩm bán chạy</a>
+                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Món ăn bán chạy</a>
                                             </li>
                                             <li>
-                                                <a href="#">Sản phẩm giảm giá</a>
+                                                <a href="#">Món ăn giảm giá</a>
                                             </li>
                                         </ul>
                                     </div>

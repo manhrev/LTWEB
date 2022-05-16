@@ -23,10 +23,10 @@
                         <div class="block">
                             <div class="block-content">
                                 <div class="policy-item">
-                                    <div class="policy-content iconpolicy2 text-center">
-                                        <img src="<?= STATIC_URL ?>img/home/home1-policy2.png" alt="img">
+                                    <div class="policy-content iconpolicy1 text-center" >
+                                        <img src="<?= STATIC_URL ?>img/home/home1-policy2.png" alt="img" style="width: 60px; height: 60px">
                                         <div class="discription">
-                                            <div class="policy-name mb-5">MIỄN PHÍ LẮP ĐẶT</div>
+                                            <div class="policy-name mb-5">Chất lượng vượt trội</div>
                                             <div class="policy-des"></div>
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@
                                     <div class="policy-content iconpolicy3 text-center">
                                         <img src="<?= STATIC_URL ?>img/home/home1-policy3.png" alt="img">
                                         <div class="discription">
-                                            <div class="policy-name mb-5">CHẾ ĐỘ BẢO HÀNH TỐT</div>
+                                            <div class="policy-name mb-5">Giá cả hợp lí</div>
                                             <div class="policy-des"></div>
                                         </div>
                                     </div>

@@ -532,18 +532,18 @@
                                 <i class="zmdi zmdi-plus"></i>
                             </span>
                             <a href="<?=BASE_URL?>san-pham/tat-ca-san-pham" title="Page">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i>Sản phẩm</a>
+                                <i class="fa fa-file-text-o" aria-hidden="true"></i>Thực đơn</a>
                             <div class="subCategory collapse" id="page" aria-expanded="true" role="status">
                                 <ul class="group-page">
                                     <li class="item container group">
                                         <div>
                                             <ul>
                                                 <li class="item col-md-4 ">
-                                                    <span class="menu-title">Danh mục sản phẩm</span>
+                                                    <span class="menu-title">danh mục món ăn</span>
                                                     <div class="menu-content">
                                                         <ul class="col">
                                                             <li>
-                                                                <a href="<?=BASE_URL?>san-pham/tat-ca-san-pham">Tất cả sản phẩm</a>
+                                                                <a href="<?=BASE_URL?>san-pham/tat-ca-san-pham">Tất cả món ăn</a>
                                                             </li>
 
                                                             <?php foreach ($data['categories'] as $cate) {?>
@@ -560,13 +560,13 @@
                                                     <div class="menu-content">
                                                         <ul>
                                                             <li>
-                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Sản phẩm mới nhất</a>
+                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/moi-nhat">Món ăn mới nhất</a>
                                                             </li>
                                                             <li>
-                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Sản phẩm bán chạy</a>
+                                                                <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Món ăn bán chạy</a>
                                                             </li>
                                                             <li>
-                                                                <a href="#">Sản phẩm giảm giá</a>
+                                                                <a href="#">Món ăn giảm giá</a>
                                                             </li>
                                                         </ul>
                                                     </div>

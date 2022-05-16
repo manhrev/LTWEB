@@ -1,7 +1,7 @@
 <div class="related">
     <div class="title-tab-content  text-center">
         <div class="title-product justify-content-start">
-            <h2>Sản phẩm liên quan</h2>
+            <h2>Món ăn liên quan</h2>
         </div>
     </div>
     <div class="tab-content">
