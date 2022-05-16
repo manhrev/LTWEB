@@ -45,11 +45,14 @@ class GioHang extends Controller{
 
             }
         } else {
+            $userModel = $this->model('UserModel');
+            $userdata = $userModel->GetUser($_SESSION['username']);
             $model= $this->model('SanPhamModel');
             $categories = $model->GetCategory();
             $this->view('product-checkout', [
                 'view' => 0,
                 'categories' => $categories,
+                'userdata' => $userdata
         ]);
         }
     }

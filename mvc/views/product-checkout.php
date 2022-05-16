@@ -97,19 +97,29 @@
                                                     </a>
                                                 </li> -->
                                             </ul>
-                                            <div class="tab-content">
+                                            <span> <b>Quý khách vui lòng kiểm tra thông tin trước khi đặt hàng</b></span>
+                                            <div class="tab-content mt-3">
+                                                
                                                 <div class="tab-pane fade in active show" id="checkout-guest-form" role="tabpanel">
+                                                    
+
                                                     <form action="<?=BASE_URL?>gio-hang/dat-hang" id="customer-form" class="js-customer-form" method="post">
                                                         <div>
+                                                            <?php $udata = $data['userdata'];?>
                                                             
                                                             <div class="form-group row">
-                                                                <input class="form-control" required name="fullname" type="text" placeholder="Họ và tên">
+                                                            <label for="fullname">Tên đầy đủ:</label>
+                                                                <input class="form-control" required name="fullname" type="text" placeholder="Họ và tên" value="<?=$udata['name']?>">
                                                             </div>
+                                                            
                                                             <div class="form-group row">
-                                                                <input class="form-control" required name="address" type="text" placeholder="Địa chỉ">
+                                                                <label for="address">Địa chỉ:</label>
+                                                                <input class="form-control" required name="address" type="text" placeholder="Địa chỉ" value="<?=$udata['address']?>">
                                                             </div>
+                                                 
                                                             <div class="form-group row">
-                                                                <input class="form-control" required name="phone" type="text" placeholder="Số điện thoại">
+                                                                <label for="phone">Số điện thoại:</label>
+                                                                <input class="form-control" required name="phone" type="text" placeholder="Số điện thoại" value="<?=$udata['phone_number']?>">
                                                             </div>
 
                                                             <?php if (isset($_SESSION['cart']) && count($_SESSION['cart'])>0) {
@@ -119,14 +129,17 @@
                                                                 <input type="hidden" name="sp-<?=$i?>" value="<?=$sp['name']?>">
                                                             <?php $i++;}}?>
                                                         </div>
+                                                        
                                                         <div class="clearfix">
+                                                        
                                                             <div class="row">
                                                                 
-
+                                                                
                                                                 <button class="continue btn btn-primary pull-xs-right" data-link-action="register-new-customer" type="submit"
                                                                     >
                                                                     Đặt hàng
                                                                 </button>
+                                                                
                                                             </div>
                                                         </div>
                                                     </form>

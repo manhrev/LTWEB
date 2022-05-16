@@ -15,20 +15,30 @@ class Login extends Controller{
             
                 if (validateLoginInfo($username, $password)) {
                     //login info ok
-                    if ($username == 'Chiendau' && $password == '413314') {
-                        //only admin
-                        setUser($username, 1);
-                        echo
+                    $userModel = $this->model('UserModel');
+                    $role = $userModel->Login($username, $password);
+                    if ($role == 0) {
+                        echo 
                         "<script>
-                            alert('".'Đăng nhập thành công!'."');
-                            window.location.href='".BASE_URL."';
-                        </script>"; 
-                    } else {
-                        echo
-                        "<script>
-                            alert('".'Tên người dùng hoặc mật khẩu không đúng!'."');
+                            alert('".'Tên đăng nhập hoặc mật khẩu sai, vui lòng thử lại!'."');
                             window.location.href='".BASE_URL."login';
                         </script>"; 
+                    } elseif ($role == 1) {
+                        setUser($username, $role);
+                        echo 
+                        "<script>
+                            alert('".'Đăng nhập admin thành công!'."');
+                            window.location.href='".BASE_URL."login';
+                        </script>"; 
+                    } elseif ($role == 2) {
+                        setUser($username, $role);
+                        echo 
+                        "<script>
+                            alert('".'Đăng nhập thành công!'."');
+                            window.location.href='".BASE_URL."login';
+                        </script>";
+                    } else {
+
                     }
                     
                 } else {
