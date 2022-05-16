@@ -74,7 +74,7 @@
                             <div class="myaccount-title ">
                                 <a href="#acount" data-toggle="collapse" class="acount">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Tài khoản</span>
+                                    <span><?=isset($_SESSION['username'])?$_SESSION['username']:'Tài khoản'?></span>
                                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
 
