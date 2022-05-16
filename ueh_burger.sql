@@ -179,21 +179,8 @@ INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `
 ('Khoai-tay-chien--size-M-', 'Khoai tây chiên (size M)', '60000', 'http://localhost/UEH_burger/public/img/sanpham/25.jpg, http://localhost/UEH_burger/public/img/sanpham/26.jpg', 'mô tả', 'Khoai tây chiên ', '2022-05-16', 140),
 ('Milo', 'Milo', '40000', 'http://localhost/UEH_burger/public/img/sanpham/35.jpg, http://localhost/UEH_burger/public/img/sanpham/37.jpg', 'milo', 'milo', '2022-05-16', 24),
 ('Mix-wing', 'Mix wing', '43000', 'http://localhost/UEH_burger/public/img/sanpham/31.jpg, http://localhost/UEH_burger/public/img/sanpham/32.jpg', 'mô tả', 'Mix wing', '2022-05-16', 23),
-('Nuoc-xoai-dao', 'Nước xoài đào', '45000', 'http://localhost/UEH_burger/public/img/sanpham/33.jpeg, http://localhost/UEH_burger/public/img/sanpham/34.jpeg', 'mô tả', 'Nước xoài đào', '2022-05-16', 57),
+('Nuoc-xoai-dao', 'Nước xoài đào', '45000', 'http://localhost/UEH_burger/public/img/sanpham/33.jpeg, http://localhost/UEH_burger/public/img/sanpham/34.jpg', 'mô tả', 'Nước xoài đào', '2022-05-16', 57),
 ('Pho-mai-que', 'Phô mai que', '40000', 'http://localhost/UEH_burger/public/img/sanpham/29.jpg, http://localhost/UEH_burger/public/img/sanpham/30.jpg', 'mô tả', 'Phô mai que', '2022-05-16', 216);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `thicong_images`
---
-
-CREATE TABLE `thicong_images` (
-  `id` int(11) NOT NULL,
-  `name` text NOT NULL,
-  `image` text NOT NULL,
-  `date_created` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
