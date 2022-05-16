@@ -125,6 +125,10 @@ class App{
                 array_push($returnArr, 'LienHe');
                 if (isset($arr[1])) return array('NotFound');
                 break;
+            case 'signup':
+                array_push($returnArr, 'Signup');
+                if (isset($arr[1])) return array('NotFound');
+                break;
             case 'login':
                 array_push($returnArr, 'Login');
                 if (isset($arr[1])) return array('NotFound');
