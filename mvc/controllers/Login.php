@@ -3,6 +3,11 @@ require_once './mvc/helper/authorization.php';
 class Login extends Controller{
 
     function Default(){
+        if (isLoggedIn()) {
+            header("Location: ".BASE_URL);
+            exit();
+        }
+        
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['username']) && isset($_POST['password'])) {
                 $username = $_POST['username'];

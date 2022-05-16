@@ -162,11 +162,17 @@
                                     <?php 
                                         } else {   
                                     ?>
+                                    <?php if (isLoggedIn()) {?>
                                     <a href="<?=BASE_URL?>gio-hang/dat-hang" class="continue btn btn-primary pull-xs-right">
                                         Đặt hàng
                                     </a>
+                                    <?php } else { ?>
+                                    <span >Vui lòng đăng nhập để đặt hàng! <br>
+                                    <a href="<?=BASE_URL?>login" class="continue btn btn-primary pull-xs-right mt-2">
+                                        Đến trang đăng nhập
+                                    </a>
                                     <?php 
-                                        }   
+                                        } }  
                                     ?>
 
                                 </div>
