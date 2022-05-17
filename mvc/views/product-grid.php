@@ -279,8 +279,7 @@
                                             <div class="js-product-list-top ">
                                                 <div class="d-flex justify-content-around row">
                                                     <div class="showing col col-xs-12">
-                                                        <span>Đang hiển thị <?php $fromP = ($data['currentPage']) * $data['perPage'];
-                                                                            echo ($fromP - 5) . ' - ' . $fromP ?> trong tổng số <?= $data['numOfSP'] ?> sản phẩm</span>
+                                                        <span>Có tất cả <?= $data['numOfSP'] ?> sản phẩm (chỉ hiển thị 12 sản phẩm mỗi trang)</span>
                                                     </div>
                                                     <div class="page-list col col-xs-12">
                                                         <ul>
