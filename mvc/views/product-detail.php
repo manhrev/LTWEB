@@ -208,16 +208,16 @@
                                                                     <div class="input-group">
                                                                         <div class="quantity">
                                                                             <span class="control-label">QTY : </span>
-                                                                            <input type="text" name="qty" id="quantity_wanted" value="1" class="input-group form-control">
+                                                                            <span type="text" name="qty" id="quantity_wanted"  class="input-group form-control">1</span>
 
-                                                                            <span class="input-group-btn-vertical">
+                                                                            <!-- <span class="input-group-btn-vertical">
                                                                                 <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
                                                                                     +
                                                                                 </button>
                                                                                 <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
                                                                                     -
                                                                                 </button>
-                                                                            </span>
+                                                                            </span> -->
                                                                         </div>
                                                                         <span class="add">
                                                                             <div style="display: flex; align-items: stretch">

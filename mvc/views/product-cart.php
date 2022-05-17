@@ -118,16 +118,16 @@
                 <div class="col-md-5 col qty">
                     <div class="label">Số lượng:</div>
                     <div class="quantity">
-                        <input type="text" name="qty" value="1" class="input-group form-control">
+                        <span type="text" name="qty"  class="input-group form-control">1</span>
 
-                        <span class="input-group-btn-vertical">
+                        <!-- <span class="input-group-btn-vertical">
                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
                                 +
                             </button>
                             <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
                                 -
                             </button>
-                        </span>
+                        </span> -->
                     </div>
                 </div>
                 <div class="col-md-5 col price">
