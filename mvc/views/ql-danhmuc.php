@@ -19,7 +19,7 @@
 
 
     <main class="container">
-        <h3 class="mt-5">Các danh mục món ăn</h3>
+        <h3 class="mt-5">Các Danh mục món ăn</h3>
         <!-- Modal button -->
         <div class="py-4 text-center">
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Thêm

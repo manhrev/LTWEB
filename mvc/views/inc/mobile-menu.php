@@ -539,7 +539,7 @@
                                         <div>
                                             <ul>
                                                 <li class="item col-md-4 ">
-                                                    <span class="menu-title">danh mục món ăn</span>
+                                                    <span class="menu-title">Danh mục món ăn</span>
                                                     <div class="menu-content">
                                                         <ul class="col">
                                                             <li>

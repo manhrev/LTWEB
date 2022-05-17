@@ -1,5 +1,5 @@
 <div class="sidebar-block">
-    <div class="title-block">danh mục món ăn</div>
+    <div class="title-block">Danh mục món ăn</div>
     <div class="block-content">
 
         <?php foreach ($data['categories'] as $cate) {?>

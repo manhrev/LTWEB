@@ -591,8 +591,8 @@
                     <section class="page-home">
                         <div class="row justify-content-center mt-5">
                             <div class="title-product justify-content-between mt-4">
-                                <h2>danh mục món ăn</h2>
-                                <p style='text-align: center'>Các danh mục món ăn chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem Tất cả món ăn ở đây</a></p>
+                                <h2>Danh mục món ăn</h2>
+                                <p style='text-align: center'>Các Danh mục món ăn chúng tôi cung cấp, <br><a href="<?= BASE_URL ?>san-pham">xem Tất cả món ăn ở đây</a></p>
                             </div>
                         </div>
                         <div class="tab-content row">
