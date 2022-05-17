@@ -630,7 +630,7 @@
                                 <div class="tab-content row">
 
                                     <?php foreach ($data['SPnoibat'] as $sp) { ?>
-                                        <div class="col-md-3 item text-center">
+                                        <div class="col-md-3 item text-center card border-0">
                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                 <div class="thumbnail-container">
                                                     <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?> " style="">

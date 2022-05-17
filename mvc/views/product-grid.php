@@ -134,7 +134,7 @@
                                                 <div class="row">
 
                                                     <?php foreach ($data['allSP'] as $sp) { ?>
-                                                        <div class="item text-center col-md-4">
+                                                        <div class="item text-center col-md-4 card border-0">
                                                             <div class="product-miniature js-product-miniature item-one first-item">
                                                                 <div class="thumbnail-container border">
                                                                     <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">

@@ -6,7 +6,7 @@
         <div class="row">
 
             <?php foreach ($data['banchay'] as $sp) { ?>
-                <div class="item col-md-12">
+                <div class="item col-md-12 card border-0">
                     <div class="product-miniature item-one first-item d-flex">
                         <div class="thumbnail-container border">
                             <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
