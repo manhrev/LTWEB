@@ -22,11 +22,11 @@ class TrangChu extends Controller{
         foreach ($rand as $index) $categories6[] = $categories[$index];
         
         // lay danh muc thi cong
-        $qlModel = $this->model('QuanLiModel');
-        $DMthicong = $qlModel->GetAnhThiCong();
+        // $qlModel = $this->model('QuanLiModel');
+        // $DMthicong = $qlModel->GetAnhThiCong();
         
         $this->view('home', [
-            'DMthicong' => $DMthicong,
+            // 'DMthicong' => $DMthicong,
             'view' => 0,
             "SPnoibat" => $sanphamnoibat,
             'categories' => $categories,
