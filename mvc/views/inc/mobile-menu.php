@@ -565,9 +565,9 @@
                                                             <li>
                                                                 <a href="<?=BASE_URL?>san-pham/bo-loc/ban-chay-nhat">Món ăn bán chạy</a>
                                                             </li>
-                                                            <li>
+                                                            <!-- <li>
                                                                 <a href="#">Món ăn giảm giá</a>
-                                                            </li>
+                                                            </li> -->
                                                         </ul>
                                                     </div>
                                                 </li>
