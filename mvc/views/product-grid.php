@@ -113,7 +113,7 @@
                                                         <p>Có <?= $data['numOfSP'] ?> sản phẩm</p>
                                                     </div>
                                                 </div>
-                                                <div class="col col-xs-12">
+                                                <!-- <div class="col col-xs-12">
                                                     <div class="d-flex sort-by-row justify-content-lg-end justify-content-md-end">
 
                                                         <div class="products-sort-order dropdown">
@@ -126,7 +126,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         <div class="tab-content product-items">
