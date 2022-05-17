@@ -60,9 +60,9 @@
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </button>
                                 </form>
-                                <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                <!-- <a class="addToWishlist" href="#" data-rel="1" onclick="">
                                     <i class="fa fa-heart" aria-hidden="true"></i>
-                                </a>
+                                </a> -->
                                 <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                 </a>

@@ -233,11 +233,11 @@
                                                                                         </button>
                                                                                     </form>
                                                                                 </div>
-                                                                                <div style="display: flex; align-items: center">
+                                                                                <!-- <div style="display: flex; align-items: center">
                                                                                     <a class="addToWishlist" href="#">
                                                                                         <i class="fa fa-heart" aria-hidden="true"></i>
                                                                                     </a>
-                                                                                </div>
+                                                                                </div> -->
                                                                             </div>
                                                                         </span>
                                                                     </div>

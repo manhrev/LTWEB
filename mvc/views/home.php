@@ -673,15 +673,15 @@
                                                         </div>
                                                     </div>
                                                     <div class="product-buttons d-flex justify-content-center">
-                                                        <form action="#" method="post" class="formAddToCart">
+                                                        <!-- <form action="<?=BASE_URL?>san-pham/<?=$sp['url']?>" method="post" class="formAddToCart">
                                                             <input type="hidden" name="id_product" value="1">
-                                                            <a class="add-to-cart" href="#" data-button-action="add-to-cart">
+                                                            <button class="add-to-cart" data-button-action="add-to-cart">
                                                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                                            </a>
-                                                        </form>
-                                                        <a class="addToWishlist" href="#" data-rel="1" onclick="">
+                                                        </button>
+                                                        </form> -->
+                                                        <!-- <a class="addToWishlist" href="#" data-rel="1" onclick="">
                                                             <i class="fa fa-heart" aria-hidden="true"></i>
-                                                        </a>
+                                                        </a> -->
                                                         <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>" class="quick-view hidden-sm-down" data-link-action="quickview">
                                                             <i class="fa fa-eye" aria-hidden="true"></i>
                                                         </a>
