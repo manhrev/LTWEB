@@ -82,10 +82,8 @@
                         </div>
                     </div>
                     <div class="tiva-modules col-lg-4 col-md-6">
+                      
                         <div class="block m-top">
-                           
-                        </div>
-                        <div class="block m-top1">
                             <div class="block-content">
                                 <div class="social-content">
                                     <div class="title-block">
