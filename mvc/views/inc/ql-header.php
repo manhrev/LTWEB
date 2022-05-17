@@ -20,9 +20,9 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-anh">Quản lí ảnh</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="<?=BASE_URL?>quan-li/quan-li-thi-cong">Quản lí thi công</a>
-            </li>
+            </li> -->
           </ul>
           <div class="d-flex flex-row-reverse w-100">   
             <a class="btn btn-danger" aria-current="page" href="<?=BASE_URL.'logout'?>">Đăng xuất</a>

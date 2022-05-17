@@ -36,10 +36,10 @@
       <a class="btn btn-success" href="<?= BASE_URL ?>quan-li/quan-li-anh">Upload ảnh
       </a>
     </div>
-    <div class="py-4 text-center">
+    <!-- <div class="py-4 text-center">
       <a class="btn btn-success" href="<?= BASE_URL ?>quan-li/quan-li-thi-cong">Quản lí danh mục thi công
       </a>
-    </div>
+    </div> -->
 
 
   </main>
