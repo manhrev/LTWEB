@@ -62,7 +62,15 @@
                                         <img src="<?= STATIC_URL ?>img/home/logo-mobile.png" alt="noi that gia vuong logo">
                                     </a>
                                 </div>
-                                <div class="contact-content">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6">
+                    <div class="block">
+                            <div class="block-content">
+
+                            <div class="contact-content">
                                     <div class="data align-self-stretch d-flex">
                                         <i class="fa fa-home float-left" aria-hidden="true"></i>
                                         <div class="content-data">
@@ -92,10 +100,7 @@
                                     </div>
 
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xs-12 col-lg-3 col-md-6">
+                            </div></div>
                         <!-- <div class="block-content">
                             <p class="img-payment ">
                                 <img class="img-fluid" style="width: 200px" src="<?= STATIC_URL ?>img/home/bct.png" alt="Đã thông báo bộ công thương">
