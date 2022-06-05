@@ -102,7 +102,8 @@
                             </table>
 
                         </div>
-                        
+                        <button class="btn btn-primary" onclick="location.replace('<?= BASE_URL ?>tai-khoan/chinh-sua')">Chỉnh sửa tài khoản</button>
+                    
                         
                     </div>
 
@@ -127,6 +128,10 @@
     </div> -->
 
     <!-- Vendor JS -->
+    <?php if (isset($data['message'])) {
+        echo "<script> alert('". $data['message'] ."')</script>";
+       }?>
+    
     <script src="<?=STATIC_URL?>libs/jquery/jquery.min.js"></script>
     <script src="<?=STATIC_URL?>libs/popper/popper.min.js"></script>
     <script src="<?=STATIC_URL?>libs/bootstrap/js/bootstrap.min.js"></script>

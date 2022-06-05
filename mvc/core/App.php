@@ -135,7 +135,12 @@ class App{
                 break;
             case 'tai-khoan':
                 array_push($returnArr, 'Account');
-                if (isset($arr[1])) return array('NotFound');
+                if (isset($arr[1])){
+                    if ($arr[1]=='chinh-sua') {
+                        array_push($returnArr, 'EditProfile');
+                    }
+                    else return array('NotFound');
+                } 
                 break;
             case 'logout':
                 array_push($returnArr, 'Logout');
