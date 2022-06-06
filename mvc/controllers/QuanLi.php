@@ -427,6 +427,70 @@ class QuanLi extends Controller{
         }
 
     }
+
+    function QuanLyThanhVien(){
+        if (!isAdmin()) {
+            header("Location: ".BASE_URL.'login');
+            exit();
+        }
+
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            if (isset($_POST['action'])) {
+                if ($_POST['action'] == 'remove') {
+                    if (isset($_POST['username'])) {
+                        $username = $_POST['username'];
+                        $userModel = $this->model("UserModel");
+                        $message = $userModel->DeleteUser($username);
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-ly-thanh-vien/';
+                        </script>"; 
+                    } 
+                    else echo "Error! username not found";
+                }elseif ($_POST['action'] == 'block' or $_POST['action'] == 'unlock'){
+                    if (isset($_POST['username'])) {
+                        $username = $_POST['username'];
+                        $userModel = $this->model("UserModel");
+                        $message = $userModel->BlockUser($username,$x= ($_POST['action'] == 'block') ? 1 : 0 );
+                        echo "<script>
+                        alert('".$message."');
+                        window.location.href='".BASE_URL."quan-li/quan-ly-thanh-vien/';
+                        </script>"; 
+                    } 
+                    else echo "Error! username not found";
+                }elseif ($_POST['action'] == 'edit') {
+                    // print_r($_POST);
+                    $username = $_POST['username'];
+                    $name =$_POST['name'];
+                    $phone_number = $_POST['phone_number'];
+                    $address = $_POST['address'];
+
+                    $userModel = $this->model("UserModel");
+                    $message = $userModel->UpdateUser($username, $name, $phone_number, $address);
+                    if ($message===true) 
+                    echo "<script>
+                    alert('Update thành công!');
+                    window.location.href='".BASE_URL."quan-li/quan-ly-thanh-vien/';
+                    </script>";
+                    else 
+                    echo "<script>
+                    alert('".$message  ."');
+                    window.location.href='".BASE_URL."quan-li/quan-ly-thanh-vien/';
+                    </script>"; 
+                }
+                else {
+                    echo 'Error! action is invalid';
+                }
+            } else {
+                echo 'Error! Bad Request!';
+            }
+        }
+        else {
+        $users = $this -> model('UserModel') -> GetAll();
+        $this->view('ql-thanhvien',['users' => $users]);
+        }
+    }
 }
 
 ?>

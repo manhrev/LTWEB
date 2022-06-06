@@ -32,10 +32,23 @@ class UserModel extends DB
     }
     public function GetUser($username)
     {
-        $query = " SELECT username, name, address, phone_number, date_created FROM user WHERE username = '$username'";
+        // $query = " SELECT username, name, address, phone_number, date_created, isblocked FROM user WHERE username = '$username'";
+        $query = " SELECT * FROM user WHERE username = '$username'";
         $result = $this->con->query($query);
         $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
         return $item;
+    }
+
+    public function GetAll(){
+        $query = " SELECT username, name, address, phone_number, date_created, isblocked FROM user WHERE username <> 'admin'";
+        $result = $this->con->query($query);
+
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
+        {
+            $resultArray[]=$item;
+        }
+        
+        return $resultArray;
     }
 
     public function UpdateUser($username, $name, $phone_number, $address)
@@ -63,5 +76,27 @@ class UserModel extends DB
                 };
             } else return false;
         } else return $this->con->error;
+    }
+
+    public function DeleteUser($username){
+        $query = "DELETE FROM user WHERE username='$username'" ;
+            
+        if ($this->con->query($query ) === TRUE)
+        {
+            return "User đã bị xoá khỏi hệ thống!";
+        }
+        else
+        {
+            return "Đã phát sinh lỗi: ". (string) $this->con->error;
+        }
+    }
+
+    public function BlockUser($username, $value){
+        $query = "UPDATE `user` SET `isblocked`= '$value' WHERE `username`='$username'";
+        if ($this->con->query($query) === true) {
+            return $value==1 ? "User đã bị block!": "Đã mở khoá!";
+        } else {
+            return $this->con->error;
+        };
     }
 }

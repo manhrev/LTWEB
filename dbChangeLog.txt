@@ -1,0 +1,4 @@
+6/6/22: Thêm một cột là isblocked để hiện thực chức năng block user.
+	state=1: blocked --> ko thể đặt hàng
+	state=0: trạng thái bình thường
+Chạy lệnh SQL sau: ALTER TABLE `user` ADD `isblocked` TINYINT(1) NOT NULL DEFAULT '0' AFTER `role`;
