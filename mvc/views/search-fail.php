@@ -12,10 +12,10 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Không tìm thấy kết quả - UEH Burger</title>
+    <title>Không tìm thấy kết quả - BKU Burger</title>
 
-    <meta name="keywords" content="UEH Burger">
-    <meta name="description" content="UEH Burger">
+    <meta name="keywords" content="BKU Burger">
+    <meta name="description" content="BKU Burger - không tìm thấy kết quả">
     
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">

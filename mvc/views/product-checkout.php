@@ -11,11 +11,11 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Đặt hàng - UEH Burger</title>
+    <title>Đặt hàng - BKU Burger</title>
 
-    <meta name="keywords" content="UEH Burger">
-    <meta name="description" content="UEH Burger, thanh toán">
-    <meta name="author" content="tivatheme">
+    <meta name="keywords" content="BKU Burger">
+    <meta name="description" content="BKU Burger, thanh toán">
+
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
