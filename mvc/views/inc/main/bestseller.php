@@ -24,7 +24,7 @@
                                     <a href="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>"><?= ucfirst($sp['name']) ?></a>
                                 </div>
                                 <div class="rating">
-                                    <div class="star-content">
+                                    <div class="star-content" hidden>
                                         <div class="star"></div>
                                         <div class="star"></div>
                                         <div class="star"></div>

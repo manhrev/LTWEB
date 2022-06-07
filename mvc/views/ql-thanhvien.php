@@ -249,7 +249,7 @@
 	}
 
 	function prepareDetail(data) {
-		console.log(data);
+		// console.log(data);
 		document.getElementById('detailUsername').innerHTML = data.username;
 		document.getElementById('detailName').innerHTML = data.name;
 		document.getElementById('detailAddress').innerHTML = data.address;

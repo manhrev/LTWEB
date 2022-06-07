@@ -2,3 +2,6 @@
 	state=1: blocked --> ko thể đặt hàng
 	state=0: trạng thái bình thường
 Chạy lệnh SQL sau: ALTER TABLE `user` ADD `isblocked` TINYINT(1) NOT NULL DEFAULT '0' AFTER `role`;
+
+7/6/22: Thêm một bảng reviews để hiện thực chức năng review sản phẩm (beta)
+- import file review_table.sql

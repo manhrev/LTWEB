@@ -114,7 +114,25 @@ class SanPham extends Controller{
     function GetSanPham($url) {
         //handle add to cart
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            if (isset($_POST['url']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image'])) {
+            if (isset($_POST['act'])){
+                if ($_POST['act']='summitReview'){
+                    // print_r($_POST);
+                    // print_r($_SESSION['username']);
+                    $result= $this->model('ReviewModel') -> AddReview($url, $_SESSION['username'],$_POST['rating'], $_POST['comment']);
+                    if ($result===true){
+                        header("Location: ".BASE_URL."san-pham/$url");
+                    } elseif ($result=='Duplicate') {
+                        echo "<script>
+                        alert('Bạn đã review sản phẩm này rồi!');
+                        window.location.href='" . BASE_URL . "/san-pham/$url';
+                        </script>";
+                        // header("Location: ".BASE_URL.'san-pham/'.$_POST['url']);
+                    } else {
+                        echo 'Vui lòng thử lại! Đã có lỗi khi cập nhật DB! Error:'.$result;
+                    }
+                    
+                }
+            } elseif (isset($_POST['url']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image'])) {
                 $key = $_POST['url'];
                 $sp_to_cart = [
                     'name' => $_POST['name'],
@@ -160,6 +178,19 @@ class SanPham extends Controller{
             foreach ($rand as $index) {
                 $tags[] = $tagss[$index];
             }
+
+            $reviews = $this -> model('ReviewModel') -> GetReviews($url);
+
+            if (count($reviews)!=0){
+                $avgreview=0;
+                foreach ($reviews as $i => $info) {
+                    $avgreview = $avgreview + $info['rate'];
+                }
+                $avgreview =round($avgreview/count($reviews) );
+            }
+            
+            else $avgreview=0;
+
             $this->view('product-detail', [
                 'view' => 2,
                 'SP' => $arr,
@@ -176,9 +207,14 @@ class SanPham extends Controller{
                         'name'=> ucfirst($arr[0]['name']),
                         'url' => BASE_URL.'san-pham/'.$url
                     ]
-                ]
+                    ],
+                'reviews' => $reviews,
+                'avgreview' => $avgreview
             ]);
+            
         }
     }
+
+    
 }
 ?>

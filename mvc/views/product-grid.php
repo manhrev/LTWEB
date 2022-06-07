@@ -159,7 +159,7 @@
                                                                         <div class="product-title">
                                                                             <a href="product-detail.html" style="text-transform: uppercase"><?= $sp['name'] ?></a>
                                                                         </div>
-                                                                        <div class="rating">
+                                                                        <div class="rating" hidden>
                                                                             <div class="star-content">
                                                                                 <div class="star"></div>
                                                                                 <div class="star"></div>

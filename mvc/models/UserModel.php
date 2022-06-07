@@ -8,6 +8,7 @@ class UserModel extends DB
         $query = " SELECT username, password, role FROM user where username = '$username'";
         $result = $this->con->query($query);
         $item = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        if (!isset($item['password'])) return 0;
         if ($item['password'] == $password) {
             return $item['role'];
         }
