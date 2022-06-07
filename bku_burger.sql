@@ -215,7 +215,7 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `date_created`, `view_count`) VALUES
-('Burger-2-mieng-bo-pho-mai-thit-xong-khoi', 'Burger 2 miếng bò phô mai thịt xông khói', '97000', ' http://localhost/LTWEB/public/img/sanpham/50.jpeg ,  http://localhost/LTWEB/public/img/sanpham/50.jpeg', 'Thịt xông khói đến từ Mỹ. Bò đến từ Úc. Burger thì ở UEH. Một món ăn mà ba dân tộc.', 'Bò, Thịt xông khói', '2022-05-17', 123123),
+('Burger-2-mieng-bo-pho-mai-thit-xong-khoi', 'Burger 2 miếng bò phô mai thịt xông khói', '97000', ' http://localhost/LTWEB/public/img/sanpham/50.jpeg ,  http://localhost/LTWEB/public/img/sanpham/50.jpeg', 'Thịt xông khói đến từ Mỹ. Bò đến từ Úc. Burger thì ở BKU. Một món ăn mà ba dân tộc.', 'Bò, Thịt xông khói', '2022-05-17', 123123),
 ('Burger-Bo-Khoai-Tay', 'Burger Bò Khoai Tây', '60000', 'http://localhost/LTWEB/public/img/sanpham/12.jpg, http://localhost/LTWEB/public/img/sanpham/13.jpg', 'Burger Bò Khoai Tây với sự tan chảy từ trong miệng.', 'Burger, Bò Khoai Tây', '2022-05-16', 140),
 ('Burger-Bo-Nuong-Hanh-Chien', 'Burger Bò Nướng Hành Chiên', '51000', 'http://localhost/LTWEB/public/img/sanpham/58.jpg, http://localhost/LTWEB/public/img/sanpham/58.jpg', 'Burger Bò Nướng hành chiên được hình thành bởi công thức đặc biệt.', 'Bò', '2022-05-17', 1220),
 ('burger-bo-nuong-khoai-tay-lat', 'burger bò nướng khoai tây lát', '53000', ' http://localhost/LTWEB/public/img/sanpham/51.jpeg , http://localhost/LTWEB/public/img/sanpham/52.jpeg', 'BURGER BÒ NƯỚNG KHOAI TÂY LÁT', 'Burger, Bò', '2022-05-17', 1233),

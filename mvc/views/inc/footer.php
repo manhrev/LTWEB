@@ -9,7 +9,7 @@
                                 <p class="logo-footer">
                                     <img src="<?= STATIC_URL ?>img/home/logo-mobile.png" alt="Noi that gia vuong logo">
                                 </p>
-                                <p class="content-logo">UEH Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.
+                                <p class="content-logo">BKU Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.
                                 </p>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                         <span>Email:</span>
                                     </div>
                                     <div class="content-contact mail-contact">
-                                        <p>support@burgerueh.vn</p>
+                                        <p>support@burgerbku.vn</p>
                                     </div>
                                 </div>
                                 <div class="contact-us">

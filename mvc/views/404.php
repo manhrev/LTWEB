@@ -15,8 +15,8 @@
     <title>404 not found</title>
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
-    <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
+    <meta name="keywords" content="not found">
+    <meta name="description" content="404 not found">
     <!-- <meta name="author" content="tivatheme"> -->
 
 

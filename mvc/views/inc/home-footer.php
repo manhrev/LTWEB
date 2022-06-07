@@ -89,7 +89,7 @@
                                     <div class="support d-flex">
                                         <div class="data d-flex align-self-stretch mail-support">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <div>support@burgerueh.vn</div>
+                                            <div>support@burgerbku.vn</div>
                                         </div>
                                     </div>
                                     <div class="data d-flex align-self-stretch phone-support">
