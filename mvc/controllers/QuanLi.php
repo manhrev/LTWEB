@@ -491,6 +491,24 @@ class QuanLi extends Controller{
         $this->view('ql-thanhvien',['users' => $users]);
         }
     }
-}
 
+    function QuanLyReview($url){
+        if (isset($_POST['action'])) {
+            if ($_POST['action'] == 'removeReview') { }
+
+                // print_r($_POST);
+                if ($this->model('ReviewModel')->RemoveReview($_POST['url'],$_POST['username'])===true){
+                    echo "<script> alert('Xoá thành công!');
+                    location.replace('".BASE_URL."quan-li/reviews/$url');
+                    </script>
+                    ";
+                }
+
+    }          else {
+        $reviews = $this -> model('ReviewModel') -> GetReviews($url);
+        $this->view('ql-review', [$url ,$reviews]);
+        }
+
+    }
+}
 ?>

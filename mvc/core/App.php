@@ -205,6 +205,12 @@ class App{
                             array_push($returnArr, 'QuanLyThanhVien');
                             //xet tham so
                             break;
+                        case 'reviews':
+                            array_push($returnArr, 'QuanLyReview');
+                            if (isset($arr[2])){
+                                array_push($returnArr, $arr[2]);
+                            } else return array('NotFound');
+                            break;
                         default:
                             return array('NotFound');
                             break;
