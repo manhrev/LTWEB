@@ -12,16 +12,16 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title><?=isset($data['danhmuc'])?$data['danhmuc']:$data['pageTitle']?> - UEH Burger</title>
+    <title><?=isset($data['danhmuc'])?$data['danhmuc']:$data['pageTitle']?> - BKU Burger</title>
     <meta property="og:url" content="<?=BASE_URL?>">
     <meta name="revisit-after" content="1 day">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="true">
-    <meta property="og:site_name" content="UEH Burger">
+    <meta property="og:site_name" content="BKU Burger">
 
-    <meta name="keywords" content="UEH Burger,nội thất Đà Nẵng, nội thất, funiture, 
-    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>,UEH Burger">
-    <meta name="description" content="Các sản phẩm ở UEH Burger luôn đem đến sự hài lòng cho người sử dụng,
+    <meta name="keywords" content="BKU Burger,burger tphcm, ăn nhanh, thức an nhanh, 
+    <?=isset($data['danhmuc'])?$data['danhmuc']:''?>,BKU Burger">
+    <meta name="description" content="Các sản phẩm ở BKU Burger luôn đem đến sự hài lòng cho người sử dụng,
     với nhiều danh mục để chọn lựa, đa dạng sản phẩm.
     ">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">

@@ -11,11 +11,10 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Furnitica - Minimalist Furniture HTML Template</title>
+    <title>Đăng kí</title>
 
-    <meta name="keywords" content="Furniture, Decor, Interior">
-    <meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
-    <meta name="author" content="tivatheme">
+    <meta name="keywords" content="Đăng kí, tài khoản, tạo tài khoản">
+    <meta name="description" content="Đăng kí tài khoản">
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

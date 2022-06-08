@@ -12,14 +12,14 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title><?= ucfirst($data['SP'][0]['name']) ?> - UEH Burger</title>
+    <title><?= ucfirst($data['SP'][0]['name']) ?> - BKU Burger</title>
     <meta property="og:url" content="<?= BASE_URL ?>">
     <meta name="revisit-after" content="1 day">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="true">
-    <meta property="og:site_name" content="UEH Burger">
+    <meta property="og:site_name" content="BKU Burger">
 
-    <meta name="keywords" content="<?= $data['SP'][0]['tag'] ?>,UEH Burger">
+    <meta name="keywords" content="<?= $data['SP'][0]['tag'] ?>,BKU Burger">
     <meta name="description" content="<?= $data['SP'][0]['description'] ?>">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">

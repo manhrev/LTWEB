@@ -11,10 +11,10 @@
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-    <title>Đăng nhập - UEH Burger</title>
+    <title>Đăng nhập - BKU Burger</title>
 
-    <meta name="keywords" content="UEH Burger, đăng nhập, login, noi that, nội thất">
-    <meta name="description" content="Đăng nhập hệ thống, UEH Burger">
+    <meta name="keywords" content="BKU Burger, đăng nhập, login, noi that, nội thất">
+    <meta name="description" content="Đăng nhập hệ thống, BKU Burger">
 
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">

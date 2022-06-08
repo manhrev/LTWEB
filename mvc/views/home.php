@@ -18,14 +18,14 @@
     <meta name="revisit-after" content="1 day">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="HandheldFriendly" content="true">
-    <meta property="og:site_name" content="UEH Burger">
+    <meta property="og:site_name" content="BKU Burger">
 
-    <title>UEH Burger</title>
-    <meta property="og:title" content="UEH Burger">
+    <title>BKU Burger - Trang chủ</title>
+    <meta property="og:title" content="BKU Burger">
     <link rel="icon" href="<?= STATIC_URL ?>img/home/logo-icon.png">
     <link rel="shortcut icon" href="<?= STATIC_URL ?>img/home/logo-icon.ico">
-    <meta name="keywords" content="UEH Burger">
-    <meta name="description" content="UEH Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.">
+    <meta name="keywords" content="BKU Burger">
+    <meta name="description" content="BKU Burger là chuỗi cửa hàng thức ăn nhanh nổi tiếng thế giới với công thức Hamberger đột phá và 100% nguyên liệu thịt bò nhập từ Úc.">
 
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

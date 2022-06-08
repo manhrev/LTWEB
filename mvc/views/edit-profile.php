@@ -14,9 +14,9 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Chỉnh sửa thông tin cá nhân</title>
 
-	<!-- <meta name="keywords" content="Furniture, Decor, Interior">
-	<meta name="description" content="Furnitica - Minimalist Furniture HTML Template">
-	<meta name="author" content="tivatheme"> -->
+	<meta name="keywords" content="Chỉnh sửa cá nhân">
+	<meta name="description" content="Chỉnh sửa trang cá nhân">
+	
 
 	<!-- Mobile Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
