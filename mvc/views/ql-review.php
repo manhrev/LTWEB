@@ -1,4 +1,4 @@
-<!-- <?php print_r($data); ?> -->
+<!-- <?php print_r(BASE_URL); ?> -->
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -16,7 +16,7 @@
 	<?php require_once "./mvc/views/inc/ql-header.php" ?>
 	<div class="container">
 		<h3>Những review của sản phẩm: <?= $data[0] ?></h3>
-		<a class="btn btn-warning" type="button"  href=<?= "'http://localhost/UEH_burger/san-pham/$data[0] '" ?>>
+		<a class="btn btn-warning" type="button"  href=<?= "'".BASE_URL. "/san-pham/$data[0] '" ?>>
 								Xem trực tiếp
 </a>
 		<table class="table">
