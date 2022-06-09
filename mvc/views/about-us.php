@@ -93,25 +93,29 @@
 										<div class="col-lg-6 col-md-6 col-sm-6 left">
 											<div class="cms-block f-right">
 												<h3 class="page-subheading">Chúng tôi là ai?</h3>
-												<p>Chúng tôi là Burger BKU .Được thành lập vào năm 2022,
+												<p>
+													<!-- Chúng tôi là Burger BKU .Được thành lập vào năm 2022,
 													BURGER BKU hiện là nhà hàng thức ăn nhanh được giới trẻ ưa thích. 
 													Mỗi ngày, có hơn 1000 thực khách đến với nhà hàng BURGER BKU  để thưởng thức các món ăn chất lượng cao,
 													hương vị tuyệt hảo và giá cả phải chăng.
 												</p>
 												<p>Phương châm của BURGER BKU là bất cứ ở đâu, vào thời điểm nào, 
 													chúng tôi đều phục vụ những chiếc bánh WHOPPER ngon nhất thế giới cho đông đảo khách hàng sành điệu.
+												 -->
+												 <?= $data['info']['aboutus']?>
 												</p>
 											</div>
 										</div>
 										<div class="col-lg-6 col-md-6 col-sm-6 right">
 											<div class="cms-block f-left mt-3">
 												<h3 class="page-subheading">Chúng tôi làm gì? </h3>
-												<p>Chúng tôi làm Burger. Dù ở đâu, BURGER BKU cũng luôn giữ đúng tinh thần Taste is King, 
+												<p>
+													<!-- Chúng tôi làm Burger. Dù ở đâu, BURGER BKU cũng luôn giữ đúng tinh thần Taste is King, 
 													làm hài lòng khẩu vị của thực khách khó tính nhất khi đến thưởng thức tại nhà hàng. 
 													Cửa hàng của BURGER BKU cũng sẽ giữ vững phương châm phục vụ của BURGER BKU “những bữa ăn thân thiện với gia đình”, 
 													thể hiện qua đội ngũ nhân viên phục vụ được đào tạo chuyên nghiệp, nhanh chóng và thân thiện, không gian thoải mái, 
 													thiết kế nội thất hiện đại, những món ăn tươi ngon và nóng sốt, thức uống mát lạnh và an toàn vệ sinh tuyệt đối.
-
+												-->	<?= $data['info']['wedo']?> 
 												</p>
 
 											</div>
@@ -160,7 +164,7 @@
 														<div class="title">Email:</div>
 														<div class="contact-content">
 															<a
-																href="mailto:support@burgerBKU.vn">support@burgerBKU.vn</a>
+																href="mailto:<?= $data['info']['email']?>"><?= $data['info']['email']?></a>
 											
 														</div>
 													</div>
@@ -173,11 +177,12 @@
 															<i class="zmdi zmdi-home"></i>
 														</div>
 													</div>
-													<div class="item-right d-flex">
+													<div class="item-right ">
 														<div class="title">Địa chỉ:</div>
 														<div class="contact-content">
-														59C Nguyễn Đình Chiểu, Phường 6,
-															<br> Quận 3, TP.HCM
+														<?= $data['info']['address']?>
+														<!-- 59C Nguyễn Đình Chiểu, Phường 6,
+															<br> Quận 3, TP.HCM -->
 														</div>
 													</div>
 												</div>
@@ -192,8 +197,8 @@
 													<div class="item-right d-flex">
 														<div class="title">Hotline:</div>
 														<div class="contact-content">
-														+84 345 678 99
-															
+														<!-- +84 345 678 99 -->
+														<?= $data['info']['hotline']?>
 														</div>
 													</div>
 												</div>

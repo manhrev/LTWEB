@@ -211,6 +211,9 @@ class App{
                                 array_push($returnArr, $arr[2]);
                             } else return array('NotFound');
                             break;
+                        case 'quan-li-tt-lien-he':
+                            array_push($returnArr, 'QuanLyTTLienHe');
+                            break;
                         default:
                             return array('NotFound');
                             break;

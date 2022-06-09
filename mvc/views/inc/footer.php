@@ -1,3 +1,4 @@
+<?php require_once "./mvc/helper/getContractInfo.php" ?>
 <footer class="footer-one">
     <div class="inner-footer">
         <div class="container">
@@ -46,7 +47,9 @@
                                         <span>Địa chỉ:</span>
                                     </div>
                                     <div class="content-contact address-contact">
-                                        <p>59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM
+                                        <p>
+                                            <?= $info['address'] ?>
+                                            <!-- 59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM -->
                                         </p>
                                     </div>
                                 </div>
@@ -56,7 +59,10 @@
                                         <span>Email:</span>
                                     </div>
                                     <div class="content-contact mail-contact">
-                                        <p>support@burgerbku.vn</p>
+                                        <p>
+                                            <!-- support@burgerbku.vn -->
+                                            <?= $info['email'] ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="contact-us">
@@ -65,7 +71,10 @@
                                         <span>Hotline :</span>
                                     </div>
                                     <div class="content-contact phone-contact">
-                                        <p>+84 345 678 99</p>
+                                        <p>
+                                            <!-- +84 345 678 99 -->
+                                            <?= $info['hotline'] ?>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="contact-us">

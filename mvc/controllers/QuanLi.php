@@ -494,7 +494,7 @@ class QuanLi extends Controller{
 
     function QuanLyReview($url){
         if (isset($_POST['action'])) {
-            if ($_POST['action'] == 'removeReview') { }
+            if ($_POST['action'] == 'removeReview') { 
 
                 // print_r($_POST);
                 if ($this->model('ReviewModel')->RemoveReview($_POST['url'],$_POST['username'])===true){
@@ -502,13 +502,31 @@ class QuanLi extends Controller{
                     location.replace('".BASE_URL."quan-li/reviews/$url');
                     </script>
                     ";
-                }
+                } }
+                else { echo "Action Invalid!";}
 
     }          else {
         $reviews = $this -> model('ReviewModel') -> GetReviews($url);
         $this->view('ql-review', [$url ,$reviews]);
         }
 
+    }
+
+    function QuanLyTTLienHe(){
+        if (isset($_POST['email'])) {
+                // print_r($_POST);
+                $rs = $this->model('PublicInfoModel')->Update($_POST);
+                if ($rs===true){
+                    echo "<script> alert('Cập nhật thành công!');
+                    location.replace('".BASE_URL."quan-li/quan-li-tt-lien-he');
+                    </script>
+                    ";
+                } else echo  "$rs";
+
+    }          else {
+        $info = $this -> model('PublicInfoModel') -> GetInfo();
+        $this->view('ql-ttlienhe', $info);
+        }
     }
 }
 ?>
