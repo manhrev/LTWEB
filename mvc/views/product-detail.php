@@ -262,24 +262,24 @@
                                                         </div>
                                                         <div class="rating-comment has-border d-flex">
                                                             <div class="review-description d-flex">
-                                                            <div>ĐÁNH GIÁ:</div>
-                                                            
+                                                                <div>ĐÁNH GIÁ:</div>
+
                                                                 <div class="rating">
-                                                                
+
                                                                     <div class="star-content">
-                                                                    <?php   
-                                                                    // if ($data['avgreview']==-1){ 
-                                                                    //     echo "Chưa có đánh giá nào";
-                                                                    // } else {
-                                                                    for ($x=1; $x<=$data['avgreview']; $x++){
-                                                                                echo "<span class='star1'></span>";
-                                                                            };
-                                                                            if ($data['avgreview'] <5){
-                                                                                for ($x=1; $x<= 5- $data['avgreview']; $x++)
+                                                                        <?php
+                                                                        // if ($data['avgreview']==-1){ 
+                                                                        //     echo "Chưa có đánh giá nào";
+                                                                        // } else {
+                                                                        for ($x = 1; $x <= $data['avgreview']; $x++) {
+                                                                            echo "<span class='star1'></span>";
+                                                                        };
+                                                                        if ($data['avgreview'] < 5) {
+                                                                            for ($x = 1; $x <= 5 - $data['avgreview']; $x++)
                                                                                 echo "<span class='star'></span>";
-                                                                            }
+                                                                        }
                                                                         // }
-                                                                            ?>
+                                                                        ?>
 
                                                                     </div>
                                                                 </div>
@@ -360,51 +360,63 @@
                                                 <div class="title-tab-content ">
                                                     <div class="justify-content-start">
                                                         <h2>Reviews</h2>
-                                                        <?php 
+                                                        <?php
                                                         // print_r($data['reviews'])
-                                                        $reviews=$data['reviews'];
+                                                        $reviews = $data['reviews'];
                                                         ?>
                                                     </div>
                                                 </div>
 
-                                                <div id="review" >
-                                                
-                                                    <div class="spr-form" >
+                                                <div id="review">
+
+                                                    <div class="spr-form">
                                                         <div class="user-comment">
-                                                        <?php
-                                                        if (count($reviews)==0) echo '<h4>Sản phẩm hiện chưa có review nào.</h4>';
-                                                         foreach ($reviews as $i => $info) { ?>
-                                                            <!-- <?= print_r($info); ?> -->
-                                                            <div class="spr-review">
-                                                                <div class="spr-review-header">
-                                                                    <span class="spr-review-header-byline">
-                                                                        <strong><?= $info['username'] ?></strong> -
-                                                                        <span><?= $info['create_day'] ?></span>
-                                                                    </span>
-                                                                    <div class="rating">
-                                                                        <div class="star-content">
-                                                                            <!-- <span class="star1"></span>
+                                                            <?php
+                                                            if (count($reviews) == 0) echo '<h4>Sản phẩm hiện chưa có review nào.</h4>';
+                                                            foreach ($reviews as $i => $info) { ?>
+                                                                <!-- <?= print_r($info); ?> -->
+                                                                <div class="spr-review">
+                                                                    <div class="spr-review-header">
+                                                                        <span class="spr-review-header-byline">
+                                                                            <strong><?= $info['username'] ?></strong> -
+                                                                            <span><?= $info['create_day'] ?></span>
+                                                                        </span>
+                                                                        <div class="rating">
+                                                                            <div class="star-content">
+                                                                                <!-- <span class="star1"></span>
                                                                             <span class="star1"></span>
                                                                             <span class="star1"></span>
                                                                             <span class="star1"></span>
                                                                             <span class="star"></span> -->
-                                                                            <?php    for ($x=1; $x<=$info['rate']; $x++){
-                                                                                echo "<span class='star1'></span>";
-                                                                            };
-                                                                            if ($info['rate'] <5){
-                                                                                for ($x=1; $x<= 5- $info['rate']; $x++)
-                                                                                echo "<span class='star'></span>";
-                                                                            }
+                                                                                <?php for ($x = 1; $x <= $info['rate']; $x++) {
+                                                                                    echo "<span class='star1'></span>";
+                                                                                };
+                                                                                if ($info['rate'] < 5) {
+                                                                                    for ($x = 1; $x <= 5 - $info['rate']; $x++)
+                                                                                        echo "<span class='star'></span>";
+                                                                                }
 
-                                                                            ?>
+                                                                                ?>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
+                                                                    <div class="spr-review-content">
+                                                                        <div class="row">
+                                                                        <div class="col-10">
+                                                                            <p class="spr-review-content-body" id='<?= $info['username'] ?>'> <?= $info['comment'] ?></p>
+                                                                        </div>
+                                                                        <?php if (isset($_SESSION['username']))
+                                                                        if ($info['username'] == $_SESSION['username']){ ?>
+                                                                        <div class="col-2">
+                                                                            <button class="btn" style="padding:1px 6px; text-transform:none;" onclick="editReviewHandler()">Sửa</button>
+                                                                            <button class="btn" style="padding:1px 6px; text-transform:none; background-color:crimson" onclick="removeReviewHandler()">Xoá</button>
+                                                                        </div>
+                                                                        <?php } ?>
+                                                                        </div>
+
+                                                                    </div>
                                                                 </div>
-                                                                <div class="spr-review-content">
-                                                                    <p class="spr-review-content-body"> <?= $info['comment'] ?></p>
-                                                                </div>
-                                                            </div>
-                                                        <?php } ?>
+                                                            <?php } ?>
 
 
 
@@ -412,16 +424,16 @@
                                                     </div>
                                                     <hr>
                                                     <?php if (!isset($_SESSION['username'])) echo '<h4>Vui lòng đăng nhập để review sản phẩm.</h4>' ?>
-                                                    <form method="post" action="#" class="new-review-form" <?php if (!isset($_SESSION['username'])) echo 'hidden' ?>>
-                                                        <input type="hidden" name="review[rating]" value="3">
-                                                        <input type="hidden" name="product_id">
+                                                    <form method="post" action="#" class="new-review-form" id='review-form' <?php if (!isset($_SESSION['username'])) echo 'hidden' ?>>
+                                                        <!-- <input type="hidden" name="review[rating]" value="3"> -->
+                                                        <!-- <input type="hidden" name="product_id"> -->
                                                         <h3 class="spr-form-title">Write a review</h3>
                                                         <p>Review của bạn sẽ được hiển thị công khai kèm theo username</p>
                                                         <fieldset>
                                                             <div class="spr-form-review-rating">
                                                                 <label class="spr-form-label">Your Rating</label>
                                                                 <fieldset class="ratings">
-                                                                    <input type="radio" id="star5" name="rating" value="5" checked="checked"/>
+                                                                    <input type="radio" id="star5" name="rating" value="5" checked="checked" />
                                                                     <label class="full" for="star5" title="Awesome - 5 stars"></label>
                                                                     <input type="radio" id="star4half" name="rating" value="4 and a half" />
                                                                     <input type="radio" id="star4" name="rating" value="4" />
@@ -441,7 +453,7 @@
                                                         </fieldset>
                                                         <fieldset class="spr-form-contact">
                                                             <div class="spr-form-contact-name">
-                                                                <!-- <input class="spr-form-input spr-form-input-text form-control" value="<?php $_SESSION['username']?>" type='hidden' name='username'> -->
+                                                                <!-- <input class="spr-form-input spr-form-input-text form-control" value="<?php $_SESSION['username'] ?>" type='hidden' name='username'> -->
                                                             </div>
                                                             <input name='act' value='summitReview' type="hidden">
                                                         </fieldset>
@@ -453,7 +465,7 @@
                                                             </div>
                                                         </fieldset>
                                                         <div class="submit">
-                                                            <input type="submit" name="addComment" id="submitComment" class="btn btn-default" value="Submit Review">
+                                                            <button type="submit" name="addComment" id="submitComment" class="btn btn-default" >Submit Review</button>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -491,6 +503,25 @@
 
     <!-- Template JS -->
     <script src="<?= STATIC_URL ?>js/theme.js"></script>
+
+    <script>
+        function editReviewHandler(){
+            var username = '<?= isset($_SESSION['username']) ?$_SESSION['username'] : 'none'  ?>';
+            document.getElementsByName('act')[0].value = 'updateReview';
+            document.getElementById('submitComment').innerHTML= 'Update Review';
+            document.getElementsByName('comment')[0].innerHTML = document.getElementById(username).innerHTML;
+            document.getElementById('review-form').scrollIntoView({behavior: 'smooth'});
+        }
+
+
+        function removeReviewHandler(){
+           if ( confirm('Are you sure?') ){
+            document.getElementsByName('act')[0].value = 'removeReview';
+            document.getElementsByName('comment')[0].innerHTML ='.';
+            document.getElementById('submitComment').click(); 
+        }
+        }
+    </script>
 </body>
 
 

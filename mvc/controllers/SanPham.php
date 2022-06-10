@@ -113,10 +113,11 @@ class SanPham extends Controller{
 
     function GetSanPham($url) {
         //handle add to cart
+        // print_r($_POST);
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['act'])){
-                if ($_POST['act']='summitReview'){
-                    // print_r($_POST);
+                if ($_POST['act']=='summitReview'){
+                    
                     // print_r($_SESSION['username']);
                     $result= $this->model('ReviewModel') -> AddReview($url, $_SESSION['username'],$_POST['rating'], $_POST['comment']);
                     if ($result===true){
@@ -126,8 +127,29 @@ class SanPham extends Controller{
                         alert('Bạn đã review sản phẩm này rồi!');
                         window.location.href='" . BASE_URL . "/san-pham/$url';
                         </script>";
-                        // header("Location: ".BASE_URL.'san-pham/'.$_POST['url']);
-                    } else {
+                       
+                    }else {
+                        echo 'Vui lòng thử lại! Đã có lỗi khi cập nhật DB! Error:'.$result;
+                    }
+
+                    } elseif ($_POST['act']=='updateReview') {
+                        $result= $this->model('ReviewModel') -> UpdateReview($url, $_SESSION['username'],$_POST['rating'], $_POST['comment']);
+                        if ($result===true){
+                            header("Location: ".BASE_URL."san-pham/$url");
+                        } 
+                        else {
+                        echo 'Vui lòng thử lại! Đã có lỗi khi cập nhật DB! Error:'.$result;
+                    } }
+                    elseif ($_POST['act']=='removeReview') {
+                        $result= $this->model('ReviewModel') -> RemoveReview($url, $_SESSION['username']);
+                        if ($result===true){
+                            echo "<script>
+                            alert('Đã xoá đánh giá!');
+                            window.location.href='" . BASE_URL . "/san-pham/$url';
+                            </script>";
+                            header("Location: ".BASE_URL."san-pham/$url");
+                        } 
+                        else {
                         echo 'Vui lòng thử lại! Đã có lỗi khi cập nhật DB! Error:'.$result;
                     }
                     
