@@ -214,6 +214,9 @@ class App{
                         case 'quan-li-tt-lien-he':
                             array_push($returnArr, 'QuanLyTTLienHe');
                             break;
+                        case 'quan-ly-lien-he-KH':
+                            array_push($returnArr, 'QuanLyLienHeKH');
+                            break;
                         default:
                             return array('NotFound');
                             break;

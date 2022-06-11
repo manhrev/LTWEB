@@ -528,5 +528,26 @@ class QuanLi extends Controller{
         $this->view('ql-ttlienhe', $info);
         }
     }
+
+    function QuanLyLienHeKH(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            if ($_POST['action'] =='remove'){
+                $result = $this -> model('CusContactModel') -> Remove($_POST['id']);
+                echo $result;
+            } 
+            elseif ($_POST['action'] =='markDone'){
+                $result = $this -> model('CusContactModel') -> Update($_POST['id'], $_POST['status']);
+                echo $result;
+            } else {
+                //get done
+                $data=$this -> model('CusContactModel') -> GetAll(1);
+                echo json_encode($data);
+                
+            } 
+            
+        } else {
+        $data=$this -> model('CusContactModel') -> GetAll(0);
+        $this->view('ql-lienhecuakh', $data); }
+    }
 }
 ?>
