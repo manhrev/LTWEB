@@ -491,6 +491,63 @@ class QuanLi extends Controller{
         $this->view('ql-thanhvien',['users' => $users]);
         }
     }
-}
 
+    function QuanLyReview($url){
+        if (isset($_POST['action'])) {
+            if ($_POST['action'] == 'removeReview') { 
+
+                // print_r($_POST);
+                if ($this->model('ReviewModel')->RemoveReview($_POST['url'],$_POST['username'])===true){
+                    echo "<script> alert('Xoá thành công!');
+                    location.replace('".BASE_URL."quan-li/reviews/$url');
+                    </script>
+                    ";
+                } }
+                else { echo "Action Invalid!";}
+
+    }          else {
+        $reviews = $this -> model('ReviewModel') -> GetReviews($url);
+        $this->view('ql-review', [$url ,$reviews]);
+        }
+
+    }
+
+    function QuanLyTTLienHe(){
+        if (isset($_POST['email'])) {
+                // print_r($_POST);
+                $rs = $this->model('PublicInfoModel')->Update($_POST);
+                if ($rs===true){
+                    echo "<script> alert('Cập nhật thành công!');
+                    location.replace('".BASE_URL."quan-li/quan-li-tt-lien-he');
+                    </script>
+                    ";
+                } else echo  "$rs";
+
+    }          else {
+        $info = $this -> model('PublicInfoModel') -> GetInfo();
+        $this->view('ql-ttlienhe', $info);
+        }
+    }
+
+    function QuanLyLienHeKH(){
+        if ($_SERVER['REQUEST_METHOD']=='POST'){
+            if ($_POST['action'] =='remove'){
+                $result = $this -> model('CusContactModel') -> Remove($_POST['id']);
+                echo $result;
+            } 
+            elseif ($_POST['action'] =='markDone'){
+                $result = $this -> model('CusContactModel') -> Update($_POST['id'], $_POST['status']);
+                echo $result;
+            } else {
+                //get done
+                $data=$this -> model('CusContactModel') -> GetAll(1);
+                echo json_encode($data);
+                
+            } 
+            
+        } else {
+        $data=$this -> model('CusContactModel') -> GetAll(0);
+        $this->view('ql-lienhecuakh', $data); }
+    }
+}
 ?>

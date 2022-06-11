@@ -23,4 +23,22 @@ class ReviewModel extends DB {
         
     }
 
+    public function RemoveReview($url, $username){
+        $query="DELETE FROM `reviews` WHERE `url`='$url' AND `username`='$username' ";
+        $result = $this -> con -> query($query);
+        if ($result===true)
+            if (mysqli_affected_rows($this->con)!=0) return true;
+            
+        return  $this->con->error ;
+    }
+
+    public function UpdateReview($url,$username, $rating, $comment){
+        $query = "UPDATE `reviews` SET `rate`='$rating' , `comment`='$comment' WHERE `url`='$url' AND `username` = '$username' ";
+        $result = $this -> con -> query($query);
+        if ($result===true)
+            // if (mysqli_affected_rows($this->con)!=0) return true;
+            return true;
+        return  $this->con->error ;
+    }
+
 }

@@ -1,4 +1,5 @@
-    <!-- footer -->
+<?php require_once "./mvc/helper/getContractInfo.php" ?>
+<!-- footer -->
     <footer class="footer-one">
         <div class="inner-footer">
             <!-- delivery form -->
@@ -75,7 +76,8 @@
                                         <i class="fa fa-home float-left" aria-hidden="true"></i>
                                         <div class="content-data">
                                             <b class="mr-2">Địa chỉ:</b>
-                                            59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM
+                                            <!-- 59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM -->
+                                            <?= $info['address'] ?>
                                         </div>
                                     </div>
                                     <div class="data align-self-stretch d-flex">
@@ -89,14 +91,20 @@
                                     <div class="support d-flex">
                                         <div class="data d-flex align-self-stretch mail-support">
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            <div>support@burgerbku.vn</div>
+                                            <div>
+                                                <!-- support@burgerbku.vn -->
+                                                <?= $info['email'] ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="data d-flex align-self-stretch phone-support">
                                         <div class="title-icon">
                                             <i class="fa fa-phone" aria-hidden="true"></i>
                                         </div>
-                                        <div>+84 345 678 99</div>
+                                        <div>
+                                            <!-- +84 345 678 99 -->
+                                            <?= $info['hotline'] ?>
+                                        </div>
                                     </div>
 
                                 </div>

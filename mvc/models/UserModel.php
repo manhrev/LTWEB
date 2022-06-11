@@ -43,7 +43,7 @@ class UserModel extends DB
     public function GetAll(){
         $query = " SELECT username, name, address, phone_number, date_created, isblocked FROM user WHERE username <> 'admin'";
         $result = $this->con->query($query);
-
+        // print_r($result);
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) 
         {
             $resultArray[]=$item;
