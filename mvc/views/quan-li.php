@@ -26,7 +26,7 @@
 </head>
 
 <body>
-  <?php require_once "./mvc/views/inc/ql-header.php" ?>
+
 
 
   <main class="container">
