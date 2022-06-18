@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 18, 2022 lúc 03:54 PM
--- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 8.1.2
+-- Host: 127.0.0.1:3307
+-- Generation Time: Jun 18, 2022 at 03:54 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `bku_burger`
+-- Database: `bku_burger`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -34,11 +34,10 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`url`, `name`, `image`) VALUES
-('Banh-my', 'Bánh mỳ', 'http://localhost/LTWEB/public/img/sanpham/60.jpg'),
 ('Burger', 'Burger', 'http://localhost/LTWEB/public/img/sanpham/1.jpg'),
 ('Combo', 'Combo', 'http://localhost/LTWEB/public/img/sanpham/4.png'),
 ('Ga-ran', 'Gà rán', 'http://localhost/LTWEB/public/img/sanpham/7.jpg'),
@@ -48,7 +47,7 @@ INSERT INTO `category` (`url`, `name`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category_details`
+-- Table structure for table `category_details`
 --
 
 CREATE TABLE `category_details` (
@@ -57,11 +56,10 @@ CREATE TABLE `category_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `category_details`
+-- Dumping data for table `category_details`
 --
 
 INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
-('Banh-my', 'Banh-my-truyen-thong'),
 ('Burger', 'Burger-2-mieng-bo-pho-mai-thit-xong-khoi'),
 ('Burger', 'Burger-Bo-Khoai-Tay'),
 ('Burger', 'Burger-Bo-Nuong-Hanh-Chien'),
@@ -100,7 +98,7 @@ INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `contract_info`
+-- Table structure for table `contract_info`
 --
 
 CREATE TABLE `contract_info` (
@@ -112,7 +110,7 @@ CREATE TABLE `contract_info` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `contract_info`
+-- Dumping data for table `contract_info`
 --
 
 INSERT INTO `contract_info` (`email`, `address`, `hotline`, `aboutus`, `wedo`) VALUES
@@ -121,7 +119,7 @@ INSERT INTO `contract_info` (`email`, `address`, `hotline`, `aboutus`, `wedo`) V
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `cus_contact`
+-- Table structure for table `cus_contact`
 --
 
 CREATE TABLE `cus_contact` (
@@ -136,7 +134,7 @@ CREATE TABLE `cus_contact` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `cus_contact`
+-- Dumping data for table `cus_contact`
 --
 
 INSERT INTO `cus_contact` (`id`, `title`, `phone`, `email`, `content`, `created_at`, `status`, `fullname`) VALUES
@@ -149,7 +147,7 @@ INSERT INTO `cus_contact` (`id`, `title`, `phone`, `email`, `content`, `created_
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `images_store`
+-- Table structure for table `images_store`
 --
 
 CREATE TABLE `images_store` (
@@ -159,7 +157,7 @@ CREATE TABLE `images_store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `images_store`
+-- Dumping data for table `images_store`
 --
 
 INSERT INTO `images_store` (`id`, `link`, `date_created`) VALUES
@@ -219,14 +217,12 @@ INSERT INTO `images_store` (`id`, `link`, `date_created`) VALUES
 (56, 'http://localhost/LTWEB/public/img/sanpham/56.jpeg', '2022-05-17 03:43:43'),
 (57, 'http://localhost/LTWEB/public/img/sanpham/57.jpg', '2022-05-17 03:55:56'),
 (58, 'http://localhost/LTWEB/public/img/sanpham/58.jpg', '2022-05-17 03:57:34'),
-(59, 'http://localhost/LTWEB/public/img/sanpham/59.jpg', '2022-05-17 03:59:47'),
-(60, 'http://localhost/LTWEB/public/img/sanpham/60.jpg', '2022-06-18 20:49:31'),
-(61, 'http://localhost/LTWEB/public/img/sanpham/61.jpeg', '2022-06-18 20:52:41');
+(59, 'http://localhost/LTWEB/public/img/sanpham/59.jpg', '2022-05-17 03:59:47');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_infor`
+-- Table structure for table `order_infor`
 --
 
 CREATE TABLE `order_infor` (
@@ -239,7 +235,7 @@ CREATE TABLE `order_infor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `order_infor`
+-- Dumping data for table `order_infor`
 --
 
 INSERT INTO `order_infor` (`id`, `name`, `phone_number`, `address`, `order_detail`, `date_created`) VALUES
@@ -248,7 +244,7 @@ INSERT INTO `order_infor` (`id`, `name`, `phone_number`, `address`, `order_detai
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -263,11 +259,10 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `date_created`, `view_count`) VALUES
-('Banh-my-truyen-thong', 'Bánh mỳ truyền thống', '23000', 'http://localhost/LTWEB/public/img/sanpham/61.jpeg,http://localhost/LTWEB/public/img/sanpham/61.jpeg', 'Bánh mì Việt Nam (gọi tắt: bánh mì) là một món ăn Việt Nam, với lớp vỏ ngoài là một ổ bánh mì nướng có da giòn, ruột mềm, còn bên trong là phần nhân. Tùy theo văn hóa vùng miền hoặc sở thích cá nhân, người ta có thể chọn nhiều nhân bánh mì khác nhau.', 'Bánh mỳ, bánh mỳ việt nam, bánh mỳ truyền thống', '2022-06-18', 20),
 ('Burger-2-mieng-bo-pho-mai-thit-xong-khoi', 'Burger 2 miếng bò phô mai thịt xông khói', '97000', ' http://localhost/LTWEB/public/img/sanpham/50.jpeg ,  http://localhost/LTWEB/public/img/sanpham/50.jpeg', 'Thịt xông khói đến từ Mỹ. Bò đến từ Úc. Burger thì ở BKU. Một món ăn mà ba dân tộc.', 'Bò, Thịt xông khói', '2022-05-17', 123123),
 ('Burger-Bo-Khoai-Tay', 'Burger Bò Khoai Tây', '60000', 'http://localhost/LTWEB/public/img/sanpham/12.jpg, http://localhost/LTWEB/public/img/sanpham/13.jpg', 'Burger Bò Khoai Tây với sự tan chảy từ trong miệng.', 'Burger, Bò Khoai Tây', '2022-05-16', 140),
 ('Burger-Bo-Nuong-Hanh-Chien', 'Burger Bò Nướng Hành Chiên', '51000', 'http://localhost/LTWEB/public/img/sanpham/58.jpg, http://localhost/LTWEB/public/img/sanpham/58.jpg', 'Burger Bò Nướng hành chiên được hình thành bởi công thức đặc biệt.', 'Bò', '2022-05-17', 1220),
@@ -305,7 +300,7 @@ INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `reviews`
+-- Table structure for table `reviews`
 --
 
 CREATE TABLE `reviews` (
@@ -319,7 +314,7 @@ CREATE TABLE `reviews` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -334,7 +329,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`, `date_created`, `role`, `isblocked`) VALUES
@@ -344,48 +339,48 @@ INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`, `
 ('tuan', '123', 'Nguyễn Văn Tuấn', 'xóm Tiến Quân, xã An Nam, huyện Viễn Đông', '1236547890', '2022-05-16 14:05:36', 2, 0);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`url`);
 
 --
--- Chỉ mục cho bảng `category_details`
+-- Indexes for table `category_details`
 --
 ALTER TABLE `category_details`
   ADD PRIMARY KEY (`category_url`,`product_url`),
   ADD KEY `product_url` (`product_url`);
 
 --
--- Chỉ mục cho bảng `cus_contact`
+-- Indexes for table `cus_contact`
 --
 ALTER TABLE `cus_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `images_store`
+-- Indexes for table `images_store`
 --
 ALTER TABLE `images_store`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `order_infor`
+-- Indexes for table `order_infor`
 --
 ALTER TABLE `order_infor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`url`);
 
 --
--- Chỉ mục cho bảng `reviews`
+-- Indexes for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD PRIMARY KEY (`url`,`username`),
@@ -393,46 +388,46 @@ ALTER TABLE `reviews`
   ADD KEY `username_2` (`username`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `cus_contact`
+-- AUTO_INCREMENT for table `cus_contact`
 --
 ALTER TABLE `cus_contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT cho bảng `images_store`
+-- AUTO_INCREMENT for table `images_store`
 --
 ALTER TABLE `images_store`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT cho bảng `order_infor`
+-- AUTO_INCREMENT for table `order_infor`
 --
 ALTER TABLE `order_infor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `category_details`
+-- Constraints for table `category_details`
 --
 ALTER TABLE `category_details`
   ADD CONSTRAINT `category_details_ibfk_1` FOREIGN KEY (`category_url`) REFERENCES `category` (`url`),
   ADD CONSTRAINT `category_details_ibfk_2` FOREIGN KEY (`product_url`) REFERENCES `product` (`url`);
 
 --
--- Các ràng buộc cho bảng `reviews`
+-- Constraints for table `reviews`
 --
 ALTER TABLE `reviews`
   ADD CONSTRAINT `forekey_to_product` FOREIGN KEY (`url`) REFERENCES `product` (`url`) ON DELETE CASCADE ON UPDATE CASCADE,

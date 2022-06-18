@@ -241,8 +241,9 @@
                             <div class="col col-sm-3 col-xs-12">
                                 <h4 class="title">Danh mục <span>món ăn</span></h4>
                             </div>
-                            <a class="btn btn-success" href="<?= BASE_URL ?>/quan-li/quan-li-san-pham/them-san-pham/">Thêm danh mục
-                                mới</a>
+                         
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">Thêm
+                danh mục mới</button>
                         </div>
                     </div>
                     <div class="panel-body table-responsive">
