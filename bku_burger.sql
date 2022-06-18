@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: sql302.byetcluster.com
--- Thời gian đã tạo: Th5 17, 2022 lúc 12:17 PM
--- Phiên bản máy phục vụ: 10.3.27-MariaDB
--- Phiên bản PHP: 7.2.22
+-- Host: 127.0.0.1:3307
+-- Generation Time: Jun 18, 2022 at 03:54 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `b6_31623571_LTWEB`
+-- Database: `bku_burger`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category`
+-- Table structure for table `category`
 --
 
 CREATE TABLE `category` (
@@ -35,7 +34,7 @@ CREATE TABLE `category` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `category`
+-- Dumping data for table `category`
 --
 
 INSERT INTO `category` (`url`, `name`, `image`) VALUES
@@ -48,7 +47,7 @@ INSERT INTO `category` (`url`, `name`, `image`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `category_details`
+-- Table structure for table `category_details`
 --
 
 CREATE TABLE `category_details` (
@@ -57,7 +56,7 @@ CREATE TABLE `category_details` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `category_details`
+-- Dumping data for table `category_details`
 --
 
 INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
@@ -70,15 +69,15 @@ INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
 ('Burger', 'Burger-bo-tran-pho-mai'),
 ('Burger', 'burger-ca'),
 ('Burger', 'Burger-Ga-Nuong'),
-('Combo', 'Combo-couple'),
-('Combo', 'Combo-happiness'),
-('Combo', 'Combo-joy'),
 ('Combo', 'Combo-Bo-tam-pho-mai--banh-lon-'),
 ('Combo', 'Combo-Bo-tam-pho-mai--banh-vua-'),
 ('Combo', 'Combo-burger-2-mieng-bo-nuong-whopper-jr'),
 ('Combo', 'Combo-burger-bo-nuong-hanh-chien'),
 ('Combo', 'Combo-burger-bo-nuong-whopper-jr'),
+('Combo', 'Combo-couple'),
 ('Combo', 'Combo-ga-gion-khong-cay--3-mieng-'),
+('Combo', 'Combo-happiness'),
+('Combo', 'Combo-joy'),
 ('Combo', 'Combo-say-nang-for-2-people'),
 ('Combo', 'Combo-say-yes-for-2-people'),
 ('Ga-ran', 'Combo-ga-gion-khong-cay--3-mieng-'),
@@ -99,7 +98,56 @@ INSERT INTO `category_details` (`category_url`, `product_url`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `images_store`
+-- Table structure for table `contract_info`
+--
+
+CREATE TABLE `contract_info` (
+  `email` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL,
+  `hotline` varchar(15) NOT NULL,
+  `aboutus` text NOT NULL,
+  `wedo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contract_info`
+--
+
+INSERT INTO `contract_info` (`email`, `address`, `hotline`, `aboutus`, `wedo`) VALUES
+('support@burgerBKU.vn', 'Khu phố 6, Linh Trung, Thủ Đức, TP.HCM', '+84 345 678 88', 'Chúng tôi là Burger BKU .Được thành lập vào năm 2022, BURGER BKU hiện là nhà hàng thức ăn nhanh được giới trẻ ưa thích. Mỗi ngày, có hơn 1000 thực khách đến với nhà hàng BURGER BKU để thưởng thức các món ăn chất lượng cao, hương vị tuyệt hảo và giá cả phải chăng.\r\n\r\nPhương châm của BURGER BKU là bất cứ ở đâu, vào thời điểm nào, chúng tôi đều phục vụ những chiếc bánh WHOPPER ngon nhất thế giới cho đông đảo khách hàng sành điệu.', 'Chúng tôi làm Burger. Dù ở đâu, BURGER BKU cũng luôn giữ đúng tinh thần Taste is King, làm hài lòng khẩu vị của thực khách khó tính nhất khi đến thưởng thức tại nhà hàng. Cửa hàng của BURGER BKU cũng sẽ giữ vững phương châm phục vụ của BURGER BKU “những bữa ăn thân thiện với gia đình”, thể hiện qua đội ngũ nhân viên phục vụ được đào tạo chuyên nghiệp, nhanh chóng và thân thiện, không gian thoải mái, thiết kế nội thất hiện đại, những món ăn tươi ngon và nóng sốt, thức uống mát lạnh và an toàn vệ sinh tuyệt đối.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cus_contact`
+--
+
+CREATE TABLE `cus_contact` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
+  `status` int(11) NOT NULL DEFAULT 0,
+  `fullname` varchar(80) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `cus_contact`
+--
+
+INSERT INTO `cus_contact` (`id`, `title`, `phone`, `email`, `content`, `created_at`, `status`, `fullname`) VALUES
+(2, 'Shop', '981643651', 'vanhiepp19988@gmail.com', 'Shop 12 21', '2022-06-02 00:00:00', 0, 'Ngô Văn Hiệp'),
+(4, 'Câu hỏi', '090305078', 'luong@gmail.com', 'Thời giàn giao hang trong Quận 12 là bào nhiêu', '2022-06-02 00:00:00', 0, 'Lương'),
+(5, 'Câu hỏi', '090305078', 'luong@gmail.com', 'Thời giàn giao hang trong Quận 12 là bào nhiêu', '2022-06-02 00:00:00', 1, 'Lương'),
+(6, 'Yêu cầu', '90305078', 'luong@gmail.com', 'Chào shop', '2022-06-02 00:00:00', 1, 'Lương'),
+(7, 'Chào shop', '90305078', 'luong@gmail.com', '2', '2022-06-12 00:00:00', 1, 'Lương');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images_store`
 --
 
 CREATE TABLE `images_store` (
@@ -109,7 +157,7 @@ CREATE TABLE `images_store` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `images_store`
+-- Dumping data for table `images_store`
 --
 
 INSERT INTO `images_store` (`id`, `link`, `date_created`) VALUES
@@ -174,7 +222,7 @@ INSERT INTO `images_store` (`id`, `link`, `date_created`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `order_infor`
+-- Table structure for table `order_infor`
 --
 
 CREATE TABLE `order_infor` (
@@ -187,7 +235,7 @@ CREATE TABLE `order_infor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `order_infor`
+-- Dumping data for table `order_infor`
 --
 
 INSERT INTO `order_infor` (`id`, `name`, `phone_number`, `address`, `order_detail`, `date_created`) VALUES
@@ -196,7 +244,7 @@ INSERT INTO `order_infor` (`id`, `name`, `phone_number`, `address`, `order_detai
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `product`
+-- Table structure for table `product`
 --
 
 CREATE TABLE `product` (
@@ -211,7 +259,7 @@ CREATE TABLE `product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `product`
+-- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `date_created`, `view_count`) VALUES
@@ -225,15 +273,15 @@ INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `
 ('burger-ca', 'burger cá', '46000', 'http://localhost/LTWEB/public/img/sanpham/57.jpg, http://localhost/LTWEB/public/img/sanpham/57.jpg', 'Burger Cá đỉnh cao nhất Sài Gòn.', 'Cá', '2022-05-17', 1222),
 ('Burger-Ga-Nuong', 'Burger Gà Nướng', '45000', 'http://localhost/LTWEB/public/img/sanpham/14.jpg,http://localhost/LTWEB/public/img/sanpham/15.jpg', 'Burger Gà Nướng với hương vị đặc trưng nông thôn.', 'Burger, Gà Nướng', '2022-05-16', 160),
 ('Coca', 'Coca', '39000', 'http://localhost/LTWEB/public/img/sanpham/46.jpg,\r\nhttp://localhost/LTWEB/public/img/sanpham/53.jpg', 'Nước ngọt Coca Cola với thương hiệu uy tín hàng đầu thế giới, được nhiều người yêu thích với hương vị thơm ngon, hấp dẫn.\r\nNước ngọt Coca Cola chai 390ml không chỉ giúp giải tỏa cơn khát mà còn cung cấp nguồn năng lượng cùng hàm lượng khoáng chất dồi dào, cho bạn khơi lại hứng khởi ngay từ ngụm đầu tiên!', 'Coca', '2022-05-17', 100),
-('Combo-couple', 'Combo \"couple\"', '189000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo-couple.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo-couple.jpg', '1 bò tắm phô mai cỡ vừa + 1 bò nướng whopper + 4 cá cuộn rong biển + 1 khoai tây chiên + 2 coke', 'Combo', '2022-05-17', 1000000),
-('Combo-happiness', 'Combo \"happiness\"', '299000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_happiness.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_happiness.jpg', '1 bò nướng whopper + 1 bò phô mai + 1 gà phô mai sốt bbq + 1 bò tắm phô mai cỡ vừa + 4 gà nuggets + 2 cá cuộn rong biển + 4 nước ngọt', 'Combo', '2022-05-17', 500),
-('Combo-joy', 'Combo \"joy\"', '299000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_joy.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_joy.jpg', '1 bò nướng whopper + 1 bò phô mai + 1 gà phô mai sốt bbq + 1 bò tắm phô mai cỡ vừa + 4 cá cuộn rong biển + 4 coke', 'Combo', '2022-05-17', 2500),
 ('Combo-Bo-tam-pho-mai--banh-lon-', 'Combo Bò tắm phô mai (bánh lớn)', '100000', 'http://localhost/LTWEB/public/img/sanpham/16.jpg, http://localhost/LTWEB/public/img/sanpham/17.jpg', 'Combo Bò tắm phô mai (bánh lớn) là sự kết hợp của miếng bò nguyên chất và phô mai béo ngậy', 'Combo, Bò tắm phô mai, Bò tắm phô mai (bánh lớn)', '2022-05-16', 170),
 ('Combo-Bo-tam-pho-mai--banh-vua-', 'Combo Bò tắm phô mai (bánh vừa)', '90000', 'http://localhost/LTWEB/public/img/sanpham/18.jpg, http://localhost/LTWEB/public/img/sanpham/17.jpg', 'Combo Bò tắm phô mai (bánh vừa) cực kì ngon và hấp dẫn', 'Combo,  Bò tắm phô mai (bánh vừa)', '2022-05-16', 184),
 ('Combo-burger-2-mieng-bo-nuong-whopper-jr', 'Combo burger 2 miếng bò nướng whopper jr', '99000', 'http://localhost/LTWEB/public/img/sanpham/40.jpg, http://localhost/LTWEB/public/img/sanpham/40.jpg', 'Combo gồm : 1 nước (free refill) + 1 khoai tây (m)', 'Combo', '2022-05-17', 400000),
 ('Combo-burger-bo-nuong-hanh-chien', 'Combo burger bò nướng hành chiên', '78000', 'http://localhost/LTWEB/public/img/sanpham/59.jpg, http://localhost/LTWEB/public/img/sanpham/59.jpg', 'Combo Gồm : 1 Nước (Free Refill) + 1 Khoai Tây (M)', 'Combo', '2022-05-17', 200),
 ('Combo-burger-bo-nuong-whopper-jr', 'Combo burger bò nướng whopper jr', '78000', 'http://localhost/LTWEB/public/img/sanpham/39.jpg, http://localhost/LTWEB/public/img/sanpham/39.jpg', 'Combo gồm : 1 nước (free refill) + 1 khoai tây (m)', 'Combo', '2022-05-17', 3000),
+('Combo-couple', 'Combo \"couple\"', '189000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo-couple.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo-couple.jpg', '1 bò tắm phô mai cỡ vừa + 1 bò nướng whopper + 4 cá cuộn rong biển + 1 khoai tây chiên + 2 coke', 'Combo', '2022-05-17', 1000000),
 ('Combo-ga-gion-khong-cay--3-mieng-', 'Combo gà giòn không cay (3 miếng)', '119000', 'http://localhost/LTWEB/public/img/sanpham/45.jpg,\r\nhttp://localhost/LTWEB/public/img/sanpham/45.jpg', 'Main course : 1 nước + 3 miếng gà giòn không cay + 1 khoai tây', 'Combo, Gà rán', '2022-05-17', 3500),
+('Combo-happiness', 'Combo \"happiness\"', '299000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_happiness.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_happiness.jpg', '1 bò nướng whopper + 1 bò phô mai + 1 gà phô mai sốt bbq + 1 bò tắm phô mai cỡ vừa + 4 gà nuggets + 2 cá cuộn rong biển + 4 nước ngọt', 'Combo', '2022-05-17', 500),
+('Combo-joy', 'Combo \"joy\"', '299000', 'https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_joy.jpg, https://burgerking.vn/media/catalog/product/cache/1/small_image/1000x/9df78eab33525d08d6e5fb8d27136e95/c/o/combo_joy.jpg', '1 bò nướng whopper + 1 bò phô mai + 1 gà phô mai sốt bbq + 1 bò tắm phô mai cỡ vừa + 4 cá cuộn rong biển + 4 coke', 'Combo', '2022-05-17', 2500),
 ('Combo-say-nang-for-2-people', 'Combo say nắng for 2 people', '195000', 'http://localhost/LTWEB/public/img/sanpham/44.jpg, http://localhost/LTWEB/public/img/sanpham/44.jpg', '2 bò tắm phô mai cỡ vừa + khoai tây tắm phô mai + 2pcs drumlets + 2 coke', 'Combo', '2022-05-17', 5000),
 ('Combo-say-yes-for-2-people', 'Combo say yes for 2 people', '251000', 'http://localhost/LTWEB/public/img/sanpham/42.jpg, http://localhost/LTWEB/public/img/sanpham/42.jpg', '2 bò tắm phô mai cỡ lớn + khoai tây tắm phô mai + 4pcs nugget + 2 coke', 'Combo', '2022-05-17', 600),
 ('Dasani', 'Dasani', '19000', 'http://localhost/LTWEB/public/img/sanpham/47.jpg, http://localhost/LTWEB/public/img/sanpham/47.jpg', 'Từ nguồn nước ngầm thông qua hệ thống thẩm thấu ngược và thanh trùng bằng Ozone, đảm bảo sự thanh khiết trong từng giọt nước giúp thanh lọc cơ thể hoàn hảo của Dasani. Nước tinh khiết Dasani 350ml khi uống có vị tinh khiết, thanh mát giúp cơ thể bù nước', 'Nước suối', '2022-05-17', 98),
@@ -252,7 +300,21 @@ INSERT INTO `product` (`url`, `name`, `price`, `images`, `description`, `tag`, `
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `reviews`
+--
+
+CREATE TABLE `reviews` (
+  `url` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `rate` tinyint(4) NOT NULL,
+  `comment` varchar(2000) DEFAULT NULL,
+  `create_day` date NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -262,85 +324,114 @@ CREATE TABLE `user` (
   `address` text NOT NULL,
   `phone_number` varchar(10) NOT NULL,
   `date_created` datetime NOT NULL DEFAULT current_timestamp(),
-  `role` int(11) NOT NULL
+  `role` int(11) NOT NULL,
+  `isblocked` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`, `date_created`, `role`) VALUES
-('admin', 'admin', 'Admin', 'admin house', '0000000000', '2022-05-16 19:24:22', 1),
-('dongvi', 'admin', 'Đặng Đông Vĩ', '123', '0934581137', '2022-05-17 01:43:03', 2),
-('tuan', '123', 'Nguyễn Văn Tuấn', 'xóm Tiến Quân, xã An Nam, huyện Viễn Đông', '1236547890', '2022-05-16 14:05:36', 2);
+INSERT INTO `user` (`username`, `password`, `name`, `address`, `phone_number`, `date_created`, `role`, `isblocked`) VALUES
+('admin', 'admin', 'Admin', 'admin house', '0000000000', '2022-05-16 19:24:22', 1, 0),
+('dongvi', 'admin', 'Đặng Đông Vĩ', '123', '0934581137', '2022-05-17 01:43:03', 2, 0),
+('leducan1110', 'ducan875246', 'Lê Đức An', 'Ktx khu A, Khu phố 6 - Phường Linh Trung - TP. Thủ Đức - TP.HCM', '0359959615', '2022-06-11 15:34:32', 2, 0),
+('tuan', '123', 'Nguyễn Văn Tuấn', 'xóm Tiến Quân, xã An Nam, huyện Viễn Đông', '1236547890', '2022-05-16 14:05:36', 2, 0);
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `category`
+-- Indexes for table `category`
 --
 ALTER TABLE `category`
   ADD PRIMARY KEY (`url`);
 
 --
--- Chỉ mục cho bảng `category_details`
+-- Indexes for table `category_details`
 --
 ALTER TABLE `category_details`
   ADD PRIMARY KEY (`category_url`,`product_url`),
   ADD KEY `product_url` (`product_url`);
 
 --
--- Chỉ mục cho bảng `images_store`
+-- Indexes for table `cus_contact`
+--
+ALTER TABLE `cus_contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `images_store`
 --
 ALTER TABLE `images_store`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `order_infor`
+-- Indexes for table `order_infor`
 --
 ALTER TABLE `order_infor`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `product`
+-- Indexes for table `product`
 --
 ALTER TABLE `product`
   ADD PRIMARY KEY (`url`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD PRIMARY KEY (`url`,`username`),
+  ADD KEY `username` (`username`),
+  ADD KEY `username_2` (`username`);
+
+--
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `images_store`
+-- AUTO_INCREMENT for table `cus_contact`
+--
+ALTER TABLE `cus_contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `images_store`
 --
 ALTER TABLE `images_store`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT cho bảng `order_infor`
+-- AUTO_INCREMENT for table `order_infor`
 --
 ALTER TABLE `order_infor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `category_details`
+-- Constraints for table `category_details`
 --
 ALTER TABLE `category_details`
   ADD CONSTRAINT `category_details_ibfk_1` FOREIGN KEY (`category_url`) REFERENCES `category` (`url`),
   ADD CONSTRAINT `category_details_ibfk_2` FOREIGN KEY (`product_url`) REFERENCES `product` (`url`);
+
+--
+-- Constraints for table `reviews`
+--
+ALTER TABLE `reviews`
+  ADD CONSTRAINT `forekey_to_product` FOREIGN KEY (`url`) REFERENCES `product` (`url`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `forekey_to_user` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
