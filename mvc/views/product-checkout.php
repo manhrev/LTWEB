@@ -127,6 +127,7 @@
                                                                 foreach ($_SESSION['cart'] as $key=>$sp) {
                                                             ?>
                                                                 <input type="hidden" name="sp-<?=$i?>" value="<?=$sp['name']?>">
+                                                                <input type="hidden" name="sl-<?=$i?>" value="<?=$sp['qty']?>">
                                                             <?php $i++;}}?>
                                                         </div>
                                                         

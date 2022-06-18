@@ -40,8 +40,8 @@ class GioHang extends Controller
                     $address = $_POST['address'];
                     $phone = $_POST['phone'];
 
-                    for ($i = 0; $i < count($_POST) - 3; $i++) {
-                        $order[] = $_POST['sp-' . $i];
+                    for ($i = 0; $i < (count($_POST) - 3)/2; $i++) {
+                        $order[] = [$_POST['sp-' . $i],$_POST['sl-'.$i]];
                     }
                     unset($_SESSION['cart']);
                     $message = $qlModel->ThemOrder($name, $phone, $address, $order);
@@ -49,6 +49,9 @@ class GioHang extends Controller
                 alert('" . $message . "');
                 window.location.href='" . BASE_URL . "';
                 </script>";
+                // print_r($_POST);
+                // echo '\n';
+                // print_r($order);
                 } else {
                     echo 'Có lỗi!!';
                 }

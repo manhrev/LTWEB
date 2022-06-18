@@ -182,34 +182,15 @@
                                                             </span>
                                                         </div>
                                                         <p class="description">Sản phẩm được miễn phí vận chuyển</p>
-                                                        <!-- <div class="option has-border d-lg-flex size-color">
-                                                            <div class="size">
-                                                                <span class="size">size :</span>
-                                                                <select>
-                                                                    <option value="">Choose your size</option>
-                                                                    <option value="">M</option>
-                                                                    <option value="">l</option>
-                                                                    <option value="">xl</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="colors">
-                                                                <b class="title">Color : </b>
-                                                                <span class="blue"></span>
-                                                                <span class="yellow"></span>
-                                                                <span class="pink"></span>
-                                                                <span class="green"></span>
-                                                                <span class="brown"></span>
-                                                                <span class="red"></span>
-                                                            </div>
-                                                        </div> -->
+                                                       
                                                         <div class="has-border cart-area">
                                                             <div class="product-quantity">
                                                                 <div class="qty">
                                                                     <div class="input-group">
                                                                         <div class="quantity">
                                                                             <span class="control-label">QTY : </span>
-                                                                            <span type="text" name="qty" id="quantity_wanted" class="input-group form-control">1</span>
-
+                                                                            <!-- <span type="text" name="qty" id="quantity_wanted" class="input-group form-control">1</span> -->
+                                                                            <input form='myform' id='qtyinput'class='input-group form-control' type="number" min='1' max='20' name='qty' value="1" onchange="validate()">
                                                                             <!-- <span class="input-group-btn-vertical">
                                                                                 <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
                                                                                     +
@@ -222,11 +203,12 @@
                                                                         <span class="add">
                                                                             <div style="display: flex; align-items: stretch">
                                                                                 <div style="display: flex; align-items: center">
-                                                                                    <form method="post" action="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
+                                                                                    <form id='myform' method="post" action="<?= BASE_URL ?>san-pham/<?= $sp['url'] ?>">
                                                                                         <input type="hidden" name='url' value='<?= $sp['url'] ?>'>
                                                                                         <input type="hidden" name='name' value='<?= $sp['name'] ?>'>
                                                                                         <input type="hidden" name='price' value='<?= $sp['price'] ?>'>
                                                                                         <input type="hidden" name='image' value='<?= $images[0] ?>'>
+                                                                                        <!-- <input type="hidden" name='qty' value='2'> -->
                                                                                         <button class="btn btn-primary add-to-cart add-item" data-button-action="add-to-cart" type="submit">
                                                                                             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                                                                             <span>Thêm vào giỏ hàng</span>
@@ -513,6 +495,14 @@
             document.getElementById('review-form').scrollIntoView({behavior: 'smooth'});
         }
 
+
+        function validate(){
+            quantity= document.querySelector('#qtyinput').value
+            if (quantity<1 || quantity >20){
+                alert('Số lượng chỉ cho phép từ 1-20 trên mỗi sản phẩm!');
+                document.querySelector('#qtyinput').value=1;
+            }
+        }
 
         function removeReviewHandler(){
            if ( confirm('Are you sure?') ){

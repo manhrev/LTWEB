@@ -155,19 +155,22 @@ class SanPham extends Controller{
                     
                 }
             } elseif (isset($_POST['url']) && isset($_POST['name']) && isset($_POST['price']) && isset($_POST['image'])) {
+                // assert(isset($_POST['qty']),'qQty is not set');
                 $key = $_POST['url'];
                 $sp_to_cart = [
                     'name' => $_POST['name'],
                     'price' => $_POST['price'],
-                    'image' => $_POST['image']
+                    'image' => $_POST['image'],
+                    'qty' => $_POST['qty']
                 ];
                 if (isset($_SESSION['cart'])) {
-                    if (!array_key_exists($key, $_SESSION['cart']))
+                    // if (!array_key_exists($key, $_SESSION['cart']))
                     $_SESSION['cart'][$key] = $sp_to_cart;
                 } else {
                     $_SESSION['cart'][$key] = $sp_to_cart;
                 }
                 header("Location: ".BASE_URL.'san-pham/'.$_POST['url']);
+                // print_r($_POST);
             } else {
                 header("Location: ".BASE_URL.'Error');
             }

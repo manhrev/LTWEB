@@ -7,6 +7,7 @@
 
 
 <!-- product-cart07:06-->
+
 <head>
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
@@ -41,10 +42,10 @@
 </head>
 
 <body class="product-cart checkout-cart blog">
-    
+
     <!-- contact pop -->
     <?php require_once "./mvc/views/inc/phone.php" ?>
-    <?php require_once "./mvc/views/inc/fb-messenger.php"?>
+    <?php require_once "./mvc/views/inc/fb-messenger.php" ?>
 
     <?php require_once "./mvc/views/inc/header.php" ?>
 
@@ -58,7 +59,7 @@
                     <div class="breadcrumb">
                         <ol>
                             <li>
-                                <a href="<?=BASE_URL?>">
+                                <a href="<?= BASE_URL ?>">
                                     <span>Trang chủ</span>
                                 </a>
                             </li>
@@ -81,150 +82,113 @@
                                     <div class="cart-container">
                                         <div class="cart-overview js-cart">
                                             <ul class="cart-items">
-                                            <?php 
+                                                <?php
+                                                // print_r($cart);
                                                 if (isset($_SESSION['cart'])) {
-                        
+                                                    $rowid = 0;
                                                     foreach ($cart as $url => $sp) {
-                                            ?>
-<li class="cart-item">
-    <div class="product-line-grid row justify-content-between">
-        <!--  product left content: image-->
-        <div class="product-line-grid-left col-md-2">
-            <span class="product-image media-middle">
-                <a href="<?=BASE_URL.'san-pham/'.$url?>">
-                    <img class="img-fluid" src="<?=$sp['image']?>" alt="<?=ucfirst($sp['name'])?>">
-                </a>
-            </span>
-        </div>
-        <div class="product-line-grid-body col-md-6">
-            <div class="product-line-info">
-                <a class="label" href="<?=BASE_URL.'san-pham/'.$url?>" data-id_customization="0"><?=ucfirst($sp['name'])?></a>
-            </div>
-            <div class="product-line-info product-price">
-                <span class="value">Đơn giá: <?=$sp['price']!=0?number_format($sp['price']).' đ':"Liên hệ"?></span>
-            </div>
-            <!-- <div class="product-line-info">
-                <span class="label-atrr">Size:</span>
-                <span class="value">S</span>
-            </div>
-            <div class="product-line-info">
-                <span class="label-atrr">Color:</span>
-                <span class="value">Blue</span>
-            </div> -->
-        </div>
-        <div class="product-line-grid-right text-center product-line-actions col-md-4">
-            <div class="row">
-                <div class="col-md-5 col qty">
-                    <div class="label">Số lượng:</div>
-                    <div class="quantity">
-                        <span type="text" name="qty"  class="input-group form-control">1</span>
+                                                        $rowid++;
+                                                ?>
+                                                        <li class="cart-item">
+                                                            <div class="product-line-grid row justify-content-between">
+                                                                <!--  product left content: image-->
+                                                                <div class="product-line-grid-left col-md-2">
+                                                                    <span class="product-image media-middle">
+                                                                        <a href="<?= BASE_URL . 'san-pham/' . $url ?>">
+                                                                            <img class="img-fluid" src="<?= $sp['image'] ?>" alt="<?= ucfirst($sp['name']) ?>">
+                                                                        </a>
+                                                                    </span>
+                                                                </div>
+                                                                <div class="product-line-grid-body col-md-6">
+                                                                    <div class="product-line-info">
+                                                                        <a class="label" href="<?= BASE_URL . 'san-pham/' . $url ?>" data-id_customization="0"><?= ucfirst($sp['name']) ?></a>
+                                                                    </div>
+                                                                    <div class="product-line-info product-price">
+                                                                        <span class="value">Đơn giá: <?= $sp['price'] != 0 ? number_format($sp['price']) . ' đ' : "Liên hệ" ?></span>
+                                                                    </div>
 
-                        <!-- <span class="input-group-btn-vertical">
-                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-up" type="button">
-                                +
-                            </button>
-                            <button class="btn btn-touchspin js-touchspin bootstrap-touchspin-down" type="button">
-                                -
-                            </button>
-                        </span> -->
-                    </div>
-                </div>
-                <div class="col-md-5 col price">
-                    <div class="label">Tổng:</div>
-                    <div class="product-price total">
-                        <?=$sp['price']!=0?number_format($sp['price']).' đ':"Liên hệ"?>
-                    </div>
-                </div>
-                <div class="col-md-2 col text-xs-right align-self-end">
-                    <div class="cart-line-product-actions ">
-                        <a class="remove-from-cart" rel="nofollow" href="<?=BASE_URL.'gio-hang/xoa-san-pham/'.$url?>" data-link-action="delete-from-cart" data-id-product="1">
-                            <i class="fa fa-trash-o" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</li>
-                                            <?php      
+                                                                </div>
+                                                                <!-- <?php print_r($_SESSION);  ?> -->
+                                                                <div class="product-line-grid-right text-center product-line-actions col-md-4">
+                                                                    <div class="row">
+
+                                                                        <div class="col-md-5 col qty">
+                                                                            <div class="label">Số lượng:</div>
+
+                                                                            <div class="quantity">
+
+                                                                                <!-- <span type="text" name="qty"  class="input-group form-control">1</span> -->
+                                                                                <input value="<?= $sp['price'] ?>" hidden>
+                                                                                <input id='qtyid' class='input-group form-control' style="width:70px;" type="number" min='1' max='20' name='qty' value="<?= $sp['qty'] ?>" onchange="qtyChange('<?= $rowid ?>')">
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-md-5 col price">
+                                                                            <div class="label">Tổng:</div>
+                                                                            <div class="product-price total" id='a'>
+                                                                                
+                                                                                <?= $sp['price'] != 0 ? $sp['price'] * $sp['qty']  : "Liên hệ" ?>
+                                                                                
+                                                                            </div><div>đ</div>
+                                                                        </div>
+                                                                        <div class="col-md-2 col text-xs-right align-self-end">
+                                                                            <div class="cart-line-product-actions ">
+                                                                                <a class="remove-from-cart" rel="nofollow" href="<?= BASE_URL . 'gio-hang/xoa-san-pham/' . $url ?>" data-link-action="delete-from-cart" data-id-product="1">
+                                                                                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                                                </a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                <?php
                                                     }
                                                 }
-                                            ?>
-                                                
+                                                ?>
+
                                             </ul>
                                         </div>
                                     </div>
-                                    <?php 
-                                        if (!isset($_SESSION['cart']) || count($_SESSION['cart'])==0) {   
+                                    <?php
+                                    if (!isset($_SESSION['cart']) || count($_SESSION['cart']) == 0) {
                                     ?>
-                                    <h5>Giỏ hàng trống</h5>
-                                    <?php 
-                                        } else {   
+                                        <h5>Giỏ hàng trống</h5>
+                                    <?php
+                                    } else {
                                     ?>
-                                    <?php if (isLoggedIn()) {?>
-                                    <a href="<?=BASE_URL?>gio-hang/dat-hang" class="continue btn btn-primary pull-xs-right">
-                                        Đặt hàng
-                                    </a>
-                                    <?php } else { ?>
-                                    <span >Vui lòng đăng nhập để đặt hàng! <br>
-                                    <a href="<?=BASE_URL?>login" class="continue btn btn-primary pull-xs-right mt-2">
-                                        Đến trang đăng nhập
-                                    </a>
-                                    <?php 
-                                        } }  
-                                    ?>
+                                        <?php if (isLoggedIn()) { ?>
+                                            <a href="<?= BASE_URL ?>gio-hang/dat-hang" class="continue btn btn-primary pull-xs-right">
+                                                Đặt hàng
+                                            </a>
+                                        <?php } else { ?>
+                                            <span>Vui lòng đăng nhập để đặt hàng! <br>
+                                                <a href="<?= BASE_URL ?>login" class="continue btn btn-primary pull-xs-right mt-2">
+                                                    Đến trang đăng nhập
+                                                </a>
+                                        <?php
+                                        }
+                                    }
+                                        ?>
+
+
+                               
+
+                               
 
                                 </div>
-                                <!-- <div class="cart-grid-right col-xs-12 col-lg-3">
-                                    <div class="cart-summary">
-                                        <div class="cart-detailed-totals">
-                                            <div class="cart-summary-products">
-                                                <div class="summary-label">There are 3 item in your cart</div>
-                                            </div>
-                                            <div class="cart-summary-line" id="cart-subtotal-products">
-                                                <span class="label js-subtotal">
-                                                    Total products:
-                                                </span>
-                                                <span class="value">£200.00</span>
-                                            </div>
-                                            <div class="cart-summary-line" id="cart-subtotal-shipping">
-                                                <span class="label">
-                                                    Total Shipping:
-                                                </span>
-                                                <span class="value">Free</span>
-                                                <div>
-                                                    <small class="value"></small>
-                                                </div>
-                                            </div>
-                                            <div class="cart-summary-line cart-total">
-                                                <span class="label">Total:</span>
-                                                <span class="value">£200.00 (tax incl.)</span>
-                                            </div>
+                                <div class="cart-summary col-md-3  col-xs-12">
+                                    <div class="my-5 ml-2"></div>
+                                        <div class="cart-summary-line" id="cart-subtotal-products">
+                                            <div class="title-page">
+                                                Tổng giá tiền:
+                                </div>
+                                            <h2 id='tongtien' class="d-inline">200.00</h2><h2 class="d-inline">đ</h2>
                                         </div>
+
                                     </div>
-                                    <div id="block-reassurance">
-                                        <ul>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="img/product/check1.png" alt="Security policy (edit with Customer reassurance module)">
-                                                    <span>Security policy (edit with Customer reassurance module)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="img/product/check2.png" alt="Delivery policy (edit with Customer reassurance module)">
-                                                    <span>Delivery policy (edit with Customer reassurance module)</span>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="block-reassurance-item">
-                                                    <img src="img/product/check3.png" alt="Return policy (edit with Customer reassurance module)">
-                                                    <span>Return policy (edit with Customer reassurance module)</span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div> -->
+
+                              
                             </div>
                         </section>
                     </div>
@@ -235,18 +199,8 @@
 
     <?php require_once "./mvc/views/inc/footer.php" ?>
 
-	<?php require_once "./mvc/views/inc/mobile-menu.php" ?>
+    <?php require_once "./mvc/views/inc/mobile-menu.php" ?>
 
-    <!-- Page Loader -->
-        <!-- <div id="page-preloader">
-        <div class="page-loading">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div> -->
 
     <!-- Vendor JS -->
     <script src="<?= STATIC_URL ?>libs/jquery/jquery.min.js"></script>
@@ -262,8 +216,39 @@
 
     <!-- Template JS -->
     <script src="<?= STATIC_URL ?>js/theme.js"></script>
+    <script>
+        tongtien();
+        if (document.querySelectorAll('#qtyid')[rowid - 1].value=='') {
+            document.querySelectorAll('#qtyid')[rowid - 1].value==1;
+        }
+        function validateQty(quantity, rowid){
+            if (quantity<1 || quantity >20){
+                alert('Số lượng chỉ cho phép từ 1-20 trên mỗi sản phẩm!');
+                document.querySelectorAll('#qtyid')[rowid - 1].value =1;
+            }
+        }
+        function qtyChange(rowid) {
+            quantity = document.querySelectorAll('#qtyid')[rowid - 1].value
+            validateQty(quantity,rowid)
+            quantity = document.querySelectorAll('#qtyid')[rowid - 1].value
+            dongia = document.querySelectorAll('.cart-container .quantity')[rowid - 1].firstElementChild.value
+            document.querySelectorAll('.product-price.total')[rowid - 1].innerHTML = dongia * quantity;// + '\nđ';
+            tongtien();
+        }
+
+        function tongtien(){
+            sum=0;
+            values = document.querySelectorAll('.product-price.total')
+            for (x=0; x< values.length; x++){
+                console.log(values[x].innerHTML)
+                sum+= parseInt(values[x].innerHTML) 
+            }
+            document.getElementById('tongtien').innerHTML=sum;
+        }
+    </script>
 </body>
 
 
 <!-- product-cart07:12-->
+
 </html>

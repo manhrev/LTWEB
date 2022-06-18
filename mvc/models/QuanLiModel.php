@@ -240,17 +240,19 @@ class QuanLiModel extends DB {
         }
     }
     public function ThemOrder($Name,$Phone_number,$Address, $Order_detail)
-    {
-        $Order_str=$Order_detail[0];
+    {   
+        $order_detail=$Order_detail[0][0] ."=[". $Order_detail[0][1]."]";
+
         for ($i =1; $i<count($Order_detail);$i++)
         {
-            $Order_str .= ", ";
-            $Order_str .= $Order_detail[$i];
+            // $order_detail .= "|";
+            $order_detail=$order_detail . ' | '. $Order_detail[$i][0] ."=[". $Order_detail[$i][1]."]";
         }
         $query= "INSERT INTO order_infor (name, phone_number, address, order_detail)
-                        VALUES ('$Name','$Phone_number','$Address','$Order_str')";
+                        VALUES ('$Name','$Phone_number','$Address','$order_detail')";
                 if ($this->con->query($query ) === TRUE)
-                {
+                {   
+                    // return $Order_detail;
                     return "Cảm ơn quý khách đã đặt hàng. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất";
                 }
                 else
